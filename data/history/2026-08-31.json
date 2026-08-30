@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-31T01:08:57+09:00",
- "generated_at_display": "2026-08-31 01:08 KST",
+ "generated_at": "2026-08-31T01:27:18+09:00",
+ "generated_at_display": "2026-08-31 01:27 KST",
  "total": 8,
  "ok": 8,
  "failed": 0,
@@ -279,7 +279,39 @@
    "rsi14": 57.5,
    "atr14": 7.14,
    "stale": false,
-   "error": null
+   "error": null,
+   "news": [
+    {
+     "t": "드디어 애플 첫 폴더블폰...9월 10일 ‘아이폰 울트라’ 공개 - 매일경제",
+     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBqazdjaXJNUWdFT2RLQkl6NmVTMm9TSHVJenJ2dG9VUHJldjUyMzRBWEVZQnpEaGVzclVpQnM2M19fRk5mVV82V2hnMmZSUURPVmlmWFRB?oc=5",
+     "s": "매일경제",
+     "d": "08-27"
+    },
+    {
+     "t": "애플이 만든 AI 서버…\"이렇게 생겼다\" - 지디넷코리아",
+     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9OeUdPVzNaM2JyWkNobFdfdHNueF84Ry00X0lGNWJSYUJGbFAzWDFBd3FZcUIyTUtLUjAzRkU0MHFUcHdhNmZjQ1pXUXJqR2xQUHBlTVJB?oc=5",
+     "s": "지디넷코리아",
+     "d": "08-28"
+    },
+    {
+     "t": "패서디나 애플스토어서 위조 아이폰 바꿔치기한 사기단, 224억 피해 남기고 실형 선고받았다 - 위키트리",
+     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1kblMzaV9HeFlzVWpoaEpXN3FLR2ZTcFg2YnpKWlJXSHBtdGNiV3V3bUdob1ZLdUo0OTE2MHJqZ1kyY1ZiMmtwQUZwQTdUaEVMWFV1V2V3?oc=5",
+     "s": "위키트리",
+     "d": "08-29"
+    },
+    {
+     "t": "메모리값에 맞은 애플…화풀이는 韓 OLED에 - IT조선",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBNOHdCVFRzTG1uZmExdkk1bVUzajFVSWV1eDkyZjdLRzdRdDdwQzhaNnJZbGY2Wm1ydmpkT3M0SmY0VjRHU1pVVjA0QXY4aWlqOGdwbjBFcUJXOTJOZU1vdkphSE9QVDY2RjNzS3pOTm3SAXRBVV95cUxQZ1ZIV2x5MDRqaGFWTnh2OHNRUWhEUlBtc0NHSUVieXVtUGhBZFBEelN0TzM1U29Td216ajlWQ1dhRkV4bHlNTVFIYUdLYUZmX2VUYTBRaGM3RFZaYUVlVlhZaHZSN1VIX2VpYlY2RTdtVTk3bA?oc=5",
+     "s": "IT조선",
+     "d": "08-28"
+    },
+    {
+     "t": "[영상] 350만원인데 1000만 대...애플, 삼성 7년을 한 방에? - 더구루",
+     "u": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5TNXJnb0RnazNBZmFNaXh2RGozVjZpV0k5b0lKd0F3dHlvMmhsNEdPVXJkWkNOelZGNDNLV1VRUHk0SGRxZGczY05KQ1VNQWdlYnhpNnZxeko4S2U3U000MkdPRQ?oc=5",
+     "s": "더구루",
+     "d": "08-30"
+    }
+   ]
   },
   {
    "hist": [
@@ -554,7 +586,39 @@
    "rsi14": 63.7,
    "atr14": 0.34,
    "stale": false,
-   "error": null
+   "error": null,
+   "news": [
+    {
+     "t": "[ETF 특징주] '10년간 압도적 수익률' SCHD보다 나은 배당 ETF - 뉴스핌",
+     "u": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBpTHhiYzJuUWZjSnlrN3RaejJnUWpxbzE2TW10NTZVcHVBTGdsZWFieC12NHlWUlZmaHF1Q2Uta29sMlZacUFJbFFXSDdFQVkzTTkyc25aZW5tYi1j?oc=5",
+     "s": "뉴스핌",
+     "d": "07-28"
+    },
+    {
+     "t": "SCHD보다 좋은 배당 ETF 찾았답니다. 근데.. Happy Mothers Day Message (qoAlTtWIrH) - Mshale",
+     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1INlBiY0g3ZFVEOWJURDJFWGxISVZ3OFdveHFHSnVqbFJqZWJxZTA4VjZOYTFWbjlWdlR6UXVUdHRiSXZFYUpZcll3b1FTWGxnblJrRjlEUENoSDlvV3lWeg?oc=5",
+     "s": "Mshale",
+     "d": "08-27"
+    },
+    {
+     "t": "한때 배당왕이었던 SCHD에 대한 짧은 고찰 - 네이버 프리미엄콘텐츠",
+     "u": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YVDFGeHgzMnZWRzVLRHJQNkF4ckZweExaSVppVThOLTFBb3JOMG53SkYwYXp2eFE5ZVZjdFhhQlNjMWFwUVppTXVmM2hpUmlRdW9tYktVWmhvSlZtTk02WTczZUhLTEZiQ0hicjNTOHIwVkM2MVJLM2h6Z3k?oc=5",
+     "s": "네이버 프리미엄콘텐츠",
+     "d": "10-01"
+    },
+    {
+     "t": "SCHD '리밸런싱'…배당성장 기대주 더 담았다 - 한국경제",
+     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9sb1Q0TU1XYThnaTJaTTBNUXpkdlZoUUJkMTZzQ3dPdnZnS05fSDJCNGlQVmNlN1A2TWw2MU1IVGFQT2FOckV6VkFJUm5pUWpSWk1yZXdSRjItdw?oc=5",
+     "s": "한국경제",
+     "d": "03-31"
+    },
+    {
+     "t": "판도 바뀐 美 배당 ETF…SCHD서 커버드콜로 자금 이동 - 서울경제",
+     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB4dmFVcW40dWhISXFfUG1IVnhDV0txOVd2RDZ4RERjVjhnLV9sN3ExVHRORkd2dlRjWGwyc0FvMGlZN29YU21pNUo1UnlHWTBKcnc?oc=5",
+     "s": "서울경제",
+     "d": "12-14"
+    }
+   ]
   },
   {
    "hist": [
@@ -829,7 +893,39 @@
    "rsi14": 56.7,
    "atr14": 6.33,
    "stale": false,
-   "error": null
+   "error": null,
+   "news": [
+    {
+     "t": "\"환율 따라 선택\"…한화운용, S&P500 ETF 환노출·헤지형 2종 보수 통일 | - 연합인포맥스",
+     "u": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4tQWxzM1huakJ4MF9BZ09nbW1fTEl6eGh1MDkzTUdXOUg3ZnJIMkI2ODE5SGpiU2RBcGtTVjB6WHlpYURmTU9oanRsTzBPSDZ0UzZscUN2YnFSS2gwVWVLeHVZVmVvcHdWTU5DQkVEam5mNnR0?oc=5",
+     "s": "연합인포맥스",
+     "d": "08-28"
+    },
+    {
+     "t": "한화운용, 美 S&P500 ETF 2종 총보수 0.0062%로 인하 - 조선비즈 - Chosunbiz",
+     "u": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMEJZWFllcGkxbUdXN0ZYOXIzb25TYlNoVGNQb09xT0dBWWpNYnlWSUxVTWFaRUFpN3ZPeVVHZWxndk1DcXVseWR6QzQ2TWM1aWMzYVduV0ZoLWxMVE95OUxfXzhOUzhWcTBPdUZ0bEt6allTQ1FUVVkyU1Z3b0xmdGRTc0IxT3NW0gGcAUFVX3lxTE12dkt1NndqRml0V0ZaMmJUMVNUcDVEOVQ1LWFOaGhfODB1MDFaT3labXRoSGYwU2RXaDdOdmRBTHdPVk1MU2V2Zi1SMlkzRTJZSTI3VXZKNWlOcUZsbUV2VnRrNGljdTV5YlVJaXpxV2RDVkVXOXJmZUhoYlVBTDloTlpXSW53WFNlLVJnTml3SDB6N3RYSlJab2Z5dA?oc=5",
+     "s": "Chosunbiz",
+     "d": "08-28"
+    },
+    {
+     "t": "한화운용, S&P500 ETF 2종 보수 0.0062%로 낮춰…환헤지도 동일 - 브릿지경제",
+     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1mOHBHaWRldy00MTk3QkJTMm9GMHBad3RHbmZGcTFkeFZWd1ZxLVBVWHdrVjhqaGp6QjBGdzBoV2pLUWxWNUc3UjRCX2VSZ2dQVUxRcHpHUjJvQQ?oc=5",
+     "s": "브릿지경제",
+     "d": "08-28"
+    },
+    {
+     "t": "'PLUS 미국S&P500 ETF' 2종, 총보수 연 0.0062%로 인하 - 뉴스핌",
+     "u": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9tMkFKLWprd2tiWDFhb01pbVE2SUNZTVpRSUhFMmhqbDdMN1pxMWVMNHNwSk9ycUo4SWM5MWk4WjN4QllFVjBTb0FpeFJSRWlFUEJxWnlpUmVnbllL?oc=5",
+     "s": "뉴스핌",
+     "d": "08-28"
+    },
+    {
+     "t": "한화운용, 美 S&P500 ETF 2종 보수 0.0062%로 인하 - 서울경제",
+     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBEb3NCNGdpa0pXMTBFLUNPaVpya0hVd3NxMmQ5azZsNWhva2RUR00wTEM1Ri1ndmNIZWgtcXoxcTlQMjhZejJhZXJ1SkJyaVQ4X2c?oc=5",
+     "s": "서울경제",
+     "d": "08-28"
+    }
+   ]
   },
   {
    "hist": [
@@ -1104,7 +1200,39 @@
    "rsi14": 49.0,
    "atr14": 18921.49,
    "stale": false,
-   "error": null
+   "error": null,
+   "news": [
+    {
+     "t": "“어제 삼전 374원 실망하셨어요?”...석달뒤엔 ‘이만큼’받는다 - 매일경제",
+     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8zUlU4OF9GYTNvVzlwYTJQN1BzQTZIQ2llYWZuS3ZZLXh4MUVXTkotNUNsWWNZOXlkWkRUdW5KcUhhdnJ5alU5TUZRazNJZ0Z0eWc?oc=5",
+     "s": "매일경제",
+     "d": "08-29"
+    },
+    {
+     "t": "게이밍 시장 놓고 펼쳐진 삼성·LG 맞대결…1100㎐ vs 네이티브 1000㎐ - IT조선",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE44T2ZDQVJadURTcVdNbEE5MUNXdjV6RF83blYwUU5DQVd0WmdKVzNzVzBXYWFVTDF1c20waDljOHRqSzV0VklqbG5qazhrTVBpb1JEc2lUU1Rub3BwWC1hOXdId1lSMDZqdUtuSHdiT3bSAXRBVV95cUxONDFVVkcxYmxXcVVMcUlyMlFyQUJFaGVWdUJnQnNHTVBHQ3RTUnFTV1lOaFBQUnNRT0FRZEFJR2NiT3dhRTJ5bEhzblFCSlpjWVFfMl92UzJJeTVzaDlTR0NDeHJOX1RsMGxKdWEzeHNVVE5RdQ?oc=5",
+     "s": "IT조선",
+     "d": "08-30"
+    },
+    {
+     "t": "북미 주방가전도 K열풍… 삼성-LG 합산 점유율, GE-월풀 앞질러 - v.daum.net",
+     "u": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5xODQ2N19oaUlCUFBuRHFnMVZxeWJUOG9lLVZ5OWFaZ012RGJ4a2pSRXMzYkpDbkNRTm9JNzNMRjVaRVBham5pRm4xb1hpazA?oc=5",
+     "s": "v.daum.net",
+     "d": "08-31"
+    },
+    {
+     "t": "진화하는 게이밍 모니터 시장 급팽창, 삼성전자·LG전자 '고해상도' '고주사율'로 1위 경쟁 - 비즈니스포스트",
+     "u": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1NdWZCWFFYdFFZcGozTW9xZDc0aExrd2s1dDBCa2VmWU5ySkpPcGpYU1JjLXBoallRb2tiLTRTd3J5X1hXR1phLThwOG4zbWZVNkFkcjNfZnFBbFZYYlY3N2NPal9GaDdyVTZ0TFc4emZpTmM?oc=5",
+     "s": "비즈니스포스트",
+     "d": "08-30"
+    },
+    {
+     "t": "그룹 모든 업무에 AI 도입… 2030년까지 AI 자율 공장 전환 - 조선일보",
+     "u": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQYnllTlhFVGhKQ3M0dThQMjdnVUphMmtNRlo4VWhoRFY4OExlOV9HUmZ6b2ZONVNKdWlrbmVHMElJc18yU2g5c0hIdkctS21NdXBCUTEycGxhQi15THROb0ctZXVqOEdNTC1fRzZlRVRvMXJNdVduYms1dm9sSFY2OEpvdW5tbERwSWQ5YVln?oc=5",
+     "s": "조선일보",
+     "d": "08-31"
+    }
+   ]
   },
   {
    "hist": [
@@ -1379,7 +1507,39 @@
    "rsi14": 48.1,
    "atr14": 149314.15,
    "stale": false,
-   "error": null
+   "error": null,
+   "news": [
+    {
+     "t": "'40조' 통 큰 환원 이어…SK하이닉스, 추가 카드 꺼낸다[주주환원시대②] - 뉴시스",
+     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE85SkFYODYwcWZ3Q3BjQzRJTWl6emxYQ0EwNi1NejVlbXRTZlZhbUh1UHpUVEtISDdsaDA3bjBoSUI2OUdCb3FObUxQYkJHV1hpVFlveW41RVBkZGlMLU9iOdIBeEFVX3lxTFBtWE8xdTJSaG1OV2pTbW9pRTNHSlQyZXBaeWxzQUJiS2RrN0IwSl9VTGxDVUpucEN3N1dPRTlobXFvTVpXR3o1ZThuUWg5T1Y1MzllaEMyb1hrUFZEQlFPNUdNX0k2YTQ1MWl0NTVaU0VpdFJOU1lwcA?oc=5",
+     "s": "뉴시스",
+     "d": "08-29"
+    },
+    {
+     "t": "\"트럼프, 반도체 고율관세 검토...SK하이닉스 \"미국산 HBM 생산\" - YTN",
+     "u": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE80ZW1SY0laQ1U4d1RmZVY1Rks3NDV1RFg0cWtVUVdvb3ZZVE5BcklXaW9jZXBiY2Y0cEVoQmtGN1pGMU41VE1RNUE2YlA5Tmlxa3VzUmdFdTAyOFo4RGc?oc=5",
+     "s": "YTN",
+     "d": "08-28"
+    },
+    {
+     "t": "반도체 호황에…삼성전자·SK하이닉스 상반기 법인세 11조 돌파 - v.daum.net",
+     "u": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB4N3daZlRrN1VCMTMyUER2djNsNkdlZlV0d0VqcFB3b2VxSE1JWDVDdUVDR0Z4SXJlQjZrVWtQbHFscXZzcjU5YnNxTnBiczQ?oc=5",
+     "s": "v.daum.net",
+     "d": "08-30"
+    },
+    {
+     "t": "AI 에이전트에 사번과 업무 권한주고 함께 일한다 - 조선일보",
+     "u": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSHdvOWJVYl9zYUNuaERlSkxvWVBCQmwyWkM2MVFLOC1LSWZraFo0aHJMeVBNTk1Dc0kwNDdBUWdKX3ZYbFplbDhNTXNfM0o3NWNHTHpMT1JsS3FXSWRqQTZVX1BnZzg0eUgzV3lyWmRBT3VRQS03UE5uWHA1T1djR3FIZEplTTU2MjEtOW9KRQ?oc=5",
+     "s": "조선일보",
+     "d": "08-31"
+    },
+    {
+     "t": "삼전닉스 성장+주주환원 효과 더 누리는 투자법은?[머니똑똑] - 머니투데이 - 머니투데이",
+     "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1nRnJHQlpGMFdWaGhYR3BmLTVESVFvSTBCOWdNbDZvVGhUYnEwaVJHNHd5b2VsSy1oT1IxVDVnLTEyOU9KM2xXYWppdVN3NGR5NU9KcHY4M0dFWWZCY3dUSnE3SkFHOU910gFuQVVfeXFMUGF2MzkwWFY1UzJqck80VXctR0pKNjJQaExfZTcwSXlmY0tmdXFaRlpnVUhocUJFYmthaGFla3Fab2Z6bzZZNmdBTmtTU2hWbnM4ck9JRWRSZ0h1Z0FqbDFDbUt0OW92TWJQMjhCUmc?oc=5",
+     "s": "머니투데이",
+     "d": "08-30"
+    }
+   ]
   },
   {
    "hist": [
@@ -1654,7 +1814,39 @@
    "rsi14": 49.9,
    "atr14": 6144.69,
    "stale": false,
-   "error": null
+   "error": null,
+   "news": [
+    {
+     "t": "[코스피 6,000] 거침없는 코스피에 ETF 몸값도 고공행진…순자산 374조 - 매일경제 마켓",
+     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE96UXVjd3VrcXJpOElCV1FpTzJxekNtSEZ2dnhoelRHUmpSNlN1N1FUZE1wVlRVQWFTTkk0NkowWnZTN1lFTTNJVUUtdzZOZE9KakE?oc=5",
+     "s": "매일경제 마켓",
+     "d": "08-29"
+    },
+    {
+     "t": "18일, 기관 거래소에서 삼성전자(+4.62%), KODEX 레버리지(+7.04%) 등 순매수 - 씽크풀 AI",
+     "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5scERMbDBNVEtlbTUwbVJpOW1rTy1zY3JOMTNHMmtoa2c1bFRlVkppUXZEUnhEd1hXLUJfX0VmM3lIbzZhU2ZEdkhKNHFpTWZaa1c3SXVFZXZCS1ozQ2ZtNnBLMVZ6NXhs?oc=5",
+     "s": "씽크풀 AI",
+     "d": "08-27"
+    },
+    {
+     "t": "삼성운용 KODEX 200커버드콜액티브, 순자산 5천억 돌파 - 연합뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBVT3F0N2EtcG5jNHR4ZmlvR2F5UkFSQlJvM3lNUVRRS290WXQySFpTQkRISmdIbHl4NXFEb2prb2lISV9YUUZrcEVrSUVfWE43d0NWLVNSMzczN1XSAWBBVV95cUxQZUNJZGJHNy1ZNHQzQVZDRjg4S2JtVnc5cG9fUG9jMzJfWERHSDV0cVdwZmdDNVIwVTUtTFhQUWZVb1N2bTMtdTh1dE5sdGpnWHZZRVZoV3VpOTd0SXVZRk8?oc=5",
+     "s": "연합뉴스",
+     "d": "08-13"
+    },
+    {
+     "t": "KODEX 200커버드콜액티브, 한달만에 순자산 5000억 돌파 - 한국경제",
+     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Gd2dXaVhOT1JOSnNCTWd3Yjlzbm80Q3Rla3JIcXZOV0puWlJtRk9HYXFwWWctMzR6R0RnWHpLLXBNWU1NOVVtSUVXZVR5eVhLOW8xRDBlZU9lZw?oc=5",
+     "s": "한국경제",
+     "d": "08-13"
+    },
+    {
+     "t": "'KODEX 200커버드콜액티브', 상장 1개월 만에 순자산 5000억원 - v.daum.net",
+     "u": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE16ejg5QUV3Q0RJOHBjZXZTMkFtcElGM2cyYXJPaVhUTGpEZlplNi1vdnNfZE5UeTBwaTFrRlA3aDV4b0tZWWc?oc=5",
+     "s": "v.daum.net",
+     "d": "08-13"
+    }
+   ]
   },
   {
    "hist": [
@@ -1929,7 +2121,39 @@
    "rsi14": 37.2,
    "atr14": 291.36,
    "stale": false,
-   "error": null
+   "error": null,
+   "news": [
+    {
+     "t": "[ETF 머니플로우-8월 4주] 미래에셋자산운용, TIGER 미국S&P500 3주 연속 순매수 1위 - 신아일보",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9PLXZTN2NweU8ta0x3ZElIdjRNV3lUY0JQTnY1SWZpXzJkd2hKM3dCY255NURTd1RNZEUyOXlsdVd2VzQ2TFlESFlMX3Uxa0dBdDBFc25pa1Itcmx1SXg3cF9DV3BIbUlfRTJDRkdaaXE?oc=5",
+     "s": "신아일보",
+     "d": "08-29"
+    },
+    {
+     "t": "증시 흔들리자 자금 어디로…머니마켓 ETF 1.6조 유입, 개인은 TIGER 미국S&P500 최다 순매수 - 베타뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE05T2F5UU5zZ29ja1MyMzlvdXFYOXFlaHB4aVl0WUJ6bHVZUVJTejl0UzYyeDF0VDdRVFRiam1mRXBJNGpzVXVETVBhNnRMbzl2NkNNZXZMbkg0MVMyZE5RYVl5VGM?oc=5",
+     "s": "베타뉴스",
+     "d": "08-29"
+    },
+    {
+     "t": "[머니플로우] 조정장에 일주일새 파킹형 ETF 1.6조…커버드콜 1조 유입 - 매일경제 마켓",
+     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9uM0pzbmRBQkVkenNrb3M1LWpFWnYzVVNiTEZiQ3VFTUdrOGhaQ25fMVdhRjFsVmRfYy1GZmk1UVFia09UZ0lPUWhWeTdsRTBleXc?oc=5",
+     "s": "매일경제 마켓",
+     "d": "08-29"
+    },
+    {
+     "t": "TIGER 미국S&P500(360750) - 씽크풀 AI",
+     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1GcEY4a3V4TkNCaWFKUEVHMTBGcjRMU0xEVjUzclRhSFNOR245UmZTYjMxWHpCRl9DdEhwMDdVNHFCNUlSWFEzbHk4c0JtNHRwMHF1MWtCdlZjVUtRcWZnMQ?oc=5",
+     "s": "씽크풀 AI",
+     "d": "08-25"
+    },
+    {
+     "t": "변동장에도 美 ETF 담았다…'TIGER 3종' 한 달 순매수 1조 돌파 - 뉴스핌",
+     "u": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9KWXl0cjRtOTR0WXFnVVk3bjFLa1g3WG1Jck9WYi1veVl1cWt1TGVrM0R3cnRVUGJpWDdUeHozODl3YjhtclBWOTdxTDFreVJkb3BpTE5wUG9IOVl0?oc=5",
+     "s": "뉴스핌",
+     "d": "08-18"
+    }
+   ]
   },
   {
    "hist": [
@@ -2204,7 +2428,39 @@
    "rsi14": 73.5,
    "atr14": 12.05,
    "stale": false,
-   "error": null
+   "error": null,
+   "news": [
+    {
+     "t": "Xbox, 반투명 ‘OG Green’ 25주년 Series X25 콘솔 사전 예약 시작 - Hypebeast.KR",
+     "u": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVWw4eVd5MnJURlprX09aSkhuWnhfYkM3cVNPN0t2ek1vMXBGX1J4QmlxLXd4WkpuNUxQc3BGTnQzNTZlVG43WVd6Mnd0d0JHcW0zMjkyZEMtLWxQMkNCS3FBajFISHZ6LTIycGpkSEFiNGtjU2RPTEdUaXZ2di00V2VCVUppVDFZV1JYOXBWeURIMGxwTDdJOVNFRV9yUjdjZ1JxaU12aEc4a1JrX2RwTkZ5QzZGQQ?oc=5",
+     "s": "Hypebeast.KR",
+     "d": "08-27"
+    },
+    {
+     "t": "마이크로소프트 주식이 이끄는 AI 인프라 유망주 3선 - simplywall.st",
+     "u": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNaGN1X1hncmZLSGdsV2ZwOXUtck4yWmZ4dVV1eW1oUEJaVXIzV3RGa2dOV1lGU2NlMTJ2SXlFUG1rWGtMUVZBbU1SQ1llQV9LSzFnT3lRN1k0czJ0Smp4V1VrU1BoUlJHRE0tZDg1NHdVbk1aLVVNaW01SGg4SGdLVFg2dXN6d2w3ei1tTlBqcjNTS2p6WXfSAZYBQVVfeXFMTWhjdV9YZ3JmS0hnbFdmcDl1LXJOMlpmeHVVdXltaFBCWlVyM1d0RmtnTldZRlNjZTEydkl5RVBta1hrTFFWQW1NUkNZZUFfS0sxZ095UTdZNHMydEpqeFdVa1NQaFJSR0RNLWQ4NTR3VW5NWi1VTWltNUhoOEhnS1RYNnVzendsN3otbU5QanIzU0tqell3?oc=5",
+     "s": "simplywall.st",
+     "d": "08-28"
+    },
+    {
+     "t": "김훈상 - Microsoft Source",
+     "u": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNOVNZMEp5b2ttd0tvc3EtVE1nelJkNnpYSzJkOVR2eGUzV0ExRHp5bGdHRjFuTTZzR1pWMWhqXzNFZmpKWHo1V3JQQkwwV2tCMkJyazhSYkZ2SDRrUl9GZ0tzR2tQOXhaY0xtZlhuQ2ZqWEVDdExQaUdsMHpyR0cxUVNjdkRKZnc?oc=5",
+     "s": "Microsoft Source",
+     "d": "08-13"
+    },
+    {
+     "t": "Microsoft Xbox의 새 디스크-투-디지털 기능, 실물 게임 컬렉션을 디지털 라이선스로 전환 - Hypebeast.KR",
+     "u": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNV0tQRm9pbW9GaXlSbS1Qb1VFSHB5SWJ2eldXQUdGdEVmdEZfNlR0V0QxWGROYTdyMElVM0g3QUszLVZ4ZzdLMFdTcjV4ZXMtd094OWhQY0tJSW9Za1JYN0tGZ1hpVTBYbXN5dUswdHgxZ3BfNVZ6akYyRkxra1hvdTVTSlZLNnpVbVpETA?oc=5",
+     "s": "Hypebeast.KR",
+     "d": "08-27"
+    },
+    {
+     "t": "마이크로소프트, 글로벌 프론티어 트랜스포메이션 고객 사례 공개… “에이전틱 워크플로로 AI 가치를 비즈니스 성과로 전환” - Microsoft Source",
+     "u": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNUThJdTk4RXpfOWdyOWl1T3N2SUpnVWhrV0wyWXhsX2RxSDh3TjVOYXVuZ3JrbnVXZ3N0YW8xVGFMNDRVaWNwOVJBTVlkOUNKaU1KZEp2a3lLa0lZYVVQMTlzMDFuYjgzck1TbXlGWlFUanVXMkhqM0Zkd3dhSGV0UHluVlVUVmhkdFdSTjhKckhRbExTR0VFNUFuMjkyMW96YlVaajFMMWR0czRmc0VNc3BocFd1UHU5VGZNbmtIMk1nN2wxeDdNbG4xT2tKUWI4Tkw5VXNtSWtqb2FfanpGS2s4Z3A3VlZwdHlqYldLbHNTZ0JUc0RqRnNHWEl4M1B0WXNPWFZrOVhFQWdHNVE5TEotY3lmRnhhT3diNTFIdDRpT1draUhlVGVxc1Vlak55RXYtcGY1THU5ZzdXZ3VvZElBUlpvdVl4aThTSGV1eFRzdnRUZ1JtMTlKY291SWd5QkU2V2FzQnJtSmRSZE1r?oc=5",
+     "s": "Microsoft Source",
+     "d": "07-31"
+    }
+   ]
   }
  ]
 }
