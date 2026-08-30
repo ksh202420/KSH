@@ -116,6 +116,53 @@ def verdict(score: float, lv: dict) -> tuple[str, str | None]:
 
 
 HIST_DAYS = 120   # 화면 그래프에 그릴 일수
+NEWS_N = 5        # 종목당 뉴스 개수
+
+
+def fetch_news(item: dict, n: int = NEWS_N) -> list:
+    """구글 뉴스 RSS에서 종목 관련 기사 제목을 가져옵니다.
+
+    실패해도 예외를 밖으로 내보내지 않습니다 — 뉴스가 없는 것은 불편이지만
+    분석이 멈추는 것은 사고이기 때문입니다.
+    """
+    import urllib.parse
+    import xml.etree.ElementTree as ET
+
+    import requests
+
+    q = (item.get("name") or item["code"]).strip()
+    url = ("https://news.google.com/rss/search?q="
+           + urllib.parse.quote(q) + "&hl=ko&gl=KR&ceid=KR:ko")
+    r = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+    r.raise_for_status()
+    root = ET.fromstring(r.content)
+
+    out = []
+    for el in root.iter("item"):
+        title = (el.findtext("title") or "").strip()
+        link = (el.findtext("link") or "").strip()
+        if not title or not link:
+            continue
+        src = el.find("source")
+        pub = (el.findtext("pubDate") or "").strip()
+        out.append({
+            "t": title,
+            "u": link,
+            "s": (src.text or "").strip() if src is not None else "",
+            "d": _news_date(pub),
+        })
+        if len(out) >= n:
+            break
+    return out
+
+
+def _news_date(pub: str) -> str:
+    """'Fri, 29 Aug 2026 07:12:00 GMT' → '08-29'"""
+    from email.utils import parsedate_to_datetime
+    try:
+        return parsedate_to_datetime(pub).astimezone(KST).strftime("%m-%d")
+    except Exception:  # noqa: BLE001
+        return ""
 
 
 def _series(s: pd.Series, krw: bool) -> list:
@@ -166,9 +213,28 @@ def analyze(item: dict, df: pd.DataFrame) -> dict:
     }
 
 
+def _previous_news() -> dict:
+    """직전 결과에서 뉴스를 가져옵니다.
+
+    장중 실행에서는 뉴스를 새로 받지 않고 이걸 그대로 물려줍니다.
+    1시간마다 뉴스를 긁으면 구글에 부담만 주고 얻는 게 거의 없습니다.
+    """
+    try:
+        prev = json.load(open("docs/data/latest.json", encoding="utf-8"))
+        return {i["code"]: i.get("news") or [] for i in prev.get("items", [])}
+    except Exception:  # noqa: BLE001
+        return {}
+
+
 def run(selftest: bool = False) -> dict:
+    import os
+
     watchlist = json.load(open("watchlist.json", encoding="utf-8"))
     results, failures = [], []
+    want_news = (not selftest) and os.environ.get("FETCH_NEWS") == "1"
+    carried = {} if want_news else _previous_news()
+    if want_news:
+        print("뉴스도 함께 받습니다")
 
     for item in watchlist:
         try:
@@ -179,8 +245,10 @@ def run(selftest: bool = False) -> dict:
                 df = fetch.fetch(item["market"], item["code"])
                 time.sleep(1.5)  # 소스를 배려한 간격. 지우지 마세요.
             row = analyze(item, df)
+            row["news"] = _news_for(item, want_news, carried)
             results.append(row)
-            print(f"  OK   {item['name']:<20} {row['score']:>4}점  {row['verdict']}")
+            print(f"  OK   {item['name']:<20} {row['score']:>4}점  {row['verdict']}"
+                  + (f"  뉴스 {len(row['news'])}건" if row["news"] else ""))
         except Exception as e:  # noqa: BLE001
             msg = f"{type(e).__name__}: {e}"
             failures.append({"name": item["name"], "code": item["code"], "error": msg})
@@ -194,6 +262,7 @@ def run(selftest: bool = False) -> dict:
                 "stop": None, "target": None, "target_basis": None, "rr": None,
                 "demoted_reason": None, "last_date": None, "bars": 0,
                 "hist": [], "hist_ma200": [], "hist_from": None,
+                "news": _news_for(item, want_news, carried),
             })
             print(f"  FAIL {item['name']:<20} {msg}")
 
@@ -211,17 +280,76 @@ def run(selftest: bool = False) -> dict:
 
 
 def save(payload: dict) -> None:
+    """결과를 저장합니다.
+
+    latest.json은 매번 갱신하고, 날짜별 이력은 종가 확정 후에만 남깁니다.
+    장중에 1시간마다 이력을 쌓으면 리포만 무겁고 얻는 게 없기 때문입니다.
+    """
     import os
+    import shutil
+
     os.makedirs("docs/data", exist_ok=True)
-    os.makedirs("data/history", exist_ok=True)
-    day = payload["generated_at"][:10]
-    for path in ("docs/data/latest.json", f"data/history/{day}.json"):
+    with open("docs/data/latest.json", "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=1)
+    written = ["docs/data/latest.json"]
+
+    # 종목 관리 화면이 현재 목록을 읽을 수 있도록 docs 안에 사본을 둡니다
+    shutil.copyfile("watchlist.json", "docs/data/watchlist.json")
+    written.append("docs/data/watchlist.json")
+
+    if os.environ.get("SAVE_HISTORY", "1") == "1":
+        os.makedirs("data/history", exist_ok=True)
+        day = payload["generated_at"][:10]
+        path = f"data/history/{day}.json"
         with open(path, "w", encoding="utf-8") as f:
             json.dump(payload, f, ensure_ascii=False, indent=1)
-    print(f"\n저장 완료 → docs/data/latest.json, data/history/{day}.json")
+        written.append(path)
+
+    print("\n저장 완료 → " + ", ".join(written))
+
+
+def save_symbols() -> None:
+    """종목 관리 화면의 검색에 쓸 한국 상장종목 목록을 만듭니다.
+
+    실패해도 기존 파일을 그대로 두고 넘어갑니다 — 검색 목록이 하루 낡는 것보다
+    분석이 멈추는 쪽이 훨씬 나쁘기 때문입니다.
+    """
+    import FinanceDataReader as fdr
+
+    df = fdr.StockListing("KRX")
+    cols = {c.lower(): c for c in df.columns}
+    code_col = cols.get("code") or cols.get("symbol")
+    name_col = cols.get("name")
+    if not code_col or not name_col:
+        raise RuntimeError(f"예상과 다른 컬럼 구성: {list(df.columns)}")
+
+    rows = []
+    for code, name in zip(df[code_col], df[name_col]):
+        code = str(code).strip()
+        if len(code) == 6 and code.isdigit() and isinstance(name, str) and name.strip():
+            rows.append({"c": code, "n": name.strip()})
+
+    rows.sort(key=lambda r: r["n"])
+    with open("docs/data/symbols.json", "w", encoding="utf-8") as f:
+        json.dump({"updated": datetime.now(KST).strftime("%Y-%m-%d"), "kr": rows},
+                  f, ensure_ascii=False, separators=(",", ":"))
+    print(f"한국 종목 목록 갱신 → {len(rows)}종목")
 
 
 # ── 보조 ──────────────────────────────────────────────────────
+def _news_for(item: dict, want: bool, carried: dict) -> list:
+    """뉴스를 새로 받거나(want=True) 직전 결과에서 물려받습니다."""
+    if not want:
+        return carried.get(item["code"], [])
+    try:
+        news = fetch_news(item)
+        time.sleep(0.8)          # 구글 뉴스에 대한 최소한의 예의
+        return news
+    except Exception as e:  # noqa: BLE001
+        print(f"       ↳ {item['code']}: 뉴스 실패 ({type(e).__name__}) — 건너뜁니다")
+        return carried.get(item["code"], [])
+
+
 def _ok(v) -> bool:
     return v is not None and isinstance(v, float) and not math.isnan(v)
 
@@ -248,6 +376,14 @@ def _synthetic(seed_text: str) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
+    import os
+
     st = "--selftest" in sys.argv
     print("자체 점검 모드 (가짜 데이터)" if st else "실행 시작")
     save(run(selftest=st))
+
+    if not st and os.environ.get("UPDATE_SYMBOLS") == "1":
+        try:
+            save_symbols()
+        except Exception as e:  # noqa: BLE001
+            print(f"종목 목록 갱신 실패 — 기존 파일을 그대로 둡니다: {type(e).__name__}: {e}")
