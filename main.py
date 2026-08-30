@@ -116,6 +116,8 @@ def verdict(score: float, lv: dict) -> tuple[str, str | None]:
 
 
 HIST_DAYS = 120   # 화면 그래프에 그릴 일수
+START_CASH = 10_000_000.0   # 가상 계좌 초기 자금 (1천만원)
+frames: dict = {}           # 시뮬레이션에 넘길 원본 일봉
 NEWS_N = 5        # 종목당 뉴스 개수
 
 
@@ -187,6 +189,7 @@ def analyze(item: dict, df: pd.DataFrame) -> dict:
         "hist": _series(tail, krw),
         "hist_ma200": _series(ind.sma(df["Close"], 200).tail(HIST_DAYS), krw),
         "hist_from": str(tail.index[0].date()),
+        "hist_dates": [d.strftime("%m-%d") for d in tail.index],
         "name": item["name"],
         "code": item["code"],
         "market": item["market"],
@@ -236,6 +239,7 @@ def run(selftest: bool = False) -> dict:
     if want_news:
         print("뉴스도 함께 받습니다")
 
+    frames.clear()
     for item in watchlist:
         try:
             if selftest:
@@ -244,6 +248,7 @@ def run(selftest: bool = False) -> dict:
                 import fetch
                 df = fetch.fetch(item["market"], item["code"])
                 time.sleep(1.5)  # 소스를 배려한 간격. 지우지 마세요.
+            frames[item["code"]] = df
             row = analyze(item, df)
             row["news"] = _news_for(item, want_news, carried)
             results.append(row)
@@ -261,7 +266,7 @@ def run(selftest: bool = False) -> dict:
                 "reasons": [], "close": None, "change_pct": None, "entry": None,
                 "stop": None, "target": None, "target_basis": None, "rr": None,
                 "demoted_reason": None, "last_date": None, "bars": 0,
-                "hist": [], "hist_ma200": [], "hist_from": None,
+                "hist": [], "hist_ma200": [], "hist_from": None, "hist_dates": [],
                 "news": _news_for(item, want_news, carried),
             })
             print(f"  FAIL {item['name']:<20} {msg}")
@@ -306,6 +311,44 @@ def save(payload: dict) -> None:
         written.append(path)
 
     print("\n저장 완료 → " + ", ".join(written))
+
+
+def save_paper() -> None:
+    """가상 계좌 — 신호를 그대로 따랐다면 어땠을지 계산해 저장합니다."""
+    import backtest
+
+    watchlist = json.load(open("watchlist.json", encoding="utf-8"))
+    meta = {i["code"]: {"name": i["name"], "market": i["market"]} for i in watchlist}
+    usable = {c: d for c, d in frames.items() if c in meta}
+    if len(usable) < 1:
+        raise RuntimeError("시뮬레이션에 쓸 종목 데이터가 없습니다")
+
+    res = backtest.simulate(usable, meta, START_CASH)
+    st = backtest.stats(res, START_CASH)
+    if not st.get("ok"):
+        raise RuntimeError("시뮬레이션 결과가 비어 있습니다")
+
+    # 자산 곡선은 매일 한 점이면 충분합니다. 거래 내역은 최근 것부터.
+    trades = [t.__dict__ for t in res.trades]
+    trades.sort(key=lambda t: t["exit_date"] or t["entry_date"], reverse=True)
+
+    payload = {
+        "generated_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M KST"),
+        "assumptions": {
+            "start_cash": START_CASH,
+            "fee": backtest.FEE, "slippage": backtest.SLIPPAGE,
+            "tax_kr": backtest.TAX_KR_SELL, "risk_pct": backtest.RISK_PCT,
+            "max_weight": backtest.MAX_WEIGHT, "order_ttl": backtest.ORDER_TTL,
+            "symbols": len(usable),
+        },
+        "stats": st,
+        "dates": res.dates, "equity": res.equity, "buyhold": res.buyhold,
+        "trades": trades[:200],
+    }
+    with open("docs/data/paper.json", "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
+    print(f"가상 계좌 계산 완료 → 전략 {st['total_pct']:+.2f}% / "
+          f"단순보유 {st['bh_total_pct']:+.2f}% / 거래 {st['trades']}회")
 
 
 def save_symbols() -> None:
@@ -381,6 +424,12 @@ if __name__ == "__main__":
     st = "--selftest" in sys.argv
     print("자체 점검 모드 (가짜 데이터)" if st else "실행 시작")
     save(run(selftest=st))
+
+    if not st and os.environ.get("RUN_BACKTEST") == "1":
+        try:
+            save_paper()
+        except Exception as e:  # noqa: BLE001
+            print(f"가상 계좌 계산 실패 — 기존 결과를 그대로 둡니다: {type(e).__name__}: {e}")
 
     if not st and os.environ.get("UPDATE_SYMBOLS") == "1":
         try:
