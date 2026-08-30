@@ -34,6 +34,11 @@
   .wrap{max-width:820px;margin:0 auto;padding:20px 16px 64px}
 
   header{margin-bottom:18px}
+  .hrow{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .manage{font-size:13px;color:var(--accent);text-decoration:none;
+    border:1px solid var(--line);border-radius:7px;padding:5px 12px;white-space:nowrap}
+  .manage:hover{border-color:var(--accent)}
+  .manage:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   h1{font-size:20px;margin:0 0 4px;letter-spacing:-.02em}
   .updated{font-size:13px;color:var(--ink3);font-variant-numeric:tabular-nums}
 
@@ -104,19 +109,36 @@
   .lv b{font-size:13.5px;font-variant-numeric:tabular-nums;font-weight:600}
   .lv .st b{color:var(--sell)} .lv .tg b{color:var(--buy)}
 
-  .acts{display:flex;gap:8px;margin-top:11px;align-items:center;flex-wrap:wrap}
-  .acts a{font-size:12.5px;color:var(--accent);text-decoration:none;
-    border:1px solid var(--line);border-radius:6px;padding:4px 11px}
-  .acts a:hover{border-color:var(--accent)}
-  .acts a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  /* 카드 머리를 눌러 상세를 펼칩니다 */
+  .head{width:100%;text-align:left;background:none;border:none;padding:0;
+    font:inherit;color:inherit;cursor:pointer;display:block}
+  .head:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:6px}
+  .chev{font-size:12px;color:var(--ink3);margin-left:6px;display:inline-block;
+    transition:transform .18s}
+  .head[aria-expanded="true"] .chev{transform:rotate(180deg)}
 
-  details{margin-top:10px}
-  summary{font-size:12.5px;color:var(--accent);cursor:pointer;list-style:none}
-  summary::-webkit-details-marker{display:none}
-  summary::before{content:"근거 보기 ▾"}
-  details[open] summary::before{content:"근거 접기 ▴"}
-  details ul{margin:8px 0 0;padding-left:17px;font-size:13px;color:var(--ink2)}
-  details li{margin-bottom:3px}
+  .detail{display:none;margin-top:13px;padding-top:13px;border-top:1px solid var(--line)}
+  .detail.open{display:block}
+  .dtitle{font-size:11px;letter-spacing:.1em;color:var(--ink3);text-transform:uppercase;
+    margin:0 0 7px}
+  table.spec{width:100%;border-collapse:collapse;font-size:13px}
+  table.spec th{text-align:left;font-weight:400;color:var(--ink3);padding:5px 0;width:44%}
+  table.spec td{text-align:right;padding:5px 0;font-variant-numeric:tabular-nums;font-weight:600}
+  table.spec tr+tr th,table.spec tr+tr td{border-top:1px solid var(--line)}
+
+  ul.why{margin:9px 0 0;padding-left:17px;font-size:12.5px;color:var(--ink2)}
+  ul.why li{margin-bottom:3px}
+
+  .news{margin-top:16px}
+  .news a{display:block;text-decoration:none;color:inherit;padding:8px 0;
+    border-top:1px solid var(--line)}
+  .news a:first-of-type{border-top:none}
+  .news a:hover .nt{color:var(--accent)}
+  .news a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+  .nt{font-size:13.5px;line-height:1.5;display:block}
+  .nm2{font-size:11.5px;color:var(--ink3);margin-top:2px;display:block}
+  .nonews{font-size:12.5px;color:var(--ink3);padding:6px 0}
+
   .demote{font-size:12.5px;color:var(--warn);margin-top:8px}
   .err{font-size:12.5px;color:var(--sell);margin-top:8px;word-break:break-all}
 
@@ -127,7 +149,10 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>오늘의 타점</h1>
+    <div class="hrow">
+      <h1>오늘의 타점</h1>
+      <a class="manage" href="manage.html">종목 관리</a>
+    </div>
     <p class="updated" id="updated">불러오는 중…</p>
   </header>
 
@@ -163,18 +188,6 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, m =>
 function changeClass(pct, market){
   if (pct == null || pct === 0) return "flat";
   return (market === "KR" ? "kr" : "us") + (pct > 0 ? "-up" : "-down");
-}
-
-// 종목별 뉴스 페이지 — 한국은 네이버 증권, 미국은 야후 파이낸스
-function newsURL(it){
-  return it.market === "KR"
-    ? `https://finance.naver.com/item/news.naver?code=${encodeURIComponent(it.code)}`
-    : `https://finance.yahoo.com/quote/${encodeURIComponent(it.code)}/news`;
-}
-function quoteURL(it){
-  return it.market === "KR"
-    ? `https://finance.naver.com/item/main.naver?code=${encodeURIComponent(it.code)}`
-    : `https://finance.yahoo.com/quote/${encodeURIComponent(it.code)}`;
 }
 
 function matches(it){
@@ -271,26 +284,51 @@ function cardHTML(it){
       <div><span>손익비</span><b>${it.rr == null ? "—" : it.rr.toFixed(2)}</b></div>
     </div>`;
 
-  const reasons = (it.reasons && it.reasons.length)
-    ? `<details><summary></summary><ul>${it.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}
-       ${it.target_basis ? `<li>목표가 기준: ${esc(it.target_basis)}</li>` : ""}</ul></details>` : "";
+  const row = (k, v) => v == null || v === "" ? ""
+    : `<tr><th>${k}</th><td>${v}</td></tr>`;
+
+  const spec = `<table class="spec">
+    ${row("현재가", fmt(it.close, cur))}
+    ${row("20일선", fmt(it.ma20, cur))}
+    ${row("200일선", fmt(it.ma200, cur))}
+    ${row("RSI (14)", it.rsi14 == null ? null : it.rsi14.toFixed(1))}
+    ${row("ATR (14)", fmt(it.atr14, cur))}
+    ${row("목표가 기준", it.target_basis ? esc(it.target_basis) : null)}
+    ${row("데이터", it.last_date ? `${esc(it.last_date)} · ${it.bars ?? 0}봉` : null)}
+  </table>`;
+
+  const why = (it.reasons && it.reasons.length)
+    ? `<ul class="why">${it.reasons.map(r => `<li>${esc(r)}</li>`).join("")}</ul>` : "";
+
+  const news = (it.news && it.news.length)
+    ? it.news.map(a => `<a href="${esc(a.u)}" target="_blank" rel="noopener">
+         <span class="nt">${esc(a.t)}</span>
+         <span class="nm2">${esc([a.s, a.d].filter(Boolean).join(" · "))}</span></a>`).join("")
+    : `<p class="nonews">아직 받아온 기사가 없습니다. 장 마감 후 실행에서 채워집니다.</p>`;
 
   return `<div class="card" data-cur="${cur}">
-    <div class="top">
-      <div><span class="nm">${esc(it.name)}</span><span class="code">${esc(it.code)}</span></div>
-      <div class="px">${price}</div>
-    </div>
+    <button class="head" type="button" aria-expanded="false">
+      <div class="top">
+        <div><span class="nm">${esc(it.name)}</span><span class="code">${esc(it.code)}</span
+          ><span class="chev">▾</span></div>
+        <div class="px">${price}</div>
+      </div>
+    </button>
     <span class="verdict v-${vkey}">${esc(it.verdict)}</span>
     ${it.score != null ? `<span class="score">${it.score > 0 ? "+" : ""}${it.score}점</span>` : ""}
     ${it.demoted_reason ? `<div class="demote">${esc(it.demoted_reason)}</div>` : ""}
     ${it.error ? `<div class="err">${esc(it.error)}</div>` : ""}
     ${chartHTML(it)}
     ${levels}
-    <div class="acts">
-      <a href="${newsURL(it)}" target="_blank" rel="noopener">뉴스 ↗</a>
-      <a href="${quoteURL(it)}" target="_blank" rel="noopener">시세 ↗</a>
+    <div class="detail">
+      <p class="dtitle">지표</p>
+      ${spec}
+      ${why}
+      <div class="news">
+        <p class="dtitle">뉴스</p>
+        ${news}
+      </div>
     </div>
-    ${reasons}
   </div>`;
 }
 
@@ -359,6 +397,14 @@ function attachHover(){
     });
   }, true);
 }
+
+/* ── 카드 펼치기 ── */
+document.getElementById("list").addEventListener("click", e => {
+  const head = e.target.closest(".head"); if (!head) return;
+  const open = head.getAttribute("aria-expanded") === "true";
+  head.setAttribute("aria-expanded", String(!open));
+  head.closest(".card").querySelector(".detail").classList.toggle("open", !open);
+});
 
 /* ── 검색과 필터 ── */
 const qInput = document.getElementById("q");
