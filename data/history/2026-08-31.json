@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-31T01:53:49+09:00",
- "generated_at_display": "2026-08-31 01:53 KST",
+ "generated_at": "2026-08-31T01:55:49+09:00",
+ "generated_at_display": "2026-08-31 01:55 KST",
  "total": 10,
  "ok": 10,
  "failed": 0,
@@ -1691,10 +1691,10 @@
    "error": null,
    "news": [
     {
-     "t": "엔비디아, '오픈소스' 허깅페이스 18조에 인수...AI 생태계 수직통합 - AI타임스",
-     "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBma0NJSm9QRGw3bzlyNWFzTXg4ZHRVM05FejJIdnd6VVI5QWVPSTBwV1dhTnpWQkFEUkRuQncwek02dlRlTWVISXhJZWFMcGV1YjQ1NF9uVVF2d2Q4OURMWGN4ZGZsUjVoX2c?oc=5",
-     "s": "AI타임스",
-     "d": "08-27"
+     "t": "‘K-엔비디아’ 키운다며 정책자금 3000억 넣었는데… 리벨리온, 엔비디아 품으로 가나 - 조선비즈 - Chosunbiz",
+     "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUHlEUU52ZGdpeHJyRVJ0WXRpOTlXclFHNElXbUNwWEhocHFsUTBraDVoSVhQNTlqcEJodlhDcFVnWEI0N3FVUU1UZHZZUVNweDluS2psTU5kTEJpZEU0Y3dkcHZ0eFVnY1gzeVN3UkxEbHpUWVhtdzZMWEF2LURvcTFR0gGWAUFVX3lxTE1UTXdwdWRKQXhFQzZOX0tqSkpTR0w1WGVUak5aaGdQWFdtT2t5VTEwRThkYzB0VFVYV1lVLXNhN0EyOWU4WFEzdzY0eFVnTFNVZ2N2dU9iWkRTTkl4c1IyZTlvWHEzN2s3dkdSUU5sTE1VOFdzaXpSNURoUXFPb214am43eFZ2dFBLclUyNVA2ZUlvMDBlZw?oc=5",
+     "s": "Chosunbiz",
+     "d": "08-28"
     },
     {
      "t": "[류재철의 로봇 전략] 엔비디아와 휴머노이드 동맹…'원 LG' 이끄는 지휘자 - 딜사이트",
@@ -2144,10 +2144,10 @@
      "d": "08-27"
     },
     {
-     "t": "인바디, 상반기 호실적에 글로벌 인재 확보…하반기 채용 - v.daum.net",
-     "u": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5TenRodFFnUHNaWXViN2FmOEhOWVVPdW04RU0tdVJlX2JjemxtSV9uWTFmT2U1V1F3RkRZelhuS2M2R3ZMSTZweXZyNURMR1kzaDZ4SA?oc=5",
-     "s": "v.daum.net",
-     "d": "08-28"
+     "t": "인바디 목표가 8만1000원, 비만치료 수요 거론 - tokenpost.kr",
+     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9uTlhfblVlQk5lMkhTTmJFblR0bDNHNnZKdmZsNDZpT3BmMDhZbURlUkxQOU53ZEtsME5aYzlBUUgzSUp1clZWVGpOeU5RcFpSejZlQkxn0gFbQVVfeXFMTlItdm9EbDlqdlVsR0xFeHhhN2tCa3F2ZF9md0tBWnZ6c01jZnY5dFB4dm9UQXp1U2ZCWWlmcWdfNTduaTg2ODY1T2RzQWhnd1JFdXYxUjB0YWpwbw?oc=5",
+     "s": "tokenpost.kr",
+     "d": "08-27"
     }
    ]
   },
@@ -3209,9 +3209,9 @@
    "error": null,
    "news": [
     {
-     "t": "스페이스X, AI 전력난에 가스터빈 핵심부품 직접 만든다 - 글로벌이코노믹",
-     "u": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMWxwU0hJcEg4eDF5d1hLcUh4cHYzTWd6VFVPUGxPMENYbXN3UDhmVWJqVEVEZVhORFV4X09Qc3NwUWVqenFDTnNSaW1VZzJHTko4Mml0WEt2UkxaRU1YcjdQdzVUamRaN3hJcDh4bTRvU2VlTWRua3VXZzFaYUpzbUR1UVVIeUVs?oc=5",
-     "s": "글로벌이코노믹",
+     "t": "오픈AI, 스페이스X 인수된 커서 계약해지…머스크 \"사기꾼\" 비난 - 연합뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1IZFY0WTg5Z3dTRktFQ3hkaTduSlpRX1lNZXYzdlpnVG04YXN5TlNCNHlRQVBQQ2tiazRLUHYzS3I0YUJoN0JSYV9remRRM0xZR0I0dERWRmdZYTQ?oc=5",
+     "s": "연합뉴스",
      "d": "08-30"
     },
     {
@@ -3638,15 +3638,15 @@
    "error": null,
    "news": [
     {
-     "t": "소회 밝히는 두산에너빌리티 현장소장 - 뉴스1",
-     "u": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE91dG1vTVNObko0Ylg4LXp1aUR0RWpsRzRsSWFGbDB2R0xaVExnQVJhVHB3Z3JCZ1JNUUJGT29QblBQaGlmN1VlVkJBRQ?oc=5",
-     "s": "뉴스1",
-     "d": "08-30"
+     "t": "박지원 두산에너 회장 네팔 도착… 실종 직원 구조 위해 직접 나서 - 머니투데이 - 머니투데이",
+     "u": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0yOWVOWG9rbXloNUhzTnYxTVZFZ01zejA3MHIwVFFkLUZ4aGp3ZHNPTUEwYVMxOUppcmlCdlVycTZ0eVpVbTh1WlQtUUVnUGtLaUtVaGttcy1aMnNfR0ZlQTk4eUZCdXdrTExB0gFwQVVfeXFMUGpOUUJXX1lxREU1aHA1OVJod1ZyZXZfdDhvQXNzOU9GX05ieU56YUpEYlRLbjNzU2Q1Uk1SOHEydXpZN1RvZTVxSFdyZjg2N3A5NXVQeEg0UFFnNV84bDhEdVVEcGV6TFM2NjhHU2phZw?oc=5",
+     "s": "머니투데이",
+     "d": "08-29"
     },
     {
-     "t": "'두산에너빌리티 소속 네팔인 작업자도 찾아주세요' - 연합뉴스",
-     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0NHJ3RTBWVTdkb3g5ak1kVUpyaFNKZ1dkY2VwX19td0tRUkpPdHpVVWFZMWVJY1M2NllVc2ZaYzUwSEp2YVoySXNuU0JBZjdrLVprOXJvUktuR1nSAWBBVV95cUxOQ0NlUFJ4OWYwc09YU3FycVpuTDJVWWhKTEdaVFEza1RrRjluS01RdjVYRDVLeXM0YVdVZ2QyVEw0ckNpOXpNdFN6N3o0RGJpSHRveGZmZFRpbFI1TGp2R0I?oc=5",
-     "s": "연합뉴스",
+     "t": "\"홍수 덮친 순간 저는 터널 안... 나왔을 땐 물밖에 안 보였다\" - 조선일보",
+     "u": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNVA2aDVEWFFQUkxjRF9FWW4wU0p1eXNqOTA5eE9MaUV4STFqVnJtRTNBeEFKQ0FvRUR6NG5zWk0zSFU1Y0JQTGRUV291OXJCQllXZzhTUVRTbkVvMDFCUjYta2F2eW1YQ1ktVEtYbXIxNVZycG9rRjc0MEh1c0g2THJreWs5TkdZOUNWMGZQOWQ?oc=5",
+     "s": "조선일보",
      "d": "08-30"
     },
     {
@@ -3662,10 +3662,10 @@
      "d": "08-30"
     },
     {
-     "t": "‘네팔로 급파’ 두산에너빌리티 대표 “직원 구조에 최선 다하겠다” - 조선비즈 - Chosunbiz",
-     "u": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZEY3UmFzUFRIYTE4UU8wT0RaRTZ5Q29UQ1JmUXNhUWhhWXpzUFF4T0dUaGNXMnlqRHQ0SFRUdkZuVlh1c25aUXRPZ3dZRkZSYk4yWVoxSDRKd0hNUnl0S1MtczZzSHVFemtsVVV6RnpxenQ1aXNVY0NkbDBZcUhpZE1NSW7SAZgBQVVfeXFMTlc0LXRhWkw2V3BkT1NLck1MYlBqWDNGNWRGWlVWQXpUUUxEMWkyaFM1VkphQVJVTjkyMTV0MVlYSkpKb3VMZnoybVNRM1NLcWt1QVdhaGtlckRpcWtzdzcxU04wTnRidDVmbllQN05WWUloUHlxdHBKanlOd2lmd0J0OTBpNzlKM1ZBaTJlWkpZUXpMNm1BS0g?oc=5",
-     "s": "Chosunbiz",
-     "d": "08-27"
+     "t": "남동발전 네팔 현지팀 \"실종자 고립 가능성에 구호물품\"…두산 \"드론도 검토\" - 연합뉴스TV",
+     "u": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9OZEx5clcyaWd6Ync3dEk5WG00M19rd2puTE1HcFh2QkNzSEZLcFpianRRZDA3N0JoNnNoYThLX1JDSi1fd1ZWQk43R1dTUm1wRThvU0VmVE5hTWhTR1ZFZmo1b3hHY2M?oc=5",
+     "s": "연합뉴스TV",
+     "d": "08-29"
     }
    ]
   },
