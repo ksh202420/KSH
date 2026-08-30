@@ -1,10 +1,12 @@
 [
-  { "name": "Apple",              "code": "AAPL",   "market": "US" },
-  { "name": "Microsoft",          "code": "MSFT",   "market": "US" },
-  { "name": "SCHD 배당ETF",        "code": "SCHD",   "market": "US" },
-  { "name": "S&P500 ETF",         "code": "SPY",    "market": "US" },
-  { "name": "삼성전자",             "code": "005930", "market": "KR" },
-  { "name": "SK하이닉스",           "code": "000660", "market": "KR" },
-  { "name": "TIGER 미국S&P500",    "code": "360750", "market": "KR" },
-  { "name": "KODEX 200",          "code": "069500", "market": "KR" }
+  { "name": "Apple", "code": "AAPL", "market": "US" },
+  { "name": "Microsoft", "code": "MSFT", "market": "US" },
+  { "name": "삼성전자", "code": "005930", "market": "KR" },
+  { "name": "SK하이닉스", "code": "000660", "market": "KR" },
+  { "name": "두산에너빌리티", "code": "034020", "market": "KR" },
+  { "name": "테슬라", "code": "TSLA", "market": "US" },
+  { "name": "엔비디아", "code": "NVDA", "market": "US" },
+  { "name": "스페이스x", "code": "SPCX", "market": "US" },
+  { "name": "팔란티어", "code": "PLTR", "market": "US" },
+  { "name": "인바디", "code": "041830", "market": "KR" }
 ]
