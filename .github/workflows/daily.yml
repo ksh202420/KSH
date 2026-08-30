@@ -28,6 +28,8 @@ jobs:
       # 한국 상장종목 목록(검색용)은 하루 한 번이면 충분합니다.
       UPDATE_SYMBOLS: ${{ (github.event_name == 'workflow_dispatch' || github.event.schedule == '7 23 * * 1-5') && '1' || '0' }}
       # 뉴스도 마감 후에만 받습니다. 장중 실행은 직전 결과의 뉴스를 그대로 물려받습니다.
+      # 가상 계좌(백테스트)는 무거우므로 마감 후에만 다시 계산합니다.
+      RUN_BACKTEST: ${{ (github.event_name == 'workflow_dispatch' || github.event.schedule == '7 23 * * 1-5') && '1' || '0' }}
       FETCH_NEWS: ${{ (github.event_name == 'workflow_dispatch' || github.event.schedule == '37 6 * * 1-5' || github.event.schedule == '7 23 * * 1-5') && '1' || '0' }}
 
     steps:
