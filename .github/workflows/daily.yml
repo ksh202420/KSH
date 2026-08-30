@@ -3,21 +3,32 @@ name: daily-signals
 on:
   schedule:
     # cron은 항상 UTC 기준입니다. 한국 시간이 아닙니다.
-    - cron: '37 6 * * 1-5'   # 15:37 KST — 한국장 마감 후
-    - cron: '7 23 * * 1-5'   # 08:07 KST 익일 — 미국장 마감 후
-  workflow_dispatch:          # Actions 탭에서 손으로 실행하는 버튼
+    - cron: '17 0-6 * * 1-5'   # 한국장 09:17~15:17 KST — 장중 1시간마다
+    - cron: '37 6 * * 1-5'     # 한국장 마감 후 15:37 KST — 이력 저장
+    - cron: '17 14-20 * * 1-5' # 미국장 장중 1시간마다 (서머타임 양쪽 포함)
+    - cron: '7 23 * * 1-5'     # 미국장 마감 후, 익일 08:07 KST — 이력 + 종목목록 갱신
+  workflow_dispatch:            # Actions 탭에서 손으로 실행하는 버튼
 
 permissions:
-  contents: write             # 계산 결과를 리포에 커밋하기 위해 필요합니다
+  contents: write
 
 concurrency:
-  group: daily-signals        # 두 실행이 겹쳐 커밋이 충돌하는 것을 막습니다
+  group: daily-signals
   cancel-in-progress: false
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
+
+    env:
+      # 이력은 종가가 확정된 뒤에만 남깁니다.
+      # 장중 실행까지 매번 쌓으면 리포만 무거워지고 얻는 게 없습니다.
+      SAVE_HISTORY: ${{ (github.event_name == 'workflow_dispatch' || github.event.schedule == '37 6 * * 1-5' || github.event.schedule == '7 23 * * 1-5') && '1' || '0' }}
+      # 한국 상장종목 목록(검색용)은 하루 한 번이면 충분합니다.
+      UPDATE_SYMBOLS: ${{ (github.event_name == 'workflow_dispatch' || github.event.schedule == '7 23 * * 1-5') && '1' || '0' }}
+      # 뉴스도 마감 후에만 받습니다. 장중 실행은 직전 결과의 뉴스를 그대로 물려받습니다.
+      FETCH_NEWS: ${{ (github.event_name == 'workflow_dispatch' || github.event.schedule == '37 6 * * 1-5' || github.event.schedule == '7 23 * * 1-5') && '1' || '0' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -42,7 +53,6 @@ jobs:
             echo "변경 사항이 없어 커밋을 건너뜁니다."
           else
             git commit -m "signals $(date -u '+%Y-%m-%d %H:%M') UTC"
-            # 다른 실행이 먼저 푸시했을 수 있으므로 한 번 당겨받고 푸시합니다
             git pull --rebase --autostash origin ${{ github.ref_name }}
             git push
           fi
