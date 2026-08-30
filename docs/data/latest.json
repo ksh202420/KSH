@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-31T02:05:19+09:00",
- "generated_at_display": "2026-08-31 02:05 KST",
+ "generated_at": "2026-08-31T02:11:23+09:00",
+ "generated_at_display": "2026-08-31 02:11 KST",
  "total": 10,
  "ok": 10,
  "failed": 0,
@@ -839,6 +839,18 @@
      "d": "08-29"
     },
     {
+     "t": "금산법 '10%룰' 묶인 삼성전자 자사주 소각 - 마켓인",
+     "u": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBmMHE3WGJRT3A3WTNTejF6U0l2cDUzdGlZanY5elQ0WmdCSEJSX3ZjZVA1U1QzRHFEYzkwTlVFTUl4WDRyblA2U3g1VGxkTEw5S2RaRlBEVkY4WmtpUlZRblM3cnR3bU8yVERLaXFPNm9Nam8?oc=5",
+     "s": "마켓인",
+     "d": "08-30"
+    },
+    {
+     "t": "\"삼성전자 주가 끝난 거 아냐?\"...증권가가 아직도 \"사자\" 주장하는 이유 - v.daum.net",
+     "u": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5rWkJPVXBINWdaR1J6Tks0WHlHUzNUMGhaLS1vcWF0S3B4VktTUlRQSlpNUTNUMmhDTm4xWVZRSlItUzA5cmc?oc=5",
+     "s": "v.daum.net",
+     "d": "08-29"
+    },
+    {
      "t": "게이밍 시장 놓고 펼쳐진 삼성·LG 맞대결…1100㎐ vs 네이티브 1000㎐ - IT조선",
      "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE44T2ZDQVJadURTcVdNbEE5MUNXdjV6RF83blYwUU5DQVd0WmdKVzNzVzBXYWFVTDF1c20waDljOHRqSzV0VklqbG5qazhrTVBpb1JEc2lUU1Rub3BwWC1hOXdId1lSMDZqdUtuSHdiT3bSAXRBVV95cUxONDFVVkcxYmxXcVVMcUlyMlFyQUJFaGVWdUJnQnNHTVBHQ3RTUnFTV1lOaFBQUnNRT0FRZEFJR2NiT3dhRTJ5bEhzblFCSlpjWVFfMl92UzJJeTVzaDlTR0NDeHJOX1RsMGxKdWEzeHNVVE5RdQ?oc=5",
      "s": "IT조선",
@@ -848,18 +860,6 @@
      "t": "북미 주방가전도 K열풍… 삼성-LG 합산 점유율, GE-월풀 앞질러 - v.daum.net",
      "u": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5xODQ2N19oaUlCUFBuRHFnMVZxeWJUOG9lLVZ5OWFaZ012RGJ4a2pSRXMzYkpDbkNRTm9JNzNMRjVaRVBham5pRm4xb1hpazA?oc=5",
      "s": "v.daum.net",
-     "d": "08-31"
-    },
-    {
-     "t": "글로벌 게이밍 모니터 시장 급팽창, 삼성전자·LG전자 '고해상도' '고주사율'로 1위 경쟁 - 비즈니스포스트",
-     "u": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1NdWZCWFFYdFFZcGozTW9xZDc0aExrd2s1dDBCa2VmWU5ySkpPcGpYU1JjLXBoallRb2tiLTRTd3J5X1hXR1phLThwOG4zbWZVNkFkcjNfZnFBbFZYYlY3N2NPal9GaDdyVTZ0TFc4emZpTmM?oc=5",
-     "s": "비즈니스포스트",
-     "d": "08-30"
-    },
-    {
-     "t": "그룹 모든 업무에 AI 도입… 2030년까지 AI 자율 공장 전환 - 조선일보",
-     "u": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQYnllTlhFVGhKQ3M0dThQMjdnVUphMmtNRlo4VWhoRFY4OExlOV9HUmZ6b2ZONVNKdWlrbmVHMElJc18yU2g5c0hIdkctS21NdXBCUTEycGxhQi15THROb0ctZXVqOEdNTC1fRzZlRVRvMXJNdVduYms1dm9sSFY2OEpvdW5tbERwSWQ5YVln?oc=5",
-     "s": "조선일보",
      "d": "08-31"
     }
    ]
@@ -3638,9 +3638,21 @@
    "error": null,
    "news": [
     {
-     "t": "고립 당시 소회 밝히는 두산에너빌리티 현장소장 - 뉴스1",
-     "u": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9qOFRFTkZPOVBMSXRxb2lYUGZJbGFpeUdqclI3ZFpjMFRCSExMcEFCcXI3NnltWDJQcnFTQ29IY1R0VWU0SEJWLWMtQQ?oc=5",
-     "s": "뉴스1",
+     "t": "\"헬기 빨리 띄워달라\"…네팔 실종 두산에너빌리티 직원 가족들 '비통' - 뉴시스",
+     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1aV0RyVWtfcXlIazBKdGpDeGVGWXR6UFBOTHBRTXo2Z3VpS3ZFaEpBQUJBVWI3TVZoaFlINVZOUEJFZ3lXTng0a3dIbGNaMnlSTF9ONUlwYnI4NUpGTHZFcdIBeEFVX3lxTE9CdDA3dWFpeVA2ZlFpQklmSzgydmpwc2h6a1h0SVJIUzRoSXVBUDNOdlVZYVZkcTdvN0V4TWEweE5XOUQ3LVNsUWNCT3oyNWJIVkpIYXl4LXgzRjFoS09XZXRDZnBwQVlRNmVqYmtrS2xuNlQ4cTBORQ?oc=5",
+     "s": "뉴시스",
+     "d": "08-28"
+    },
+    {
+     "t": "두산에너빌리티 현장소장 \"사방이 물보라…3시간 지나서야 현장 보여\" - 연합뉴스TV",
+     "u": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5oU3RpdWJBNmJZQlRPZGdnQVkyVEVDUmVPUEJBcXJpWHhvTFlkZ1E2QXJrLWxpV3pDSEFSUFpJT0JEUzZtYi0zZ3VuNER6a0FURm5BMjZGeFFEeU82UkpvV0xoN0hWQVU?oc=5",
+     "s": "연합뉴스TV",
+     "d": "08-31"
+    },
+    {
+     "t": "'두산에너빌리티 소속 네팔인 작업자도 찾아주세요' - 연합뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0NHJ3RTBWVTdkb3g5ak1kVUpyaFNKZ1dkY2VwX19td0tRUkpPdHpVVWFZMWVJY1M2NllVc2ZaYzUwSEp2YVoySXNuU0JBZjdrLVprOXJvUktuR1nSAWBBVV95cUxOQ0NlUFJ4OWYwc09YU3FycVpuTDJVWWhKTEdaVFEza1RrRjluS01RdjVYRDVLeXM0YVdVZ2QyVEw0ckNpOXpNdFN6N3o0RGJpSHRveGZmZFRpbFI1TGp2R0I?oc=5",
+     "s": "연합뉴스",
      "d": "08-30"
     },
     {
@@ -3650,21 +3662,9 @@
      "d": "08-30"
     },
     {
-     "t": "'15년 우여곡절' 두산에너빌리티 네팔 발전소 - 비즈워치",
-     "u": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxT1dzQ1V0bUYyc0x3Vk9UNVEzdXR1SWp2MnAwb01tVHAtQ1V4SlE4aTllZ0NQSUFkM0hidlEzaEE5Mlc5ZG5GMmVYbkJOTGtsRjVoTktnYV9xTzNQVG16YW5IRDNyUVc3MXdLSQ?oc=5",
-     "s": "비즈워치",
-     "d": "08-27"
-    },
-    {
-     "t": "취재진과 인터뷰하는 두산에너빌리티 현장소장 - 연합뉴스 한민족센터",
-     "u": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4wazU3SzcwMW5DVlpjdHFhcElnR092aU1sNE5QcV8tRHlkXzFHOWNBcC12ZjZ5M0NBaDcyV0dlY3I3RE8wRWZFaFkxcE5FWWhsLTdEQXZ2NDJ1VkhvV1J0N1N0d0tvcWwwaWo2UjNQVTc0MTlO?oc=5",
-     "s": "연합뉴스 한민족센터",
-     "d": "08-30"
-    },
-    {
-     "t": "남동발전 네팔 현지팀 \"실종자 고립 가능성에 구호물품\"…두산 \"드론도 검토\" - 연합뉴스TV",
-     "u": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9OZEx5clcyaWd6Ync3dEk5WG00M19rd2puTE1HcFh2QkNzSEZLcFpianRRZDA3N0JoNnNoYThLX1JDSi1fd1ZWQk43R1dTUm1wRThvU0VmVE5hTWhTR1ZFZmo1b3hHY2M?oc=5",
-     "s": "연합뉴스TV",
+     "t": "박지원 두산에너 회장 네팔 도착… 실종 직원 구조 위해 직접 나서 - 머니투데이 - 머니투데이",
+     "u": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0yOWVOWG9rbXloNUhzTnYxTVZFZ01zejA3MHIwVFFkLUZ4aGp3ZHNPTUEwYVMxOUppcmlCdlVycTZ0eVpVbTh1WlQtUUVnUGtLaUtVaGttcy1aMnNfR0ZlQTk4eUZCdXdrTExB0gFwQVVfeXFMUGpOUUJXX1lxREU1aHA1OVJod1ZyZXZfdDhvQXNzOU9GX05ieU56YUpEYlRLbjNzU2Q1Uk1SOHEydXpZN1RvZTVxSFdyZjg2N3A5NXVQeEg0UFFnNV84bDhEdVVEcGV6TFM2NjhHU2phZw?oc=5",
+     "s": "머니투데이",
      "d": "08-29"
     }
    ]
