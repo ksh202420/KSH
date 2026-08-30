@@ -1,0 +1,48 @@
+name: daily-signals
+
+on:
+  schedule:
+    # cron은 항상 UTC 기준입니다. 한국 시간이 아닙니다.
+    - cron: '37 6 * * 1-5'   # 15:37 KST — 한국장 마감 후
+    - cron: '7 23 * * 1-5'   # 08:07 KST 익일 — 미국장 마감 후
+  workflow_dispatch:          # Actions 탭에서 손으로 실행하는 버튼
+
+permissions:
+  contents: write             # 계산 결과를 리포에 커밋하기 위해 필요합니다
+
+concurrency:
+  group: daily-signals        # 두 실행이 겹쳐 커밋이 충돌하는 것을 막습니다
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: 라이브러리 설치
+        run: pip install -r requirements.txt
+
+      - name: 신호 계산
+        run: python main.py
+
+      - name: 결과 커밋
+        run: |
+          git config user.name  "signal-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data data
+          if git diff --staged --quiet; then
+            echo "변경 사항이 없어 커밋을 건너뜁니다."
+          else
+            git commit -m "signals $(date -u '+%Y-%m-%d %H:%M') UTC"
+            # 다른 실행이 먼저 푸시했을 수 있으므로 한 번 당겨받고 푸시합니다
+            git pull --rebase --autostash origin ${{ github.ref_name }}
+            git push
+          fi
