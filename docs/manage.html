@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>종목 관리</title>
+<style>
+  :root{
+    --bg:#F3F5F8; --card:#FFF; --ink:#121820; --ink2:#57657A; --ink3:#8A98AC;
+    --line:#DDE3EB; --accent:#0D6570; --accentInk:#FFF;
+    --add:#1B6E52; --addBg:#DDEEE6; --del:#A2372E; --delBg:#F5DFDC;
+    --warn:#8A6212; --warnBg:#F6EACF; --ok:#1B6E52; --okBg:#DDEEE6;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0C1118; --card:#141C25; --ink:#E8EEF5; --ink2:#AFBCCB; --ink3:#7C8B9C;
+      --line:#26313D; --accent:#5FC6D0; --accentInk:#0C1118;
+      --add:#58BE95; --addBg:#123529; --del:#E38077; --delBg:#3A1D1A;
+      --warn:#DDB25A; --warnBg:#33290F; --ok:#58BE95; --okBg:#123529;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+    font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all}
+  .wrap{max-width:720px;margin:0 auto;padding:20px 16px 70px}
+
+  header{margin-bottom:6px}
+  h1{font-size:20px;margin:0 0 4px;letter-spacing:-.02em}
+  .back{font-size:13px;color:var(--accent);text-decoration:none}
+  .sub{font-size:13px;color:var(--ink3);margin:2px 0 18px}
+
+  h2{font-size:15px;font-weight:650;margin:26px 0 9px;letter-spacing:-.01em}
+  .count{font-size:12.5px;color:var(--ink3);font-weight:400;margin-left:6px}
+
+  .box{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 15px}
+
+  .seg{display:flex;gap:7px;margin-bottom:12px}
+  .seg button{flex:1;font:inherit;font-size:13.5px;padding:7px;border-radius:8px;
+    border:1px solid var(--line);background:var(--card);color:var(--ink2);cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accentInk)}
+  .seg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  input[type=search],input[type=text]{width:100%;font:inherit;font-size:15px;
+    padding:10px 13px;border:1px solid var(--line);border-radius:9px;
+    background:var(--bg);color:var(--ink)}
+  input::placeholder{color:var(--ink3)}
+  input:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+  .hint{font-size:12.5px;color:var(--ink3);margin:7px 0 0}
+
+  .results{margin-top:10px;max-height:290px;overflow-y:auto;
+    border:1px solid var(--line);border-radius:9px}
+  .results:empty{display:none}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding:9px 12px;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:none}
+  .row .t{min-width:0}
+  .row .t b{font-weight:600;font-size:14.5px}
+  .row .t span{font-size:12px;color:var(--ink3);margin-left:6px;font-variant-numeric:tabular-nums}
+  .row .t i{display:block;font-style:normal;font-size:11.5px;color:var(--ink3)}
+  .row button{font:inherit;font-size:12.5px;padding:5px 12px;border-radius:6px;
+    border:none;cursor:pointer;flex:none;font-weight:600}
+  .badd{background:var(--addBg);color:var(--add)}
+  .bdel{background:var(--delBg);color:var(--del)}
+  .row button:disabled{opacity:.45;cursor:default}
+  .row button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .empty{padding:16px;text-align:center;color:var(--ink3);font-size:13.5px}
+
+  textarea{width:100%;height:190px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;line-height:1.6;padding:12px;border:1px solid var(--line);
+    border-radius:9px;background:var(--bg);color:var(--ink);resize:vertical}
+  .btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .btns a,.btns button{font:inherit;font-size:13.5px;font-weight:600;padding:9px 15px;
+    border-radius:8px;border:1px solid var(--accent);cursor:pointer;text-decoration:none;
+    background:var(--accent);color:var(--accentInk);display:inline-block}
+  .btns .ghost{background:var(--card);color:var(--accent)}
+  .btns button:focus-visible,.btns a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .toast{font-size:13px;color:var(--ok);background:var(--okBg);border-radius:7px;
+    padding:8px 12px;margin-top:10px;display:none}
+  .toast.show{display:block}
+
+  ol.steps{margin:12px 0 0;padding-left:20px;font-size:13.5px;color:var(--ink2)}
+  ol.steps li{margin-bottom:6px}
+  .note{background:var(--warnBg);color:var(--warn);border-radius:8px;padding:11px 14px;
+    font-size:13px;margin-top:14px;font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="./">← 오늘의 타점</a>
+    <h1>종목 관리</h1>
+    <p class="sub">여기서 목록을 만들고, 마지막에 한 번만 GitHub에 붙여넣으면 됩니다.</p>
+  </header>
+
+  <h2>종목 찾기</h2>
+  <div class="box">
+    <div class="seg" id="seg">
+      <button type="button" data-m="KR" aria-pressed="true">한국</button>
+      <button type="button" data-m="US" aria-pressed="false">미국</button>
+    </div>
+
+    <div id="krPane">
+      <input type="search" id="krQ" placeholder="종목 이름으로 검색 (예: 삼성전자)" autocomplete="off">
+      <p class="hint" id="krHint">종목 목록을 불러오는 중…</p>
+      <div class="results" id="krResults"></div>
+    </div>
+
+    <div id="usPane" hidden>
+      <input type="text" id="usT" placeholder="티커 입력 (예: AAPL)" autocomplete="off"
+             autocapitalize="characters" spellcheck="false">
+      <input type="text" id="usN" placeholder="표시할 이름 (예: 애플) — 비우면 티커 그대로"
+             autocomplete="off" style="margin-top:8px">
+      <div class="btns"><button type="button" id="usAdd">추가</button></div>
+      <p class="hint">미국 종목은 티커를 직접 넣습니다. 구글에 “회사명 ticker”로 검색하면 나옵니다.</p>
+    </div>
+  </div>
+
+  <h2>내 목록 <span class="count" id="cnt"></span></h2>
+  <div class="box" style="padding:0">
+    <div id="mine"></div>
+  </div>
+
+  <h2>GitHub에 반영하기</h2>
+  <div class="box">
+    <textarea id="out" readonly aria-label="watchlist.json 내용"></textarea>
+    <div class="btns">
+      <button type="button" id="copy">전체 복사</button>
+      <a id="editLink" class="ghost" href="#" target="_blank" rel="noopener">GitHub 편집 화면 열기 ↗</a>
+    </div>
+    <p class="hint" id="repoNote"></p>
+    <div class="toast" id="toast"></div>
+    <ol class="steps">
+      <li><b>전체 복사</b>를 누릅니다</li>
+      <li><b>GitHub 편집 화면 열기</b>를 누릅니다 (새 탭)</li>
+      <li>편집창 안에서 <b>Ctrl+A</b> → <b>Ctrl+V</b></li>
+      <li>아래 <b>Commit changes</b>를 두 번 누릅니다</li>
+    </ol>
+    <div class="note">
+      붙여넣기를 해야 실제 분석에 반영됩니다. 이 페이지에서 추가한 것만으로는
+      GitHub이 알지 못합니다.
+    </div>
+  </div>
+</div>
+
+<script>
+const LS_KEY = "stock-signals-watchlist";
+let mine = [];          // [{name, code, market}]
+let krList = [];        // [{c, n}]
+let mode = "KR";
+
+/* ── 저장소 (실패해도 페이지는 계속 동작) ── */
+function load(){ try { return JSON.parse(localStorage.getItem(LS_KEY) || "null"); }
+                 catch(e){ return null; } }
+function save(){ try { localStorage.setItem(LS_KEY, JSON.stringify(mine)); } catch(e){} }
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, m =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+
+const has = (code, market) => mine.some(x => x.code === code && x.market === market);
+
+function add(item){
+  if (has(item.code, item.market)) return;
+  mine.push(item); save(); renderMine(); renderKR();
+}
+function remove(code, market){
+  mine = mine.filter(x => !(x.code === code && x.market === market));
+  save(); renderMine(); renderKR();
+}
+
+/* ── 한국 종목 검색 ── */
+function renderKR(){
+  const q = document.getElementById("krQ").value.trim().toLowerCase();
+  const box = document.getElementById("krResults");
+  if (!q){ box.innerHTML = ""; return; }
+  if (!krList.length){ box.innerHTML = `<div class="empty">종목 목록을 아직 불러오지 못했습니다</div>`; return; }
+
+  const hits = krList.filter(s => s.n.toLowerCase().includes(q) || s.c.includes(q)).slice(0, 40);
+  box.innerHTML = hits.length === 0
+    ? `<div class="empty">“${esc(q)}” 검색 결과가 없습니다</div>`
+    : hits.map(s => {
+        const on = has(s.c, "KR");
+        return `<div class="row">
+          <div class="t"><b>${esc(s.n)}</b><span>${s.c}</span></div>
+          <button class="badd" data-add-kr="${s.c}" ${on ? "disabled" : ""}>${on ? "추가됨" : "추가"}</button>
+        </div>`;
+      }).join("");
+}
+
+/* ── 내 목록 ── */
+function renderMine(){
+  const box = document.getElementById("mine");
+  document.getElementById("cnt").textContent =
+    mine.length ? `${mine.length}종목` + (mine.length > 40 ? " — 너무 많습니다" : "") : "";
+  box.innerHTML = mine.length === 0
+    ? `<div class="empty">아직 없습니다. 위에서 찾아 추가하세요</div>`
+    : mine.map(x => `<div class="row">
+        <div class="t"><b>${esc(x.name)}</b><span>${esc(x.code)}</span>
+          <i>${x.market === "KR" ? "한국" : "미국"}</i></div>
+        <button class="bdel" data-del="${esc(x.code)}" data-m="${x.market}">삭제</button>
+      </div>`).join("");
+  renderOut();
+}
+
+function renderOut(){
+  const body = mine.map(x =>
+    `  { "name": ${JSON.stringify(x.name)}, "code": ${JSON.stringify(x.code)}, "market": ${JSON.stringify(x.market)} }`
+  ).join(",\n");
+  document.getElementById("out").value = "[\n" + body + "\n]\n";
+}
+
+/* ── GitHub 편집 주소를 현재 페이지 주소에서 유추합니다 ──
+   ksh202420.github.io/KSH/manage.html → ksh202420 / KSH
+   유추한 결과를 화면에 적어두어, 틀렸을 때 바로 알아챌 수 있게 합니다. */
+function repoInfo(){
+  if (!/\.github\.io$/i.test(location.hostname)) return null;
+  const owner = location.hostname.replace(/\.github\.io$/i, "");
+  const seg = location.pathname.split("/").filter(Boolean);
+  // 마지막 조각이 파일이면 제외 (…/manage.html)
+  const dirs = seg.filter(s => !s.includes("."));
+  const repo = dirs.length ? dirs[0] : `${owner}.github.io`;
+  return { owner, repo };
+}
+
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.classList.remove("show"), 3000);
+}
+
+/* ── 이벤트 ── */
+document.getElementById("seg").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  mode = b.dataset.m;
+  [...e.currentTarget.children].forEach(x => x.setAttribute("aria-pressed", x === b));
+  document.getElementById("krPane").hidden = mode !== "KR";
+  document.getElementById("usPane").hidden = mode !== "US";
+});
+
+let deb;
+document.getElementById("krQ").addEventListener("input", () => {
+  clearTimeout(deb); deb = setTimeout(renderKR, 120);
+});
+
+document.getElementById("krResults").addEventListener("click", e => {
+  const b = e.target.closest("[data-add-kr]"); if (!b) return;
+  const s = krList.find(x => x.c === b.dataset.addKr);
+  if (s) add({ name: s.n, code: s.c, market: "KR" });
+});
+
+document.getElementById("mine").addEventListener("click", e => {
+  const b = e.target.closest("[data-del]"); if (!b) return;
+  remove(b.dataset.del, b.dataset.m);
+});
+
+document.getElementById("usAdd").addEventListener("click", () => {
+  const t = document.getElementById("usT");
+  const n = document.getElementById("usN");
+  const ticker = t.value.trim().toUpperCase();
+  if (!/^[A-Z][A-Z.\-]{0,9}$/.test(ticker)){ toast("티커는 영문으로 입력하세요 (예: AAPL)"); return; }
+  if (has(ticker, "US")){ toast(`${ticker}는 이미 목록에 있습니다`); return; }
+  add({ name: n.value.trim() || ticker, code: ticker, market: "US" });
+  t.value = ""; n.value = ""; t.focus();
+});
+document.getElementById("usT").addEventListener("keydown", e => {
+  if (e.key === "Enter") document.getElementById("usAdd").click();
+});
+
+document.getElementById("copy").addEventListener("click", async () => {
+  const ta = document.getElementById("out");
+  try {
+    await navigator.clipboard.writeText(ta.value);
+    toast("복사했습니다. 이제 GitHub 편집 화면에서 붙여넣으세요");
+  } catch(e) {
+    ta.removeAttribute("readonly"); ta.select();
+    toast("직접 복사해 주세요 (Ctrl+A → Ctrl+C)");
+    setTimeout(() => ta.setAttribute("readonly",""), 100);
+  }
+});
+
+/* ── 시작 ── */
+(function setupEditLink(){
+  const link = document.getElementById("editLink");
+  const note = document.getElementById("repoNote");
+  const info = repoInfo();
+  if (!info){
+    link.removeAttribute("href");
+    link.style.opacity = ".5";
+    link.style.cursor = "default";
+    note.textContent = "이 주소에서는 리포를 자동으로 알 수 없습니다. GitHub에서 watchlist.json을 직접 여세요.";
+    return;
+  }
+  link.href = `https://github.com/${info.owner}/${info.repo}/edit/main/watchlist.json`;
+  note.textContent = `대상 리포: ${info.owner}/${info.repo}`;
+})();
+
+// 저장된 작업본이 있으면 그것부터, 없으면 현재 분석 중인 목록을 가져옵니다
+const saved = load();
+if (Array.isArray(saved) && saved.length){
+  mine = saved; renderMine();
+} else {
+  fetch("data/watchlist.json?t=" + Date.now())
+    .then(r => r.ok ? r.json() : [])
+    .then(j => { mine = Array.isArray(j) ? j : []; renderMine(); })
+    .catch(() => renderMine());
+}
+
+fetch("data/symbols.json?t=" + Date.now())
+  .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+  .then(j => {
+    krList = j.kr || [];
+    document.getElementById("krHint").textContent =
+      `한국 상장 ${krList.length.toLocaleString("ko-KR")}종목 · ${j.updated} 기준`;
+  })
+  .catch(() => {
+    document.getElementById("krHint").textContent =
+      "종목 목록이 아직 없습니다. Actions에서 Run workflow를 한 번 실행하면 만들어집니다.";
+  });
+</script>
+</body>
+</html>

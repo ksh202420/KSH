@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>가상 계좌</title>
+<style>
+  :root{
+    --bg:#F3F5F8; --card:#FFF; --ink:#121820; --ink2:#57657A; --ink3:#8A98AC;
+    --line:#DDE3EB; --accent:#0D6570;
+    --pos:#14A369; --neg:#B33228; --warnBg:#F6EACF; --warn:#8A6212;
+    --cStrat:#0092AB; --cBH:#A68B66; --cSurface:#FFFFFF;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0C1118; --card:#141C25; --ink:#E8EEF5; --ink2:#AFBCCB; --ink3:#7C8B9C;
+      --line:#26313D; --accent:#5FC6D0;
+      --pos:#2FA875; --neg:#BF4C42; --warnBg:#33290F; --warn:#DDB25A;
+      --cStrat:#22A3BC; --cBH:#B99B72; --cSurface:#141C25;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;word-break:keep-all}
+  .wrap{max-width:860px;margin:0 auto;padding:0 14px 70px}
+
+  .topbar{position:sticky;top:0;z-index:10;background:var(--card);
+    border-bottom:1px solid var(--line);margin:0 -14px 14px;padding:9px 14px;
+    display:flex;align-items:center;gap:12px}
+  .brand{font-size:13.5px;font-weight:700;white-space:nowrap}
+  .brand em{font-style:normal;color:var(--accent)}
+  .gen{font-family:var(--mono);font-size:10.5px;color:var(--ink3);margin:0;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .navs{margin-left:auto;display:flex;gap:6px;flex:none}
+  .navs a{font-size:11.5px;color:var(--ink2);text-decoration:none;
+    border:1px solid var(--line);border-radius:5px;padding:4px 9px;white-space:nowrap}
+  .navs a:hover{border-color:var(--accent);color:var(--accent)}
+  .navs a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  h2{font-size:13px;font-weight:650;letter-spacing:.02em;margin:22px 0 8px;color:var(--ink2)}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:13px}
+
+  /* 성적표 */
+  .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .k{background:var(--card);padding:11px 9px}
+  .k span{display:block;font-size:10.5px;color:var(--ink3);letter-spacing:.03em}
+  .k b{display:block;font-family:var(--mono);font-size:19px;font-weight:600;
+    line-height:1.3;margin-top:2px;letter-spacing:-.02em}
+  .k i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink3);display:block}
+  .pos{color:var(--pos)} .neg{color:var(--neg)}
+
+  .verdictbar{margin-top:10px;padding:11px 13px;border-radius:8px;font-size:13.5px;
+    font-weight:600;line-height:1.6}
+  .vb-win{background:color-mix(in srgb,var(--pos) 12%,transparent);color:var(--pos)}
+  .vb-lose{background:var(--warnBg);color:var(--warn)}
+
+  /* 자산 곡선 */
+  .chart{position:relative;padding:0 0 17px 56px;margin-top:4px}
+  .chart svg{display:block;width:100%;height:190px}
+  .yax,.xax{position:absolute;pointer-events:none;font-family:var(--mono);
+    font-size:10px;color:var(--ink3)}
+  .yax{left:0;top:0;width:51px;height:190px}
+  .yax span{position:absolute;right:0;transform:translateY(-50%);white-space:nowrap}
+  .xax{left:56px;right:0;bottom:0;height:15px}
+  .xax span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+  .xax span:first-child{transform:none;left:0!important}
+  .xax span:last-child{transform:none;left:auto!important;right:0}
+  .legend{display:flex;gap:14px;margin-top:9px;font-size:11px;color:var(--ink2);padding-left:56px}
+  .legend span{display:inline-flex;align-items:center;gap:5px}
+  .legend i{width:13px;height:0;border-top-width:2px;border-top-style:solid;display:inline-block}
+  .readout{position:absolute;top:0;right:0;font-family:var(--mono);font-size:11px;
+    background:var(--card);border:1px solid var(--line);border-radius:4px;padding:3px 7px;
+    opacity:0;transition:opacity .12s;pointer-events:none;z-index:2;line-height:1.5}
+  .chart.hovering .readout{opacity:1}
+
+  /* 거래 내역 */
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+  table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:560px}
+  th,td{padding:8px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+  th{font-size:10px;letter-spacing:.06em;color:var(--ink3);font-weight:500;
+    text-transform:uppercase;background:var(--bg);position:sticky;top:0}
+  td{font-family:var(--mono)}
+  th:first-child,td:first-child{text-align:left;font-family:var(--sans);font-weight:600}
+  th:nth-child(6),td:nth-child(6){text-align:left;font-family:var(--sans)}
+  tbody tr:last-child td{border-bottom:none}
+  .more{font-size:12px;color:var(--ink3);text-align:center;padding:9px}
+
+  table.spec{min-width:0;font-size:12.5px}
+  table.spec th{text-align:left;text-transform:none;letter-spacing:0;font-size:12.5px;
+    color:var(--ink3);font-weight:400;background:none;position:static;width:52%}
+  table.spec td{font-weight:600}
+
+  .note{background:var(--warnBg);color:var(--warn);border-radius:8px;padding:12px 14px;
+    font-size:12.5px;line-height:1.7;margin-top:16px}
+  .empty{padding:30px 16px;text-align:center;color:var(--ink3);font-size:13.5px;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <span class="brand">가상 <em>계좌</em></span>
+    <p class="gen" id="gen">불러오는 중…</p>
+    <nav class="navs">
+      <a href="./">타점</a>
+      <a href="manage.html">종목관리</a>
+    </nav>
+  </div>
+  <div id="app"></div>
+</div>
+
+<script>
+const W=320, H=190, PAD=6;
+const esc = s => String(s ?? "").replace(/[&<>"']/g, m =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const won = v => Math.round(v).toLocaleString("ko-KR");
+const money = v => Math.abs(v) >= 1e8 ? (v/1e8).toFixed(2)+"억"
+                 : Math.abs(v) >= 1e4 ? Math.round(v/1e4).toLocaleString("ko-KR")+"만"
+                 : won(v);
+const sgn = v => (v > 0 ? "+" : "") + v.toFixed(2) + "%";
+const cls = v => v > 0 ? "pos" : v < 0 ? "neg" : "";
+
+let D = null;
+
+function kpis(s){
+  const items = [
+    ["총 수익률", sgn(s.total_pct), `${money(s.start)} → ${money(s.final)}`, cls(s.total_pct)],
+    ["연 환산", sgn(s.cagr), `${s.days}거래일`, cls(s.cagr)],
+    ["최대 낙폭", s.mdd.toFixed(1)+"%", "고점 대비", "neg"],
+    ["단순 보유", sgn(s.bh_total_pct), `낙폭 ${s.bh_mdd.toFixed(1)}%`, cls(s.bh_total_pct)],
+    ["승률", s.win_rate+"%", `${s.trades}회 거래`, ""],
+    ["손익비", s.payoff == null ? "—" : s.payoff.toFixed(2),
+      `평균 ${sgn(s.avg_win)} / ${sgn(s.avg_loss)}`, ""],
+  ];
+  return `<div class="kpi">${items.map(([l,v,sub,c]) =>
+    `<div class="k"><span>${l}</span><b class="${c}">${v}</b><i>${sub}</i></div>`).join("")}</div>`;
+}
+
+function curve(){
+  const eq = D.equity, bh = D.buyhold, ds = D.dates, n = eq.length;
+  const all = eq.concat(bh);
+  let lo = Math.min(...all), hi = Math.max(...all);
+  if (!(hi > lo)) hi = lo + 1;
+  const pad = (hi - lo) * 0.06; lo -= pad; hi += pad;
+  const X = i => PAD + (i/(n-1))*(W-PAD*2);
+  const Y = v => PAD + (1-(v-lo)/(hi-lo))*(H-PAD*2);
+  const line = a => a.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ");
+  const base = Y(D.stats.start);
+
+  const yT = [0,.25,.5,.75,1].map(f=>{
+    const v = hi - f*(hi-lo);
+    return `<span style="top:${(PAD+f*(H-PAD*2))/H*100}%">${money(v)}</span>`;
+  }).join("");
+  const idx = [0, Math.round((n-1)/3), Math.round((n-1)*2/3), n-1];
+  const xT = idx.map(i=>`<span style="left:${(i/(n-1)*100).toFixed(1)}%">${esc(ds[i].slice(2))}</span>`).join("");
+
+  return `<div class="chart">
+    <div class="yax">${yT}</div>
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img"
+         aria-label="가상 계좌 자산 곡선과 단순 보유 비교">
+      <line x1="${PAD}" y1="${base.toFixed(1)}" x2="${W-PAD}" y2="${base.toFixed(1)}"
+        stroke="var(--line)" stroke-width="1" vector-effect="non-scaling-stroke"/>
+      <polyline points="${line(bh)}" fill="none" stroke="var(--cBH)" stroke-width="2"
+        stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+      <polyline points="${line(eq)}" fill="none" stroke="var(--cStrat)" stroke-width="2"
+        stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+      <line class="cross" x1="0" y1="0" x2="0" y2="${H}" stroke="var(--ink3)"
+        stroke-width="1" vector-effect="non-scaling-stroke" opacity="0"/>
+    </svg>
+    <div class="xax">${xT}</div>
+    <div class="readout"></div>
+  </div>
+  <div class="legend">
+    <span><i style="border-color:var(--cStrat)"></i>신호대로 매매</span>
+    <span><i style="border-color:var(--cBH)"></i>그냥 사서 보유</span>
+  </div>`;
+}
+
+function trades(){
+  if (!D.trades.length) return `<div class="box" style="text-align:center;color:var(--ink3)">
+    아직 체결된 거래가 없습니다</div>`;
+  const rows = D.trades.slice(0,60).map(t=>`<tr>
+    <td>${esc(t.name)}</td>
+    <td>${esc(t.entry_date.slice(2))}</td>
+    <td>${esc(t.exit_date ? t.exit_date.slice(2) : "보유중")}</td>
+    <td>${t.entry.toLocaleString("ko-KR")}</td>
+    <td>${t.exit ? t.exit.toLocaleString("ko-KR") : "—"}</td>
+    <td>${esc(t.reason)}</td>
+    <td class="${cls(t.pct)}">${sgn(t.pct)}</td>
+  </tr>`).join("");
+  return `<div class="scroll"><table>
+    <thead><tr><th>종목</th><th>매수</th><th>매도</th><th>매수가</th><th>매도가</th>
+      <th>사유</th><th>손익</th></tr></thead>
+    <tbody>${rows}</tbody></table></div>
+    ${D.trades.length > 60 ? `<p class="more">최근 60건만 표시 · 전체 ${D.trades.length}건</p>` : ""}`;
+}
+
+function assumptions(){
+  const a = D.assumptions, s = D.stats;
+  const r = (k,v)=>`<tr><th>${k}</th><td>${v}</td></tr>`;
+  return `<div class="box"><table class="spec">
+    ${r("시작 자금", money(a.start_cash)+"원")}
+    ${r("기간", `${s.from} ~ ${s.to}`)}
+    ${r("대상 종목", a.symbols+"개")}
+    ${r("1회 최대 손실", (a.risk_pct*100).toFixed(0)+"% (자산 대비)")}
+    ${r("한 종목 최대 비중", (a.max_weight*100).toFixed(0)+"%")}
+    ${r("매매 수수료", (a.fee*100).toFixed(3)+"% (양방향)")}
+    ${r("슬리피지", (a.slippage*100).toFixed(1)+"%")}
+    ${r("한국 매도세", (a.tax_kr*100).toFixed(2)+"%")}
+    ${r("주문 방식", `진입가 지정가, ${a.order_ttl}일 내 미체결 시 취소`)}
+    ${r("체결 시점", "신호 다음 거래일")}
+  </table></div>`;
+}
+
+function render(){
+  const s = D.stats;
+  document.getElementById("gen").textContent = D.generated_at + " 기준";
+  const win = s.beats_buyhold;
+  document.getElementById("app").innerHTML = `
+    ${kpis(s)}
+    <div class="verdictbar ${win ? "vb-win" : "vb-lose"}">
+      ${win
+        ? `단순 보유보다 <b>${(s.total_pct - s.bh_total_pct).toFixed(2)}%p 앞섭니다.</b>
+           다만 표본이 ${s.trades}회뿐이라 아직 실력인지 운인지 알 수 없습니다.`
+        : `단순 보유에 <b>${(s.bh_total_pct - s.total_pct).toFixed(2)}%p 뒤집니다.</b>
+           지금 이 규칙으로 매매하면 그냥 사서 들고 있는 것보다 못합니다.
+           규칙을 늘리지 말고 줄이는 쪽을 먼저 시도하세요.`}
+    </div>
+    <h2>자산 곡선</h2>
+    ${curve()}
+    <h2>거래 내역</h2>
+    ${trades()}
+    <h2>계산 가정</h2>
+    ${assumptions()}
+    <div class="note">
+      과거 데이터에 규칙을 적용한 <b>모의 계산</b>입니다. 실제로 이렇게 매매했다면 얻었을
+      결과라는 뜻이 아니며, 미래 수익을 보장하지 않습니다. 신호가 난 다음 거래일에
+      화면에 표시된 진입가로 지정가 주문을 냈다고 가정했고, 그 가격까지 오지 않으면
+      체결되지 않은 것으로 처리했습니다. 수수료·세금·슬리피지는 모두 뺐습니다.
+    </div>`;
+
+  // 자산 곡선 위에서 값 읽기
+  const chart = document.querySelector(".chart");
+  if (!chart) return;
+  const svg = chart.querySelector("svg");
+  chart.addEventListener("pointermove", e => {
+    const r = svg.getBoundingClientRect();
+    const n = D.equity.length;
+    const i = Math.round(Math.min(1,Math.max(0,(e.clientX-r.left)/r.width))*(n-1));
+    const x = PAD + (i/(n-1))*(W-PAD*2);
+    const c = svg.querySelector(".cross");
+    c.setAttribute("x1",x); c.setAttribute("x2",x); c.setAttribute("opacity","0.35");
+    chart.querySelector(".readout").innerHTML =
+      `${esc(D.dates[i])}<br>전략 ${money(D.equity[i])}<br>보유 ${money(D.buyhold[i])}`;
+    chart.classList.add("hovering");
+  });
+  chart.addEventListener("pointerleave", () => {
+    chart.classList.remove("hovering");
+    svg.querySelector(".cross").setAttribute("opacity","0");
+  });
+}
+
+fetch("data/paper.json?t=" + Date.now())
+  .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+  .then(j => { D = j; if (!j.stats || !j.stats.ok) throw new Error("결과 없음"); render(); })
+  .catch(e => {
+    document.getElementById("gen").textContent = "아직 계산되지 않았습니다";
+    document.getElementById("app").innerHTML = `<div class="box empty">
+      가상 계좌가 아직 계산되지 않았습니다.<br>
+      Actions 탭 → <b>daily-signals</b> → <b>Run workflow</b>를 한 번 실행해 주세요.<br>
+      <span style="font-size:12px;opacity:.7">(${esc(e.message)})</span></div>`;
+  });
+</script>
+</body>
+</html>
