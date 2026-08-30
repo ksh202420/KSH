@@ -115,12 +115,31 @@ def verdict(score: float, lv: dict) -> tuple[str, str | None]:
     return v, None
 
 
+HIST_DAYS = 120   # 화면 그래프에 그릴 일수
+
+
+def _series(s: pd.Series, krw: bool) -> list:
+    """그래프용 숫자 배열. 원화는 정수로 줄여 파일 크기를 아낍니다."""
+    out = []
+    for v in s:
+        if pd.isna(v):
+            out.append(None)
+        else:
+            out.append(int(round(v)) if krw else round(float(v), 2))
+    return out
+
+
 def analyze(item: dict, df: pd.DataFrame) -> dict:
     m = ind.compute_all(df)
     score, why = score_trend(m)
     lv = levels(m)
     v, demoted = verdict(score, lv)
+    krw = item["market"] == "KR"
+    tail = df["Close"].tail(HIST_DAYS)
     return {
+        "hist": _series(tail, krw),
+        "hist_ma200": _series(ind.sma(df["Close"], 200).tail(HIST_DAYS), krw),
+        "hist_from": str(tail.index[0].date()),
         "name": item["name"],
         "code": item["code"],
         "market": item["market"],
@@ -174,6 +193,7 @@ def run(selftest: bool = False) -> dict:
                 "reasons": [], "close": None, "change_pct": None, "entry": None,
                 "stop": None, "target": None, "target_basis": None, "rr": None,
                 "demoted_reason": None, "last_date": None, "bars": 0,
+                "hist": [], "hist_ma200": [], "hist_from": None,
             })
             print(f"  FAIL {item['name']:<20} {msg}")
 
