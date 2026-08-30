@@ -10,16 +10,21 @@
     --line:#DDE3EB; --accent:#0D6570;
     --buy:#1B6E52; --buyBg:#DDEEE6; --sell:#A2372E; --sellBg:#F5DFDC;
     --hold:#6B7A8C; --holdBg:#E6EAF0; --warn:#8A6212; --warnBg:#F6EACF;
-    /* 한국: 상승 빨강 / 하락 파랑,  미국: 상승 초록 / 하락 빨강 */
+    /* 등락 색: 한국은 상승 빨강, 미국은 상승 초록 */
     --krUp:#C0392B; --krDown:#1F5FA8; --usUp:#1B6E52; --usDown:#C0392B;
+    /* 그래프 색 (색각이상 검증 통과) */
+    --cPrice:#0092AB; --cPriceSoft:#7FC9D6; --cStop:#B33228; --cTarget:#14A369;
+    --cSurface:#FFFFFF;
   }
   @media (prefers-color-scheme:dark){
     :root:not([data-theme="light"]){
       --bg:#0C1118; --card:#141C25; --ink:#E8EEF5; --ink2:#AFBCCB; --ink3:#7C8B9C;
       --line:#26313D; --accent:#5FC6D0;
-      --buy:#58BE95; --buyBg:#12332661; --sell:#E38077; --sellBg:#3A1D1A;
+      --buy:#58BE95; --buyBg:#123529; --sell:#E38077; --sellBg:#3A1D1A;
       --hold:#8C9AAB; --holdBg:#1E2833; --warn:#DDB25A; --warnBg:#33290F;
       --krUp:#E5715F; --krDown:#6BA3E0; --usUp:#58BE95; --usDown:#E5715F;
+      --cPrice:#22A3BC; --cPriceSoft:#3E6A78; --cStop:#BF4C42; --cTarget:#2FA875;
+      --cSurface:#141C25;
     }
   }
   *{box-sizing:border-box}
@@ -36,10 +41,20 @@
     padding:11px 14px;font-size:13.5px;font-weight:600;margin:12px 0}
   .banner.show{display:block}
 
-  .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(74px,1fr));gap:8px;margin:16px 0 18px}
+  .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(74px,1fr));gap:8px;margin:16px 0 14px}
   .sum{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:11px 8px;text-align:center}
-  .sum b{display:block;font-size:21px;font-variant-numeric:tabular-nums;line-height:1.2}
+  .sum b{display:block;font-size:21px;line-height:1.2}
   .sum span{font-size:11.5px;color:var(--ink3)}
+
+  .search{position:relative;margin-bottom:10px}
+  .search input{width:100%;font:inherit;font-size:15px;padding:10px 36px 10px 13px;
+    border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--ink)}
+  .search input::placeholder{color:var(--ink3)}
+  .search input:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+  .search button{position:absolute;right:6px;top:50%;transform:translateY(-50%);
+    border:none;background:none;color:var(--ink3);font:inherit;font-size:17px;
+    cursor:pointer;padding:4px 8px;line-height:1;display:none}
+  .search.filled button{display:block}
 
   .filters{display:flex;gap:7px;margin-bottom:16px;overflow-x:auto;
     padding-bottom:2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -55,9 +70,9 @@
   .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
   .nm{font-weight:650;font-size:16px;letter-spacing:-.01em}
   .code{font-size:12px;color:var(--ink3);margin-left:6px;font-variant-numeric:tabular-nums}
-  .px{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .px{text-align:right;white-space:nowrap}
   .px b{font-size:16px;font-weight:650}
-  .px i{display:block;font-style:normal;font-size:12.5px}
+  .px i{display:block;font-style:normal;font-size:12.5px;font-variant-numeric:tabular-nums}
   .kr-up{color:var(--krUp)} .kr-down{color:var(--krDown)}
   .us-up{color:var(--usUp)} .us-down{color:var(--usDown)}
   .flat{color:var(--ink3)}
@@ -70,12 +85,30 @@
   .v-데이터없음{background:var(--warnBg);color:var(--warn)}
   .score{font-size:12px;color:var(--ink3);margin-left:7px;font-variant-numeric:tabular-nums}
 
+  /* ── 그래프 ── */
+  .chart{margin-top:13px;position:relative}
+  .chart svg{display:block;width:100%;height:92px;touch-action:pan-y}
+  .readout{position:absolute;top:0;right:0;font-size:11.5px;color:var(--ink2);
+    background:var(--card);padding:1px 5px;border-radius:4px;
+    font-variant-numeric:tabular-nums;pointer-events:none;opacity:0;transition:opacity .12s}
+  .chart.hovering .readout{opacity:1}
+  .legend{display:flex;flex-wrap:wrap;gap:11px;margin-top:7px;font-size:11px;color:var(--ink2)}
+  .legend span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+  .legend i{width:12px;height:0;border-top-width:2px;border-top-style:solid;display:inline-block}
+  .range{font-size:11px;color:var(--ink3);margin-top:5px;font-variant-numeric:tabular-nums}
+
   .lv{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
     border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:12px}
   .lv div{background:var(--card);padding:8px 6px;text-align:center}
   .lv span{display:block;font-size:10.5px;color:var(--ink3);margin-bottom:2px}
   .lv b{font-size:13.5px;font-variant-numeric:tabular-nums;font-weight:600}
   .lv .st b{color:var(--sell)} .lv .tg b{color:var(--buy)}
+
+  .acts{display:flex;gap:8px;margin-top:11px;align-items:center;flex-wrap:wrap}
+  .acts a{font-size:12.5px;color:var(--accent);text-decoration:none;
+    border:1px solid var(--line);border-radius:6px;padding:4px 11px}
+  .acts a:hover{border-color:var(--accent)}
+  .acts a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
   details{margin-top:10px}
   summary{font-size:12.5px;color:var(--accent);cursor:pointer;list-style:none}
@@ -100,6 +133,13 @@
 
   <div class="banner" id="banner"></div>
   <div class="summary" id="summary"></div>
+
+  <div class="search" id="searchBox">
+    <input type="search" id="q" placeholder="종목 이름이나 코드로 검색" autocomplete="off"
+           aria-label="종목 검색">
+    <button type="button" id="clearQ" aria-label="검색어 지우기">✕</button>
+  </div>
+
   <div class="filters" id="filters"></div>
   <div id="list"></div>
 
@@ -111,20 +151,37 @@
 
 <script>
 const FILTERS = ["전체","매수","매도","관망","한국","미국"];
-let DATA = null, active = "전체";
+let DATA = null, active = "전체", query = "";
 
 const fmt = (v, cur) => v == null ? "—"
   : cur === "KRW" ? Math.round(v).toLocaleString("ko-KR")
   : v.toLocaleString("en-US", {minimumFractionDigits:2, maximumFractionDigits:2});
 
+const esc = s => String(s ?? "").replace(/[&<>"']/g, m =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+
 function changeClass(pct, market){
   if (pct == null || pct === 0) return "flat";
-  // 한국은 상승이 빨강, 미국은 상승이 초록 — 시장별 관행을 그대로 따릅니다
-  const prefix = market === "KR" ? "kr" : "us";
-  return prefix + (pct > 0 ? "-up" : "-down");
+  return (market === "KR" ? "kr" : "us") + (pct > 0 ? "-up" : "-down");
+}
+
+// 종목별 뉴스 페이지 — 한국은 네이버 증권, 미국은 야후 파이낸스
+function newsURL(it){
+  return it.market === "KR"
+    ? `https://finance.naver.com/item/news.naver?code=${encodeURIComponent(it.code)}`
+    : `https://finance.yahoo.com/quote/${encodeURIComponent(it.code)}/news`;
+}
+function quoteURL(it){
+  return it.market === "KR"
+    ? `https://finance.naver.com/item/main.naver?code=${encodeURIComponent(it.code)}`
+    : `https://finance.yahoo.com/quote/${encodeURIComponent(it.code)}`;
 }
 
 function matches(it){
+  if (query){
+    const hay = (it.name + " " + it.code).toLowerCase();
+    if (!hay.includes(query)) return false;
+  }
   if (active === "전체") return true;
   if (active === "매수")  return it.verdict === "적극매수" || it.verdict === "분할매수";
   if (active === "매도")  return it.verdict === "매도" || it.verdict === "비중축소";
@@ -132,6 +189,109 @@ function matches(it){
   if (active === "한국")  return it.market === "KR";
   if (active === "미국")  return it.market === "US";
   return true;
+}
+
+/* ── 그래프 ──────────────────────────────────────────────
+   종가선과 200일선은 같은 색의 진한/옅은 단계로 구분합니다.
+   손절·목표는 상태색 가로선이고, 색만으로 구분하지 않도록 범례에 이름을 답니다. */
+const W = 320, H = 88, PAD = 4;
+
+function chartHTML(it){
+  const s = (it.hist || []).filter(v => v != null);
+  if (s.length < 5) return "";
+  const ma = it.hist_ma200 || [];
+  const vals = s.slice();
+  ma.forEach(v => { if (v != null) vals.push(v); });
+  [it.stop, it.target].forEach(v => { if (v != null) vals.push(v); });
+
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  if (!(hi > lo)) { hi = lo + 1; }
+  const pad = (hi - lo) * 0.08; lo -= pad; hi += pad;
+
+  const n = it.hist.length;
+  const X = i => PAD + (i / (n - 1)) * (W - PAD * 2);
+  const Y = v => PAD + (1 - (v - lo) / (hi - lo)) * (H - PAD * 2);
+
+  const pts = arr => arr.map((v, i) => v == null ? null : `${X(i).toFixed(1)},${Y(v).toFixed(1)}`)
+                        .filter(Boolean).join(" ");
+
+  const closePts = pts(it.hist);
+  const maPts = pts(ma);
+  const lastI = it.hist.length - 1, lastV = it.hist[lastI];
+
+  const hline = (v, color, id) => v == null ? "" :
+    `<line x1="${PAD}" y1="${Y(v).toFixed(1)}" x2="${W - PAD}" y2="${Y(v).toFixed(1)}"
+       stroke="${color}" stroke-width="1" vector-effect="non-scaling-stroke" data-h="${id}"/>`;
+
+  const area = `M ${PAD},${H - PAD} L ${closePts.split(" ").join(" L ")} L ${(W - PAD)},${H - PAD} Z`;
+
+  return `<div class="chart" data-lo="${lo}" data-hi="${hi}">
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img"
+         aria-label="${esc(it.name)} 최근 ${n}거래일 종가와 200일 이동평균">
+      <path d="${area}" fill="var(--cPrice)" fill-opacity="0.1"/>
+      ${hline(it.stop, "var(--cStop)", "stop")}
+      ${hline(it.target, "var(--cTarget)", "target")}
+      ${maPts ? `<polyline points="${maPts}" fill="none" stroke="var(--cPriceSoft)"
+         stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+         vector-effect="non-scaling-stroke"/>` : ""}
+      <polyline points="${closePts}" fill="none" stroke="var(--cPrice)"
+        stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+        vector-effect="non-scaling-stroke"/>
+      <circle cx="${X(lastI).toFixed(1)}" cy="${Y(lastV).toFixed(1)}" r="4"
+        fill="var(--cPrice)" stroke="var(--cSurface)" stroke-width="2"
+        vector-effect="non-scaling-stroke"/>
+      <line class="cross" x1="0" y1="0" x2="0" y2="${H}" stroke="var(--ink3)"
+        stroke-width="1" vector-effect="non-scaling-stroke" opacity="0"/>
+    </svg>
+    <div class="readout"></div>
+    <div class="legend">
+      <span><i style="border-color:var(--cPrice)"></i>종가</span>
+      ${maPts ? `<span><i style="border-color:var(--cPriceSoft)"></i>200일선</span>` : ""}
+      ${it.stop != null ? `<span><i style="border-color:var(--cStop)"></i>손절</span>` : ""}
+      ${it.target != null ? `<span><i style="border-color:var(--cTarget)"></i>목표</span>` : ""}
+    </div>
+    <p class="range">${esc(it.hist_from || "")} → ${esc(it.last_date || "")} · ${n}거래일</p>
+  </div>`;
+}
+
+function cardHTML(it){
+  const cur = it.currency || (it.market === "KR" ? "KRW" : "USD");
+  const cls = changeClass(it.change_pct, it.market);
+  const sign = it.change_pct > 0 ? "+" : "";
+  const vkey = (it.verdict || "").replace(/\s/g,"");
+
+  const price = it.close == null ? `<i class="flat">데이터 없음</i>`
+    : `<b>${fmt(it.close, cur)}</b><i class="${cls}">${sign}${(it.change_pct ?? 0).toFixed(2)}%</i>`;
+
+  const levels = it.entry == null ? "" : `
+    <div class="lv">
+      <div><span>진입</span><b>${fmt(it.entry, cur)}</b></div>
+      <div class="st"><span>손절</span><b>${fmt(it.stop, cur)}</b></div>
+      <div class="tg"><span>목표</span><b>${fmt(it.target, cur)}</b></div>
+      <div><span>손익비</span><b>${it.rr == null ? "—" : it.rr.toFixed(2)}</b></div>
+    </div>`;
+
+  const reasons = (it.reasons && it.reasons.length)
+    ? `<details><summary></summary><ul>${it.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}
+       ${it.target_basis ? `<li>목표가 기준: ${esc(it.target_basis)}</li>` : ""}</ul></details>` : "";
+
+  return `<div class="card" data-cur="${cur}">
+    <div class="top">
+      <div><span class="nm">${esc(it.name)}</span><span class="code">${esc(it.code)}</span></div>
+      <div class="px">${price}</div>
+    </div>
+    <span class="verdict v-${vkey}">${esc(it.verdict)}</span>
+    ${it.score != null ? `<span class="score">${it.score > 0 ? "+" : ""}${it.score}점</span>` : ""}
+    ${it.demoted_reason ? `<div class="demote">${esc(it.demoted_reason)}</div>` : ""}
+    ${it.error ? `<div class="err">${esc(it.error)}</div>` : ""}
+    ${chartHTML(it)}
+    ${levels}
+    <div class="acts">
+      <a href="${newsURL(it)}" target="_blank" rel="noopener">뉴스 ↗</a>
+      <a href="${quoteURL(it)}" target="_blank" rel="noopener">시세 ↗</a>
+    </div>
+    ${reasons}
+  </div>`;
 }
 
 function render(){
@@ -157,46 +317,61 @@ function render(){
 
   const shown = d.items.filter(matches);
   document.getElementById("list").innerHTML = shown.length === 0
-    ? `<div class="card" style="text-align:center;color:var(--ink3)">해당하는 종목이 없습니다</div>`
+    ? `<div class="card" style="text-align:center;color:var(--ink3)">${
+        query ? `“${esc(query)}”에 해당하는 종목이 없습니다` : "해당하는 종목이 없습니다"}</div>`
     : shown.map(cardHTML).join("");
 }
 
-function cardHTML(it){
-  const cur = it.currency || (it.market === "KR" ? "KRW" : "USD");
-  const cls = changeClass(it.change_pct, it.market);
-  const sign = it.change_pct > 0 ? "+" : "";
-  const vkey = (it.verdict || "").replace(/\s/g,"");
+/* ── 그래프 위에서 값 읽기 (마우스·터치 공용) ── */
+function attachHover(){
+  document.getElementById("list").addEventListener("pointermove", e => {
+    const chart = e.target.closest(".chart");
+    if (!chart) return;
+    const svg = chart.querySelector("svg");
+    const card = chart.closest(".card");
+    const idx = [...card.parentNode.children].indexOf(card);
+    const it = DATA.items.filter(matches)[idx];
+    if (!it || !it.hist) return;
 
-  const price = it.close == null ? `<i class="flat">데이터 없음</i>`
-    : `<b>${fmt(it.close, cur)}</b><i class="${cls}">${sign}${(it.change_pct ?? 0).toFixed(2)}%</i>`;
+    const r = svg.getBoundingClientRect();
+    const frac = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+    const n = it.hist.length;
+    const i = Math.round(frac * (n - 1));
+    const v = it.hist[i];
+    if (v == null) return;
 
-  const levels = it.entry == null ? "" : `
-    <div class="lv">
-      <div><span>진입</span><b>${fmt(it.entry, cur)}</b></div>
-      <div class="st"><span>손절</span><b>${fmt(it.stop, cur)}</b></div>
-      <div class="tg"><span>목표</span><b>${fmt(it.target, cur)}</b></div>
-      <div><span>손익비</span><b>${it.rr == null ? "—" : it.rr.toFixed(2)}</b></div>
-    </div>`;
+    const lo = +chart.dataset.lo, hi = +chart.dataset.hi;
+    const cross = svg.querySelector(".cross");
+    const x = PAD + (i / (n - 1)) * (W - PAD * 2);
+    cross.setAttribute("x1", x); cross.setAttribute("x2", x);
+    cross.setAttribute("opacity", "0.35");
 
-  const reasons = (it.reasons && it.reasons.length)
-    ? `<details><summary></summary><ul>${it.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}
-       ${it.target_basis ? `<li>목표가 기준: ${esc(it.target_basis)}</li>` : ""}</ul></details>` : "";
+    const ago = n - 1 - i;
+    chart.querySelector(".readout").textContent =
+      `${fmt(v, card.dataset.cur)} · ${ago === 0 ? "최근" : ago + "거래일 전"}`;
+    chart.classList.add("hovering");
+  });
 
-  return `<div class="card">
-    <div class="top">
-      <div><span class="nm">${esc(it.name)}</span><span class="code">${esc(it.code)}</span></div>
-      <div class="px">${price}</div>
-    </div>
-    <span class="verdict v-${vkey}">${esc(it.verdict)}</span>
-    ${it.score != null ? `<span class="score">${it.score > 0 ? "+" : ""}${it.score}점</span>` : ""}
-    ${it.demoted_reason ? `<div class="demote">${esc(it.demoted_reason)}</div>` : ""}
-    ${it.error ? `<div class="err">${esc(it.error)}</div>` : ""}
-    ${levels}${reasons}
-  </div>`;
+  document.getElementById("list").addEventListener("pointerleave", () => {
+    document.querySelectorAll(".chart.hovering").forEach(ch => {
+      ch.classList.remove("hovering");
+      ch.querySelector(".cross").setAttribute("opacity", "0");
+    });
+  }, true);
 }
 
-const esc = s => String(s ?? "").replace(/[&<>"']/g, m =>
-  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+/* ── 검색과 필터 ── */
+const qInput = document.getElementById("q");
+const searchBox = document.getElementById("searchBox");
+let debounce;
+qInput.addEventListener("input", () => {
+  searchBox.classList.toggle("filled", qInput.value.length > 0);
+  clearTimeout(debounce);
+  debounce = setTimeout(() => { query = qInput.value.trim().toLowerCase(); render(); }, 120);
+});
+document.getElementById("clearQ").addEventListener("click", () => {
+  qInput.value = ""; query = ""; searchBox.classList.remove("filled"); render(); qInput.focus();
+});
 
 document.getElementById("filters").innerHTML =
   FILTERS.map(f => `<button aria-pressed="${f===active}" data-f="${f}">${f}</button>`).join("");
@@ -209,7 +384,7 @@ document.getElementById("filters").addEventListener("click", e => {
 
 fetch("data/latest.json?t=" + Date.now())
   .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-  .then(j => { DATA = j; render(); })
+  .then(j => { DATA = j; render(); attachHover(); })
   .catch(e => {
     document.getElementById("updated").textContent = "아직 데이터가 없습니다";
     document.getElementById("banner").innerHTML =
