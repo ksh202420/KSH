@@ -71,6 +71,12 @@ class Result:
 def _prep(df: pd.DataFrame) -> pd.DataFrame:
     """지표를 미리 전부 계산해둡니다. 하루씩 도는 루프에서는 조회만 합니다."""
     d = df.copy()
+    # 소스가 섞여도 안전하도록 여기서도 시간대를 떼어냅니다.
+    # (fetch.py에서 이미 맞추지만, 한 종목이라도 어긋나면 계산 전체가 멈추므로)
+    idx = pd.DatetimeIndex(d.index)
+    if idx.tz is not None:
+        idx = idx.tz_localize(None)
+    d.index = idx.normalize()
     c = d["Close"]
     d["ma20"] = ind.sma(c, 20)
     d["ma200"] = ind.sma(c, 200)
