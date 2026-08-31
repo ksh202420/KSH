@@ -89,11 +89,11 @@ def fetch(market: str, code: str) -> pd.DataFrame:
     for name, fn in chain:
         for attempt in range(ATTEMPTS):
             try:
-                df = fn(code)
+                df = _normalize(fn(code))
                 _validate(df, code)
                 if name != chain[0][0]:
                     print(f"       ↳ {code}: 주 소스 실패 — 백업 사용 ({name})")
-                return df[NEEDED].copy()
+                return df
             except Exception as e:  # noqa: BLE001
                 note = f"{name}: {type(e).__name__}: {e}"
                 if note not in problems:      # 재시도로 같은 오류가 겹치는 것을 막습니다
@@ -103,6 +103,26 @@ def fetch(market: str, code: str) -> pd.DataFrame:
 
     # 모든 소스가 실패한 경우에만 여기까지 옵니다
     raise FetchError(f"{code}: 모든 소스 실패 — " + " | ".join(_short(p) for p in problems))
+
+
+def _normalize(df: pd.DataFrame) -> pd.DataFrame:
+    """소스가 달라도 결과 모양을 똑같이 맞춥니다.
+
+    yfinance는 시간대가 붙은 날짜(2026-08-28 00:00:00-04:00)를 주고
+    FinanceDataReader는 붙지 않은 날짜(2026-08-28)를 줍니다. 이대로 두면
+    미국·한국 종목을 한 달력에 합칠 때 비교가 불가능해 가상 계좌 계산이 통째로 실패합니다.
+    시간대를 떼고 날짜만 남겨 어떤 소스든 같은 형태가 되게 합니다.
+    """
+    if df is None or len(df) == 0:
+        return df
+    df = df.copy()
+    idx = pd.DatetimeIndex(df.index)
+    if idx.tz is not None:
+        idx = idx.tz_localize(None)      # 현지 날짜만 남기고 시간대 제거
+    df.index = idx.normalize()           # 시:분:초를 0으로
+    df = df[~df.index.duplicated(keep="last")].sort_index()
+    keep = [c for c in NEEDED if c in df.columns]
+    return df[keep] if len(keep) == len(NEEDED) else df
 
 
 def _validate(df: pd.DataFrame, code: str) -> None:
