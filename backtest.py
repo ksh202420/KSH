@@ -54,7 +54,6 @@ class Position:
     shares: float
     entry: float
     stop: float
-    target: float
     entry_date: str
     signal_date: str
     peak: float = 0.0
@@ -90,52 +89,33 @@ def _prep(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _score_row(r: pd.Series, prev_close: float) -> float:
-    """main.py의 점수 규칙을 그대로 옮긴 것입니다. 규칙을 바꾸면 여기도 바꿔야 합니다."""
-    pts = 0.0
-    close = r["Close"]
+    """main.py의 score_trend()와 같은 규칙이어야 합니다.
 
-    above200 = pd.notna(r["ma200"]) and close > r["ma200"]
-    if pd.notna(r["ma200"]):
-        pts += 30 if above200 else -30
-    if pd.notna(r["mom"]):
-        pts += 25 if r["mom"] > 0 else -25
-    if pd.notna(r["ma20"]):
-        pts += 15 if close > r["ma20"] else -15
-
-    rsi = r["rsi"]
-    if pd.notna(rsi):
-        if above200 and 30 <= rsi <= 45:
-            pts += 20
-        elif rsi > 75:
-            pts -= 15
-        elif (not above200) and rsi < 30:
-            pts -= 10
-
-    if pd.notna(r["vma20"]) and r["vma20"] > 0 and pd.notna(prev_close) and prev_close > 0:
-        if r["Volume"] > r["vma20"] * 1.5 and close > prev_close:
-            pts += 10
-
-    return max(-100.0, min(100.0, pts))
+    규칙을 바꾸면 반드시 두 곳을 함께 바꾸십시오. 여기가 어긋나면
+    가상 계좌 숫자가 화면의 판정과 다른 규칙을 검증하게 됩니다.
+    """
+    if pd.isna(r["ma200"]) or pd.isna(r["mom"]):
+        return 0.0
+    pts = M.W_MA200 if r["Close"] > r["ma200"] else -M.W_MA200
+    pts += M.W_MOM if r["mom"] > 0 else -M.W_MOM
+    return pts / (M.W_MA200 + M.W_MOM) * 100
 
 
 def _levels(r: pd.Series):
-    """진입·손절·목표. main.py의 levels()와 같은 규칙입니다."""
+    """진입가와 손절가. main.py의 levels()와 같은 규칙입니다.
+
+    목표가는 두지 않습니다 — 화면과 완전히 같은 규칙으로 계산해야
+    가상 계좌 숫자가 실제로 따라 할 수 있는 매매를 반영합니다.
+    """
     atr = r["atr"]
     if pd.isna(atr) or atr <= 0:
         return None
     close = r["Close"]
     entry = min(close, r["ma20"]) if pd.notna(r["ma20"]) else close
     stop = entry - M.ATR_STOP * atr
-    res = r["high60"]
-    if pd.notna(res) and res > entry * 1.005:
-        target = res
-    else:
-        target = entry + M.ATR_FALLBACK_TGT * atr
-    risk = entry - stop
-    if risk <= 0:
+    if entry - stop <= 0:
         return None
-    rr = (target - entry) / risk
-    return entry, stop, target, rr
+    return entry, stop
 
 
 def simulate(prices: dict, meta: dict, start_cash: float = 10_000_000.0) -> Result:
@@ -201,7 +181,7 @@ def simulate(prices: dict, meta: dict, start_cash: float = 10_000_000.0) -> Resu
             if cost > cash:
                 continue
             cash -= cost
-            positions[code] = Position(code, shares, fill, order["stop"], order["target"],
+            positions[code] = Position(code, shares, fill, order["stop"],
                                        str(today.date()), order["signal_date"], peak=fill)
         pending = still
 
@@ -219,8 +199,6 @@ def simulate(prices: dict, meta: dict, start_cash: float = 10_000_000.0) -> Resu
                 exit_px, why = float(r["Open"]), "갭하락 손절"
             elif float(r["Low"]) <= p.stop:
                 exit_px, why = p.stop, "손절"
-            elif float(r["High"]) >= p.target:
-                exit_px, why = p.target, "목표 도달"
             if exit_px is not None:
                 cash += _close_position(res, p, meta, exit_px, str(today.date()), why)
                 del positions[code]
@@ -253,14 +231,11 @@ def simulate(prices: dict, meta: dict, start_cash: float = 10_000_000.0) -> Resu
             lv = _levels(r)
             if not lv:
                 continue
-            entry, stop, target, rr = lv
-            if rr < M.MIN_RR:                            # 자리가 나쁘면 건너뜁니다
-                continue
+            entry, stop = lv
             if any(o["code"] == code for o in pending):
                 continue
             pending.append({"code": code, "entry": entry, "stop": stop,
-                            "target": target, "signal_date": str(today.date()),
-                            "days": 0})
+                            "signal_date": str(today.date()), "days": 0})
 
         # ── 4. 오늘 종가 기준 자산 기록 ──────────────────────
         eq = cash + sum(p.shares * _last_close(prepped[c], today) for c, p in positions.items())
