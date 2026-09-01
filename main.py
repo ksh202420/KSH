@@ -21,80 +21,98 @@ KST = timezone(timedelta(hours=9))
 
 # ── 판정 임계값 ────────────────────────────────────────────────
 STRONG_BUY, BUY, SELL, STRONG_SELL = 60, 25, -25, -60
-MIN_RR = 1.5          # 손익비가 이보다 낮으면 매수 신호를 관망으로 강등
 ATR_STOP = 2.0        # 손절 = 진입가 − 2.0 × ATR
-ATR_FALLBACK_TGT = 3.0  # 위쪽에 저항이 없을 때 쓰는 목표 배수
+
+# 목표가에 도달하면 파는 규칙은 2026-08-31 실험에서 제거했습니다.
+# 8개 데이터셋에서 목표가 매도를 넣으면 평균 +8.99%(단순보유 이긴 횟수 1/8),
+# 빼면 평균 +72.29%(5/8)로 갈렸습니다. 추세를 끝까지 타지 못하고
+# 오르는 종목을 일찍 팔아버리는 것이 이 시스템의 가장 큰 손실 원인이었습니다.
+# 60일 고점은 이제 '참고용 저항'으로만 보여주고, 매도는
+#   ① 손절선 도달  ② 점수가 −25 이하로 떨어짐
+# 두 가지로만 합니다.
+
+
+# ── 점수 규칙 ─────────────────────────────────────────────────
+# 2026-08-31 실험 결과 규칙을 둘로 줄였습니다.
+# 10개 데이터셋에서 만점 대비 정규화해 비교한 평균 수익률:
+#   전부(200일선+모멘텀+20일선+RSI+거래량)  +76.3%  거래 52회  단순보유 이김 1/10
+#   RSI 제거                              +64.0%  거래 104회 0/10
+#   RSI+거래량 제거                        +63.5%  거래 94회  0/10
+#   200일선+모멘텀만                       +90.6%  거래 38회  2/10  ← 채택
+# 규칙을 뺄수록 거래가 줄고 성적이 좋아졌습니다. 진짜 문제는 잦은 거래였습니다.
+#
+# 남긴 두 규칙만 논문 근거가 있습니다.
+#   200일선  — Faber(2007) A Quantitative Approach to Tactical Asset Allocation
+#   12−1 모멘텀 — Jegadeesh & Titman(1993), Moskowitz·Ooi·Pedersen(2012)
+# RSI·20일선·거래량은 관행일 뿐 근거가 없어 뺐습니다.
+# (지표 자체는 화면에 계속 보여줍니다. 점수에만 안 들어갑니다.)
+W_MA200 = 30.0
+W_MOM = 25.0
+_FULL = W_MA200 + W_MOM     # 만점. 이 비율로 정규화해 −100~+100으로 만듭니다.
 
 
 def score_trend(m: dict) -> tuple[float, list[str]]:
-    """추세 레이어 점수(−100~+100)와 사람이 읽을 근거 문장을 함께 돌려줍니다."""
+    """추세 점수(−100~+100)와 근거 문장.
+
+    나올 수 있는 값은 사실상 네 가지입니다.
+      +100  장기 추세도 상승, 12개월 모멘텀도 양수  → 적극매수
+       +9   200일선 위인데 모멘텀은 음수            → 관망
+       −9   200일선 아래인데 모멘텀은 양수          → 관망
+      −100  둘 다 음수                            → 매도
+    두 지표가 엇갈리면 판단하지 않는다 — 이게 이 규칙의 핵심입니다.
+    """
+    ma200, mom, close = m["ma200"], m["mom_12_1"], m["close"]
+
+    # 둘 중 하나라도 못 구하면 아예 판단하지 않습니다.
+    # 200일선은 이 시스템의 뼈대라서, 없으면 나머지로 때울 수 없습니다.
+    if not _ok(ma200) or not _ok(mom):
+        why = []
+        if not _ok(ma200):
+            why.append("200일선을 구할 수 없습니다 (200봉 이상 필요)")
+        if not _ok(mom):
+            why.append("12−1 모멘텀을 구할 수 없습니다 (253봉 이상 필요)")
+        why.append("핵심 지표가 없어 판단을 보류합니다")
+        return 0.0, why
+
     pts, why = 0.0, []
-    close, ma20, ma200 = m["close"], m["ma20"], m["ma200"]
-
-    above_200 = _ok(ma200) and close > ma200
-    if _ok(ma200):
-        if above_200:
-            pts += 30; why.append("200일선 위 (+30)")
-        else:
-            pts -= 30; why.append("200일선 아래 (−30)")
+    if close > ma200:
+        pts += W_MA200
+        why.append("200일선 위 — 장기 추세 상승 (+30)")
     else:
-        why.append("200일선 계산에 데이터 부족 (0)")
+        pts -= W_MA200
+        why.append("200일선 아래 — 장기 추세 하락 (−30)")
 
-    if _ok(m["mom_12_1"]):
-        if m["mom_12_1"] > 0:
-            pts += 25; why.append(f"12−1 모멘텀 +{m['mom_12_1']*100:.0f}% (+25)")
-        else:
-            pts -= 25; why.append(f"12−1 모멘텀 {m['mom_12_1']*100:.0f}% (−25)")
+    if mom > 0:
+        pts += W_MOM
+        why.append(f"12−1 모멘텀 +{mom*100:.0f}% — 1년 흐름 상승 (+25)")
     else:
-        why.append("모멘텀 계산에 데이터 부족 (0)")
+        pts -= W_MOM
+        why.append(f"12−1 모멘텀 {mom*100:.0f}% — 1년 흐름 하락 (−25)")
 
-    if _ok(ma20):
-        if close > ma20:
-            pts += 15; why.append("20일선 위 (+15)")
-        else:
-            pts -= 15; why.append("20일선 아래 (−15)")
-
-    r = m["rsi14"]
-    if _ok(r):
-        if above_200 and 30 <= r <= 45:
-            pts += 20; why.append(f"상승추세 중 RSI {r:.0f} 되돌림 (+20)")
-        elif r > 75:
-            pts -= 15; why.append(f"RSI {r:.0f} 과열 (−15)")
-        elif (not above_200) and r < 30:
-            pts -= 10; why.append(f"하락추세 중 RSI {r:.0f} — 떨어지는 칼 (−10)")
-        else:
-            why.append(f"RSI {r:.0f} 중립 (0)")
-
-    if _ok(m["vol_ma20"]) and m["vol_ma20"] > 0 and _ok(m["change_pct"]):
-        if m["vol"] > m["vol_ma20"] * 1.5 and m["change_pct"] > 0:
-            pts += 10; why.append("거래량 20일평균 1.5배 + 상승 (+10)")
-
-    return max(-100.0, min(100.0, pts)), why
+    score = pts / _FULL * 100
+    if abs(score) < 50:
+        why.append("두 지표가 서로 엇갈립니다 — 어느 쪽도 확신할 수 없어 관망")
+    return score, why
 
 
 def levels(m: dict) -> dict:
-    """ATR 기반 진입·손절·목표가. 목표는 직전 60일 고점(저항)을 우선 사용합니다."""
+    """ATR 기반 진입가와 손절가. 목표가는 두지 않습니다(위 주석 참고).
+
+    60일 고점은 '다음 저항'으로 화면에만 표시합니다 — 거기서 자동으로 팔지 않습니다.
+    """
     close, ma20, atr14 = m["close"], m["ma20"], m["atr14"]
     if not _ok(atr14) or atr14 <= 0:
-        return {"entry": None, "stop": None, "target": None, "rr": None,
-                "target_basis": None}
+        return {"entry": None, "stop": None, "resistance": None, "risk_pct": None}
 
     entry = min(close, ma20) if _ok(ma20) else close
     stop = entry - ATR_STOP * atr14
-    resistance = m["high_60"]
-    if resistance > entry * 1.005:      # 위쪽에 의미 있는 저항이 있을 때
-        target, basis = resistance, "60일 고점"
-    else:                                # 신고가 근처면 저항이 없으므로 ATR 배수
-        target, basis = entry + ATR_FALLBACK_TGT * atr14, "ATR 3배"
-
-    risk = entry - stop
-    rr = (target - entry) / risk if risk > 0 else None
-    return {"entry": entry, "stop": stop, "target": target, "rr": rr,
-            "target_basis": basis}
+    resistance = m["high_60"] if m["high_60"] > entry * 1.005 else None
+    risk_pct = (entry - stop) / entry * 100 if entry > 0 else None
+    return {"entry": entry, "stop": stop, "resistance": resistance, "risk_pct": risk_pct}
 
 
 def verdict(score: float, lv: dict) -> tuple[str, str | None]:
-    """점수와 손익비로 최종 판정. 손익비가 나쁘면 매수 신호를 강등합니다."""
+    """점수로 판정합니다. 타점을 못 잡는 경우에만 관망으로 강등합니다."""
     if score >= STRONG_BUY:
         v = "적극매수"
     elif score >= BUY:
@@ -106,12 +124,8 @@ def verdict(score: float, lv: dict) -> tuple[str, str | None]:
     else:
         v = "관망"
 
-    if v in ("적극매수", "분할매수"):
-        rr = lv.get("rr")
-        if rr is None:
-            return "관망", "타점 계산 불가 (ATR 없음)"
-        if rr < MIN_RR:
-            return "관망", f"손익비 {rr:.2f} < {MIN_RR} — 신호는 있으나 자리가 나쁨"
+    if v in ("적극매수", "분할매수") and lv.get("entry") is None:
+        return "관망", "타점 계산 불가 (ATR 없음)"
     return v, None
 
 
@@ -204,9 +218,8 @@ def analyze(item: dict, df: pd.DataFrame) -> dict:
         "reasons": why,
         "entry": _r(lv["entry"]),
         "stop": _r(lv["stop"]),
-        "target": _r(lv["target"]),
-        "target_basis": lv["target_basis"],
-        "rr": _r(lv["rr"], 2),
+        "resistance": _r(lv["resistance"]),
+        "risk_pct": _r(lv["risk_pct"], 1),
         "ma20": _r(m["ma20"]),
         "ma200": _r(m["ma200"]),
         "rsi14": _r(m["rsi14"], 1),
@@ -264,7 +277,7 @@ def run(selftest: bool = False) -> dict:
                 "currency": "USD" if item["market"] == "US" else "KRW",
                 "verdict": "데이터 없음", "score": None, "stale": True, "error": msg,
                 "reasons": [], "close": None, "change_pct": None, "entry": None,
-                "stop": None, "target": None, "target_basis": None, "rr": None,
+                "stop": None, "resistance": None, "risk_pct": None,
                 "demoted_reason": None, "last_date": None, "bars": 0,
                 "hist": [], "hist_ma200": [], "hist_from": None, "hist_dates": [],
                 "news": _news_for(item, want_news, carried),
@@ -394,7 +407,15 @@ def _news_for(item: dict, want: bool, carried: dict) -> list:
 
 
 def _ok(v) -> bool:
-    return v is not None and isinstance(v, float) and not math.isnan(v)
+    """숫자이고 NaN이 아니면 참.
+
+    예전에는 float만 인정해서 정수가 들어오면 '결측'으로 처리했습니다.
+    지표 계산은 늘 float를 주므로 실제로는 안 걸렸지만, 값이 하나라도
+    정수로 새어 들어오면 종목 전체가 조용히 관망 처리되는 버그였습니다.
+    """
+    if isinstance(v, bool) or not isinstance(v, (int, float)):
+        return False
+    return not math.isnan(float(v))
 
 
 def _r(v, nd: int = 2):
@@ -430,6 +451,13 @@ if __name__ == "__main__":
             save_paper()
         except Exception as e:  # noqa: BLE001
             print(f"가상 계좌 계산 실패 — 기존 결과를 그대로 둡니다: {type(e).__name__}: {e}")
+
+    if not st and os.environ.get("RUN_DEBATE") == "1":
+        try:
+            import debate
+            debate.run()
+        except Exception as e:  # noqa: BLE001
+            print(f"토론 생성 실패 — 기존 결과를 그대로 둡니다: {type(e).__name__}: {e}")
 
     if not st and os.environ.get("UPDATE_SYMBOLS") == "1":
         try:
