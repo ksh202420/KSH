@@ -13,7 +13,7 @@
     /* 등락 색: 한국은 상승 빨강, 미국은 상승 초록 */
     --krUp:#C0392B; --krDown:#1F5FA8; --usUp:#1B6E52; --usDown:#C0392B;
     /* 그래프 색 (색각이상 검증 통과) */
-    --cPrice:#0092AB; --cPriceSoft:#7FC9D6; --cStop:#B33228; --cTarget:#14A369;
+    --cPrice:#0092AB; --cPriceSoft:#7FC9D6; --cStop:#B33228; --cRes:#8A98AC;
     --cSurface:#FFFFFF;
     --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"D2Coding",monospace;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
@@ -25,7 +25,7 @@
       --buy:#58BE95; --buyBg:#123529; --sell:#E38077; --sellBg:#3A1D1A;
       --hold:#8C9AAB; --holdBg:#1E2833; --warn:#DDB25A; --warnBg:#33290F;
       --krUp:#E5715F; --krDown:#6BA3E0; --usUp:#58BE95; --usDown:#E5715F;
-      --cPrice:#22A3BC; --cPriceSoft:#3E6A78; --cStop:#BF4C42; --cTarget:#2FA875;
+      --cPrice:#22A3BC; --cPriceSoft:#3E6A78; --cStop:#BF4C42; --cRes:#7C8B9C;
       --cSurface:#141C25;
     }
   }
@@ -124,7 +124,7 @@
   .lv div{background:var(--card);padding:7px 5px;text-align:center}
   .lv span{display:block;font-size:10px;color:var(--ink3);margin-bottom:1px;letter-spacing:.03em}
   .lv b{font-family:var(--mono);font-size:13px;font-weight:600}
-  .lv .st b{color:var(--sell)} .lv .tg b{color:var(--buy)}
+  .lv .st b{color:var(--sell)} .lv .tg b{color:var(--ink2)}
 
   /* 카드 머리를 눌러 상세를 펼칩니다 */
   .head{width:100%;text-align:left;background:none;border:none;padding:0;
@@ -143,6 +143,12 @@
   table.spec td{text-align:right;padding:5px 0;font-family:var(--mono);font-weight:600}
   table.spec tr+tr th,table.spec tr+tr td{border-top:1px solid var(--line)}
 
+  table.spec th b.used{font-size:9.5px;font-weight:700;background:var(--buyBg);
+    color:var(--buy);padding:1px 5px;border-radius:3px;margin-left:5px;letter-spacing:.03em}
+  table.spec th i{font-style:normal;font-size:9.5px;background:var(--holdBg);
+    color:var(--hold);padding:1px 5px;border-radius:3px;margin-left:5px}
+  .scored{font-size:11.5px;color:var(--ink3);margin:9px 0 0;line-height:1.6}
+  .scored b{color:var(--ink2)}
   ul.why{margin:9px 0 0;padding-left:17px;font-size:12.5px;color:var(--ink2)}
   ul.why li{margin-bottom:3px}
 
@@ -156,6 +162,11 @@
   .nm2{font-size:11.5px;color:var(--ink3);margin-top:2px;display:block}
   .nonews{font-size:12.5px;color:var(--ink3);padding:6px 0}
 
+  .acts{margin-top:10px}
+  .buybtn{display:inline-block;font-size:12px;font-weight:600;color:var(--accent);
+    text-decoration:none;border:1px solid var(--line);border-radius:5px;padding:5px 12px}
+  .buybtn:hover{border-color:var(--accent)}
+  .buybtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .demote{font-size:12.5px;color:var(--warn);margin-top:8px}
   .err{font-size:12.5px;color:var(--sell);margin-top:8px;word-break:break-all}
 
@@ -169,6 +180,7 @@
     <span class="brand">오늘의 <em>타점</em></span>
     <p class="updated" id="updated">불러오는 중…</p>
     <nav class="navs">
+      <a href="debate.html">토론</a>
       <a href="paper.html">가상계좌</a>
       <a href="manage.html">종목관리</a>
     </nav>
@@ -242,7 +254,7 @@ function chartHTML(it, cur){
   const ma = it.hist_ma200 || [];
   const vals = s.slice();
   ma.forEach(v => { if (v != null) vals.push(v); });
-  [it.stop, it.target].forEach(v => { if (v != null) vals.push(v); });
+  [it.stop, it.resistance].forEach(v => { if (v != null) vals.push(v); });
 
   let lo = Math.min(...vals), hi = Math.max(...vals);
   if (!(hi > lo)) hi = lo + 1;
@@ -288,7 +300,7 @@ function chartHTML(it, cur){
       ${grid(1/3)}${grid(2/3)}
       <path d="${area}" fill="var(--cPrice)" fill-opacity="0.1"/>
       ${hline(it.stop, "var(--cStop)")}
-      ${hline(it.target, "var(--cTarget)")}
+      ${hline(it.resistance, "var(--cRes)")}
       ${maPts ? `<polyline points="${maPts}" fill="none" stroke="var(--cPriceSoft)"
          stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
          vector-effect="non-scaling-stroke"/>` : ""}
@@ -308,7 +320,7 @@ function chartHTML(it, cur){
       <span><i style="border-color:var(--cPrice)"></i>종가</span>
       ${maPts ? `<span><i style="border-color:var(--cPriceSoft)"></i>200일선</span>` : ""}
       ${it.stop != null ? `<span><i style="border-color:var(--cStop)"></i>손절</span>` : ""}
-      ${it.target != null ? `<span><i style="border-color:var(--cTarget)"></i>목표</span>` : ""}
+      ${it.resistance != null ? `<span><i style="border-color:var(--cRes)"></i>저항</span>` : ""}
   </div>`;
 }
 
@@ -325,8 +337,8 @@ function cardHTML(it){
     <div class="lv">
       <div><span>진입</span><b>${fmt(it.entry, cur)}</b></div>
       <div class="st"><span>손절</span><b>${fmt(it.stop, cur)}</b></div>
-      <div class="tg"><span>목표</span><b>${fmt(it.target, cur)}</b></div>
-      <div><span>손익비</span><b>${it.rr == null ? "—" : it.rr.toFixed(2)}</b></div>
+      <div class="tg"><span>저항</span><b>${it.resistance == null ? "—" : fmt(it.resistance, cur)}</b></div>
+      <div><span>위험</span><b>${it.risk_pct == null ? "—" : "−" + it.risk_pct.toFixed(1) + "%"}</b></div>
     </div>`;
 
   const row = (k, v) => v == null || v === "" ? ""
@@ -334,13 +346,15 @@ function cardHTML(it){
 
   const spec = `<table class="spec">
     ${row("현재가", fmt(it.close, cur))}
-    ${row("20일선", fmt(it.ma20, cur))}
-    ${row("200일선", fmt(it.ma200, cur))}
-    ${row("RSI (14)", it.rsi14 == null ? null : it.rsi14.toFixed(1))}
-    ${row("ATR (14)", fmt(it.atr14, cur))}
-    ${row("목표가 기준", it.target_basis ? esc(it.target_basis) : null)}
+    ${row("200일선 <b class=\"used\">점수</b>", fmt(it.ma200, cur))}
+    ${row("20일선 <i>참고</i>", fmt(it.ma20, cur))}
+    ${row("RSI (14) <i>참고</i>", it.rsi14 == null ? null : it.rsi14.toFixed(1))}
+    ${row("ATR (14) <i>손절 계산</i>", fmt(it.atr14, cur))}
+    ${row("매도 조건", "손절 도달 또는 점수 −25 이하")}
     ${row("데이터", it.last_date ? `${esc(it.last_date)} · ${it.bars ?? 0}봉` : null)}
-  </table>`;
+  </table>
+  <p class="scored">점수는 <b>200일선</b>과 <b>12−1 모멘텀</b> 두 가지로만 냅니다.
+    나머지는 참고용으로만 보여줍니다.</p>`;
 
   const why = (it.reasons && it.reasons.length)
     ? `<ul class="why">${it.reasons.map(r => `<li>${esc(r)}</li>`).join("")}</ul>` : "";
@@ -365,6 +379,8 @@ function cardHTML(it){
     ${it.error ? `<div class="err">${esc(it.error)}</div>` : ""}
     ${chartHTML(it, cur)}
     ${levels}
+    ${it.close != null ? `<div class="acts"><a class="buybtn"
+       href="paper.html?buy=${encodeURIComponent(it.code)}">가상매수</a></div>` : ""}
     <div class="detail">
       <p class="dtitle">지표</p>
       ${spec}
