@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-16T18:47:45+09:00",
- "generated_at_display": "2026-10-16 18:47 KST",
+ "generated_at": "2026-10-16T20:50:46+09:00",
+ "generated_at_display": "2026-10-16 20:50 KST",
  "total": 10,
  "ok": 10,
  "failed": 0,
@@ -401,6 +401,12 @@
    "error": null,
    "news": [
     {
+     "t": "[비즈톡톡] ‘AI 지각생’ 애플은 왜 스피커 시장에 다시 뛰어들었나 - 조선비즈 - Chosunbiz",
+     "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZVI3dGpjWnZ3eXQteDFYWHQ0ajNsMTdxN0ZWb2tQOUR4WW9sMnhfa3ZWQlJKb3hyUDl5X3ZLV1N5MjhCQUlFNEY0Vm5ON3h2NjJsTGxOTWVZT3BRQm95M3pKajMzbmh4WWtLUy1mSllONjE3TFA5QmxWNjJZMmEtLU1n0gGWAUFVX3lxTE1zSjQ2cktUdHhqcjh2TjFOdlc4WjNiRVEyaTFmLXVLLTlHZnJhbTJoZkZ1eVdRUUdhSzZFVkQxczFNa2l5N1F5WFhxUzN5b3Qyc01xTVVmdDl0Q3VKVzh2MmI2cl81NjVrTHJCOUluclc0bzJ1aFd0OVJZZ0czYzR5aHdtbEJzYm9MbzVNNkhCRHdpa2Q0Zw?oc=5",
+     "s": "Chosunbiz",
+     "d": "10-15"
+    },
+    {
      "t": "LG전자, 애플과 AI홈 생태계 확장...차세대 IoT 기기 7종 공개 - 지디넷코리아",
      "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5mM2ZIdXZUb1N5SlRUcjJsMGNNMUVHSmZDTll4QmhXVUxsem5Mb0pPd2VFbkphMGttN0JYU1dqUGswbm9aZ1pBanl0QVY5NVVFekgtSUVR?oc=5",
      "s": "지디넷코리아",
@@ -413,21 +419,15 @@
      "d": "10-14"
     },
     {
-     "t": "LG+애플 ‘AI 스마트홈 기기’ 7종 공개, 도어락·온도조절기… - 한겨레",
-     "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBwaTRfc0Nxa3RpVHEwUGVQYUZDMmZxMHY0b2xIemp1YzY2NnVjM3dYSE5ERTFnSzVJbldMRkVSQlc4dUVHMlFvLTRKQm9FbnY0SUxLWTAtOU0xTl8yZDl3ekJSXzZHc2ZMREE?oc=5",
-     "s": "한겨레",
-     "d": "10-14"
-    },
-    {
-     "t": "\"메모리 절대적 위기\"…애플, 아이폰에 中 반도체 사용 검토 - 한국경제",
-     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4xZ1NEaEgzU0xsWmdGaUFLV3RyX2dGa2JzUnFwVlJKay1WeDUyUTRnaGdpVWFpWTNqcXNRa2REdVNsc1ljNzlEeFNMOXdOaWo4N1ZJQW9Vd1BQQQ?oc=5",
-     "s": "한국경제",
+     "t": "애플 CEO \"메모리 위기에 모든 선택지 고려\"…중국산 사용 시사 - 연합뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5pamw4UGx6RThOUDR5Zl9oX3p6bEo4VG9TR3F2anJkQ2x5Qmhqak1jV1RqRGJPMHNITWpFZVBjLXNzNXhQYWlMeFVocjZ5WHNvbVUydklpOTMzam_SAWBBVV95cUxQZmVveWdxbGNubUFxM3d5T2s5RzFiLS05Nms1b1g3d2Y3aTM5T3ZtSHJqSWJ6LXJ6N3I5OHV1eUt3NzhFOURrQV9nNTh6Vmo3S3N6OFltcDB5VG1LWmtsd1A?oc=5",
+     "s": "연합뉴스",
      "d": "10-16"
     },
     {
-     "t": "애플 CEO \"메모리 품귀는 절대적 위기\"…중국산 사용 시사 - 아시아경제",
-     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBRSHNlWGQtVXM1Zmx0aHRZRU5QOTBqUGN6ZnFZNlp2RURCb2MyUm1EQVlkX2VCbklBNGp6Y3hfMERFRGkxQjEwMEtFc1REX0JSamNBZGU4N3o4MDJBakR1WA?oc=5",
-     "s": "아시아경제",
+     "t": "[단독] 한국음악저작권협회, 애플뮤직(Apple Music) 5년치 저작권료 정산 눈앞 “연내 창작자에 지급 추... - 스포츠경향",
+     "u": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8wM3V3ZGFOMVZiT0J6T3FaQVEyUTlfbVRRU0Jwa3lldzlfRTBsOWctSDF3WkxuTTVzSElWVHZoMno0cTJhMGo0M2Z4b3pjenFNZHZKQmZ6akU1TlNFUGfSAWNBVV95cUxPZ2Z2NElCQmRyay1wV3F2UmdObUxIWkRPZjlZUmIyV0l5djN3eVVPM19nS0tzVUF6WWNFQTVhbmd4MVlucXp4ak8xU2E3NlJWdnRnRVFMSG1YTVVNRzZaQ2lkaDQ?oc=5",
+     "s": "스포츠경향",
      "d": "10-16"
     }
    ]
@@ -827,16 +827,16 @@
    "error": null,
    "news": [
     {
+     "t": "엔비디아, 유럽 AI에 2조7천억원 투자 - 연합뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1zSENiZXpDdm5uZlpFemp6dlRieU4yVDh3WDZFZjJWcHF0ajZ4dERnRFJLMHhSRFhxOHRRNkJXTV9neUx1cmJFUkFsbXk0UTdWaGlZZFpJd0Z2VkHSAWBBVV95cUxOQXJFUUJtYWFNb1ZoZ3NxdEd0Qm9QRnBzd3hJZHVkTGFVWVNmYmtYTGxabFk3d3hubG1yOXc4OURUdzUwMjUxRWRtZ0pNQ2dfUkJTVzRYN0VfZnJOUWQwM3A?oc=5",
+     "s": "연합뉴스",
+     "d": "10-15"
+    },
+    {
      "t": "엔비디아 AI 기술센터 송도에 둥지틀까 ‘촉각’ - 기호일보",
      "u": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA2djg1OENJTlpLV2ZWa1RaN09sY0JyZGJPemx6VGxjZkpvUl9qclJSLXR2MHEzMjBpVUZzUWpRWTVpWlNqN29tN1UyejI3VHZQclRjMHN1cTFlRnhaekttRlk5WjVsOEtuZTdkWnRTNA?oc=5",
      "s": "기호일보",
      "d": "10-14"
-    },
-    {
-     "t": "\"현금 넘친다\"던 엔비디아…AI 투자 빼니 217억달러 - 한국경제",
-     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oSjIzc3ROZ1RBbTh1VjU2dzlUQU5tT0pjR1pPLWRxcm1WMlF6TFNyWE01QzlkZ0lNaU12MFBfZFdlLV9IM0hPVy1SeXJmeXhnTEVpNGk5aUJUZw?oc=5",
-     "s": "한국경제",
-     "d": "10-13"
     },
     {
      "t": "[뉴욕증시] 젠슨 황의 심폐소생? 코어위브 감쌀수록 '엔비디아 실적 거품론' 부상 - YTN",
@@ -845,15 +845,15 @@
      "d": "10-16"
     },
     {
-     "t": "[클릭 e종목]\"오텍, 엔비디아 인증 CDU 라인업 확대로 AI DC 사업 순항\" - 아시아경제",
-     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5HbHpsbldYMmhYa3I3dXhYOXUwOFc4ZHFrakhpQTlxTVBBeW1QUVVzRURyYmZCVk5iX29SeU1uMTlWeWtONENPQVd4ZXpfTGNWRXFmNU1MTEN3UmVFa2ZOZA?oc=5",
-     "s": "아시아경제",
+     "t": "엔비디아, 기업용 에이전트 겨냥 120B ‘네모트론 3.5 슈퍼 VL’ 오픈 공개 - AI타임스",
+     "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1KLWFJYjFDMk1BNksxY25KTHE0b204RVhFWmZJOFFQQ0dhNk02RnZoRkx5eXNIam1LaWQxMmlHd09ldHJJYjgyTnk0dndhSXdqRVY2QVp1LTNyV3dfTTlrTENaVHBiTmcxYUE?oc=5",
+     "s": "AI타임스",
      "d": "10-16"
     },
     {
-     "t": "엔비디아·애플 각각 330억원…트럼프 쏙 빠진 연회장 기부명단 - 연합뉴스",
-     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBhejdKbGdyMk9FMW93cUVwWndxNnQwck9vUVNvbFBSNU5XTmRiWVh5V3E4eDBmc25WOVd6NktTM2JkRkxkUFdUVlVlVENtUTN0RE9BdFJWd01IRW_SAWBBVV95cUxPS3FwdlNOZ1lFMFJYQl9YWlVtcmxDMWFGcmkxc0FKRnhQZWo0LWRzaWg0NUJtRHhBdmxBWkFkU0tsMVBqbG5QS3p2NmNyR1pJbFZKTWRiRUR3SW1IZUM3MTQ?oc=5",
-     "s": "연합뉴스",
+     "t": "\"엔비디아 300% 벌고도 아쉽다\"…남보라가 공개한 주식 성적표 - 이데일리",
+     "u": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUDFvMnZERmI0Z092S0kxSml6TWI3dDYwUy1LRUc0bEt5emo5dGMwUkJVdDNjUHZIN3pDNTBhWVBLVTNWNFd1dUFRWmVwcjNHUjhBdFBrYlZGRnZQSjJGNHVoYkxqeWlic1phc1RiWkJhN2lsY1VOUjByUWlVV3JiUw?oc=5",
+     "s": "이데일리",
      "d": "10-16"
     }
    ]
@@ -979,7 +979,7 @@
     49600,
     48500,
     46850,
-    52300
+    52600
    ],
    "hist_ma200": [
     28994,
@@ -1101,7 +1101,7 @@
     42416,
     42494,
     42566,
-    42668
+    42670
    ],
    "hist_from": "2026-04-20",
    "hist_dates": [
@@ -1232,8 +1232,8 @@
    "currency": "KRW",
    "last_date": "2026-10-16",
    "bars": 3000,
-   "close": 52300.0,
-   "change_pct": 11.63,
+   "close": 52600.0,
+   "change_pct": 12.27,
    "score": 100,
    "verdict": "적극매수",
    "demoted_reason": null,
@@ -1241,17 +1241,35 @@
     "200일선 위 — 장기 추세 상승 (+30)",
     "12−1 모멘텀 +96% — 1년 흐름 상승 (+25)"
    ],
-   "entry": 52300.0,
-   "stop": 45979.09,
+   "entry": 52600.0,
+   "stop": 46279.09,
    "resistance": 73500.0,
-   "risk_pct": 12.1,
-   "ma20": 53452.5,
-   "ma200": 42668.0,
-   "rsi14": 46.0,
+   "risk_pct": 12.0,
+   "ma20": 53467.5,
+   "ma200": 42669.5,
+   "rsi14": 46.8,
    "atr14": 3160.45,
    "stale": false,
    "error": null,
    "news": [
+    {
+     "t": "[영통3동] 우리 동네 건강관리 첫걸음! 인바디 설치 - 수원시 인터넷신문",
+     "u": "https://news.google.com/rss/articles/CBMiekFVX3lxTE15RHlJMWFPS1p0ay1ROW5STWxnV0MzRlNhLUVDNmhyMFYtZHFtTmFZSnZIeXJ1U0RNTkttcUFmQTRESUZBeGtNQVhUQktydmxqaFYyMDlzS3dHREZUUkVDMllsX0JINThfREJSbHEyYTVZRXRHZ1FSc1h3?oc=5",
+     "s": "수원시 인터넷신문",
+     "d": "10-16"
+    },
+    {
+     "t": "[장중수급포착] 인바디, 외국인/기관 동시 순매수… 주가 +11.04% - 뉴스핌",
+     "u": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPazlBbzV0M2NZa2JPb2hzTU9wOXoxVG1JbXB0dVo5bHFKTUprbzRZMXNQMldOSUNXM09jTF9RYl9Sb3NaUklQZ2JYb1Z2dmZaVnZvOFUzUDdHckRS?oc=5",
+     "s": "뉴스핌",
+     "d": "10-16"
+    },
+    {
+     "t": "인바디(041830)저점을 줄때마다 물량 모아둘 기회로 보이며 이후 전망 및 대응전략. - 씽크풀 AI",
+     "u": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9ZVm9ybE5vdnpadmhSM2tKUW1JNnZxZjlOVWh5Vk5lZEJmTUhQTnhBR0FEZVltaFd6SkVHWk5aWmYwYUtBR08wWTRMU256WXZ0cXZPY3hqcWxFOFZE?oc=5",
+     "s": "씽크풀 AI",
+     "d": "10-16"
+    },
     {
      "t": "[핫 컴퍼니] 인바디 “비만약 시대, 체성분 분석으로 지속 성장” - 한국경제",
      "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBIM1hJUWZlWE55MW9MSXcwNk5VZzFjN1VydVlhSnNVWVo5cHBoS3V2cy00ZktENTRoYWNCTk9lYmJMcFVaQURuc1ZDeDdwOGZwbWs3XzJVMU5NZw?oc=5",
@@ -1260,27 +1278,9 @@
     },
     {
      "t": "살빼는 약 시대 필수장비…덩치 키우는 인바디[클릭 e종목] - 아시아경제",
-     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ZX2l5WGtzVy16bHktSkx1TExOSTVLMkpyOXR1QWdMY2h6NTRobzdrek1xVFlsOVBoblVEMGxuOFRXYlFkcFp2S2MzeU9mVC1ySk5ERzhxRVpGMXV3V0tRaw?oc=5",
+     "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPOUJqdGZ3ODQyWjd3bzMzcW10STluZU0yY2RiS2hacnkzekxFTTNtYl8zZmNVUXphcGpsTTVYSzdiUTJYcW0tci1veFBRTEhfWkdTWVEzelZwUjVBLWJrVzFHWFBpSWxSQ1BlOE5YanNYVzhZX1A0Y2JhZGcxQlZONERR?oc=5",
      "s": "아시아경제",
      "d": "10-14"
-    },
-    {
-     "t": "인바디, 3Q 영업익 47.8%↑ 전망…수출이 성장 견인 - 메디파나뉴스",
-     "u": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAyX2E5S1hJTkxMY0FmbnEwZjFYcmZValRKWVEwaWpCUDNIbUpHQTA2MUwzcUZIN0xWTF92a0tuVHNaRlZEWEtrMllaenB3aXAzUHIwcVFuSEFMaDduajdKOEotcjlfV3MyWFhV?oc=5",
-     "s": "메디파나뉴스",
-     "d": "10-08"
-    },
-    {
-     "t": "[거버넌스워치] 비만약 열풍…인바디 주가 뛰자 증여주식 60억 내다 판 2세, 왜? - 비즈워치",
-     "u": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9PdHZqQThNZ2Q2WkNsVThfVFJWZFltMzBHVkhDM3Z1RkE3c0ZPZXc2ZkhxT3ZqSXdaZ1hJTEdVYVVaQmhpX2tKdHc1WmVrYmdtUzNmN2N2YUtwN1lQTjBtZ0lfREU0bmNQZmo2U2c2VQ?oc=5",
-     "s": "비즈워치",
-     "d": "10-08"
-    },
-    {
-     "t": "창립 30周 인바디, 3000억 넘어 ‘5000억 목표’ - 데일리메디",
-     "u": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1VWWRnXzZqUU5Yc3pkNTVZRU01RGUwclN3NUNFMm94Yl9sZTdESlliM0FYUEZ5QlphRzVjdHd5YU56a2VUT0R0VTlxMXdOeU5uMkJCREMxbVc0ZFlGT3BnY2ZKaw?oc=5",
-     "s": "데일리메디",
-     "d": "09-28"
     }
    ]
   },
@@ -1680,34 +1680,34 @@
    "error": null,
    "news": [
     {
-     "t": "VNTG, 제조 데이터부터 AI 에이전트까지 잇는다...한국마이크로소프트와 AX 협약 - 아시아경제",
-     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9pTW9PNVYzdWlrSV8xZzJhWHg4dHYzZ1p0T2JvcnhHRjZMQkNYdlB0cUNMRDJvSC1KUm9XOXR2cnN1RFBXcjEwSUdNQWhfd3UyRUN3cEk1cjR6SktmM3I5YQ?oc=5",
-     "s": "아시아경제",
-     "d": "10-15"
+     "t": "마이크로소프트, 애저 마이아 AI 시스템 멀티 기가와트 규모로 확대 - Microsoft Source",
+     "u": "https://news.google.com/rss/articles/CBMi8gJBVV95cUxNTlNGWHotRHB6T01FbHcyeGZ4SzF2dDkxQzZsbUdoLVh4eE12SUVsckhlODUtNVFTV25MMWE5eS1PSEVWenVPQTFUNkJDM0Vhc3FwaW9VVUc2T1h1Y2xxNXA2dnludEJLRXp2ZmkzTXFEYmluZ1B5UXJ2ZU5XQW5PY09DN1c2b3ByM0tmNlM2MWxxUUNpSTlNUEFJdFRZUDI4clFmRGpMMUtoUEkyRF9TSnJpeGFTVmR4Qmx4bUNqNmlzbEJZcVVKX0lmN1hSX29RUmJUNFJBOVJXbkJCX3VaQmplUldVMDBnUEZNYVJjRm1pM2tpNHNyNF9SRS03NDB3Mm1LRDREY0hla3ZjRnJUMl9PWjg3MS05Ync0N0NHOGFQZXAxamNJNmowWUVfQUxzNERIelFqVkdBZmhiTVVpcWtqMWQwTzF2cVFwbi1iV2ZPWVpSUFZmaUxFWEpDaUw0OWJhRFdLSjAzNnhsR01CTzR3?oc=5",
+     "s": "Microsoft Source",
+     "d": "10-13"
     },
     {
-     "t": "VNTG, 한국마이크로소프트와 제조 AX 실행체계 구축 MOU…현장 적용·운영 협력 - 한국경제",
-     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1RdWxmQXRFd3ZCZjhoZTJFOUdXUzRkQ0NNTk9KN1RCZXgza1VPZU13OV9OQ3Uwa2diLURxWHFYZDJCaGRWbWFGbW1TblQzU0U3YTZvalJvOGh3QQ?oc=5",
-     "s": "한국경제",
-     "d": "10-15"
+     "t": "BMW, Mercedes-Benz and Microsoft to Share How They Prove Automotive Software in Munich - autoelectronics.co.kr",
+     "u": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9IUTM3WDd4aHBta3R1ODl5ZnE5RGhIaTBMY0RWV0lyWm45TTg1OG5OZVZLRWhqYkUwOXNKM1dKdFdycUJUY2lGX3JCVkpJQUZJQmhTVDh4OE1kV2ZqdUcxbVVqOE5rbnowTzRSWWJscW1qVDh0?oc=5",
+     "s": "autoelectronics.co.kr",
+     "d": "10-16"
     },
     {
-     "t": "브이엔티지, 한국마이크로소프트와 MOU 체결 - 뉴스핌",
-     "u": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5TRVFRYXhNM0hNNjBkWUdKZkI1SWNPRHR0MTBxQnhlUXJzUXFjV3BoQjJCcEVqQlA3Q21kdE5ZZ2xyb3IzUTFUQUdOWWtXQUxhajc4cnVKYnl2MWVT?oc=5",
-     "s": "뉴스핌",
-     "d": "10-15"
+     "t": "마이크로소프트는 8GB RAM을 탑재한 컴퓨터에서 윈도우 11이 원활하게 실행되도록 지원합니다. - Vietnam.vn",
+     "u": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWjdQdHBUT2dNM296bU1VYnRYSFdQZEVKS21vMWRHa3NqSFFzRDVpcXpvREVxcUx2MU9ra1VzSXQwbzRMWXgwZFJlWHZxZGd3TS1FeWFJVUxId2NWZTV3Z29Lc3BndnBfQ3lUTUxZVGN4UThQUl9jeEdSMkZ4ekFNTV96b3pwQQ?oc=5",
+     "s": "Vietnam.vn",
+     "d": "10-16"
     },
     {
-     "t": "VNTG-한국마이크로소프트, 제조업 AX 실행체계 구축 MOU - 미주중앙일보",
-     "u": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE01N2hUMXBIaFhZQ3NRZDVYN1hoa044UUNFZ1pkT1NxUkJGaEFfM0RNeW1vMGcwVEVfWUZrYTZFdDMyYk52OW41M3dHNXU3RVJ1T2JQZmViaU9iOXhmb0RVOVp3?oc=5",
-     "s": "미주중앙일보",
-     "d": "10-15"
+     "t": "Microsoft, AI 및 게임 지원을 위해 Nvidia RTX Spark 노트북용 Windows 최적화 - Mezha.net",
+     "u": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8wLWZyU3dxQzdrN2VRMlprQ2tJdU1hSGhlSHNBeFRLUEhtczk3SU9Vc0xrVWhyNlRuTDRmMzdVZXlabEVCNFNVNUdsSHRFcG5pQ3BxdmxVMDFJZmF0YlluaXhuOVhyWURZblEwbVo1NWFMdjNjYVE?oc=5",
+     "s": "Mezha.net",
+     "d": "10-16"
     },
     {
-     "t": "VNTG, 한국마이크로소프트와 제조업 AI 전환 협력 위한 업무협약 체결 - 헤럴드경제",
-     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB4b1dfZksxOGYxUE4ybkZKaFdrRGg3bzVrT0JQZ2o5WkpGMFp0N2Z4ZjdGbHE0M21rQVhWT0N5SzhvSE5mMVMwamtzX1B0dEhUaVdPODZn?oc=5",
-     "s": "헤럴드경제",
-     "d": "10-15"
+     "t": "Microsoft 회장: AI는 유제품보다 규제가 덜하다 - IDNFinancials",
+     "u": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPQ0xTOXFXUUFxU1R3LXdPcXBWMUxPOXlxSC1TblBUOFJra2xuOVJkXzJnRU1FeVZGSkhPQzJOZGI4VUk0UUk4aE9FdnNBMlBvOWNzTUtQTUExRkxUR2xQc294dXNNVzVhY1ZhcGVKMnpWVEplOWo4V2UydjdHdGFvV0lPbmU4cTNCSE9QempxN3NMNDZhZk1mVDNyczc3dWJ6bVd1a3I5NW9oWFE5WWlGa0pVanJJSHFXVDBmbVhqNFhmYkh2Z0pEb2FXWmdCNy12cVVwSEpfX3FCMUE4eGJLWlljcDZjd2NESEEwUnRhdjc4Ym9HYUFtSTFRVjRIUDEzSW81UXBRQjMxUzRZQ1l5YnJadEk?oc=5",
+     "s": "IDNFinancials",
+     "d": "10-14"
     }
    ]
   },
@@ -2107,34 +2107,34 @@
    "error": null,
    "news": [
     {
-     "t": "“AI가 암 고칠 테니 담배 피운다?”… 팔란티어 CTO 주장에 '술렁' - 전자신문",
-     "u": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9raG1ZcGREeGl0S1lrNDczUC1LMFVHRmVOQ1NmODdZTEJhSE5uejJMbE5ZYkpnQUpOTjdrRkRjakN2TV9hVUItYlBiZ204UQ?oc=5",
-     "s": "전자신문",
-     "d": "10-15"
+     "t": "[AI픽] 팔란티어, 서울에 또 팝업스토어…이번엔 한남동에 뜬다 - 연합뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9LdV9xdll3RURIdHpNSzV2bU5ldVRIU2ZrRThQbTJUQW1WMWRHVUdDLUExdjFSTm1HR0Y1WTJINVRlYTlZOG8tWDh5TkRsbGpkN0hTVTl3SGlXcWvSAWBBVV95cUxQVU1TM0piYlhnRkRwVlpYQUxEaUhwR3RRSzJDT19vLV9JaWZyVE16SWdSMWRfbmV1T2thNFM1V1dMbGZpRmtVY2pjV091UF9HT08xR1k5bDdtQ1dFWFlIaEU?oc=5",
+     "s": "연합뉴스",
+     "d": "10-12"
     },
     {
-     "t": "팔란티어 테크 이사 Eric H. Woersching, 클래스 A 주식 20만5,000달러 매도 - Investing.com 한국어",
-     "u": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBGNjh4LTZ5dmNQOVlYczYyd1NDeGF4VlBLOWZqVXVlc29vYjFHRlVzTEZ4VVdxVlhxaFRwS2F2Y3BKRnRkX0RYeGRsc2g5TzNFcFpqRXE2ZEtITFEyNjBpaDJDb0tMQTMzOW5KM1dHMUtsMWZWQXJFelVNaw?oc=5",
-     "s": "Investing.com 한국어",
-     "d": "10-15"
+     "t": "팔란티어 테크놀로지스, 한남동에 두 번째 서울 팝업스토어 오픈 - 테크수다",
+     "u": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFA4RTVsbnZubkdlRHNwN2ZlT0dvaU9pX0lUNEJoZDFpNzdtb0tRbVBhd21UcVg0dk1pRW9TMzhrUk5XX1M4YVd4WWZ1b0VpclRPRVZVLTNINUwzc1phOXfSAWNBVV95cUxPMTBvUUtTQldWVDB1UTdWR2x3TlBxbGhUamU3ZkVSb0NlTmt1YVdUWHp4TjY0WTZXOUdvUEtkVnlPTnRWa2NhTmJmOS1pUFJQUndyTWZJVGxuN0p3VThOU29xWHc?oc=5",
+     "s": "테크수다",
+     "d": "10-12"
     },
     {
-     "t": "돈 잘 벌수록 세금 걱정…팔란티어 성장의 역설 [김주완의 글로벌머니 X파일] - 한국경제",
-     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Ua1RoMXpObGR4Ni1LcXhVRGdUMnJWWWZQXzlmV2xRMVN4c29EZzc5SG5pQXVoQmVyNzRhRGUyQ1ZsY1dYbUJGb0dCRktycGpib3BmOWFTUVo3dw?oc=5",
-     "s": "한국경제",
-     "d": "10-14"
-    },
-    {
-     "t": "‘게임 AI의 팔란티어’ 꿈꾸는 크래프톤… 게임사도 기업용 AI 시장 공략 - 조선비즈 - Chosunbiz",
-     "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOUmlKX2VvTkpweWNyVzFlQ1Y1SzJIWm1CS1VRVWJSZWFReldSczBtbFJxNkVmelJaSElCMm9DOHEzY0xtUmxTaVJuTzRqT2hJSENqZm5Ibnh4alI2NkxlanRkS25XXzRMTHl3WjVYUHdHd3pPQ3h0bllGSWxNTkIxTWZB0gGWAUFVX3lxTE9jNEl1a3A4U3JhR3lfdzcxYzNjNExxdW84SkhVM1BDdFY2b0RJTElkR1ZPSFVheUNhajRmS3pCSndRaVlJVDdYSWJMNU0zTEhwbE9HQlRmWGYzRWN2bDlmalV3MWdEMkZvYzNta1NJNjY1YmJ2d2tONklsZEJGWVBJZjYyWnBQeEd0MmJKdDdEOG42T25TQQ?oc=5",
+     "t": "팔란티어, 서울에서 팝업 스토어 연다… 최신 굿즈 판매 - 조선비즈 - Chosunbiz",
+     "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPLWlQTGt2RXMzSmlrN2Y4M3NidkJXS3I2ZUFhZll0bEpHUGxFdy12QTZTcXlMdUp4b0lKT0lYSGhOUUlYeHNWUC0xdlRzOHNlblhpX0txZjBHdXRVYjF6b2dQYTNSS3RjcUlYSnQ4Z0k0Tzg5cGRPU2VrSmZWUHM3N1Nn0gGWAUFVX3lxTE1fVE5TOTh2WW0wdnNGUE1Wbmc0VWV1c1BrOFAwaTlwRmxLLUI1Rzdib0U2NmlrbkJtNE9uSlVicHhKbF9ZQVVqMWMxWEUxZHVvbHh2S3J5blphbk51N0FNaXF0UzNhYmpGYThUOEJxWHFmVGdaVV9vYzR3Yk1KUWFEam12YXpsaTliQ1hTNXc2S2tmMUcyZw?oc=5",
      "s": "Chosunbiz",
-     "d": "10-15"
+     "d": "10-12"
     },
     {
      "t": "팔란티어 테크놀로지스 주가, 200.50달러 0.23% 하락 마감 - 톱스타뉴스",
      "u": "https://news.google.com/rss/articles/CBMickFVX3lxTE5uLWpYcVdReHRvbTRJb291SW5Nb1IzRnExQ0tnNi1wY1dqT3pEYklHN1F2cDZWWTRtNi11RmJTcUluc25weUZXWWNJSmdrQ2Q4Vk8wcFBBTXRYREtWbnBEY1BHN3V0SC1TZURxVWw3ZTJZUQ?oc=5",
      "s": "톱스타뉴스",
      "d": "10-16"
+    },
+    {
+     "t": "팔란티어 테크놀로지스(PLTR) 아마다 협업으로 주권 AI 기대 커지는데 적정가 논쟁도 이어져 - Simply Wall Street",
+     "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaG9vekJHWUwxWXY5T2hwbXQ2NzJSd2hvQWNMcGhGVGd1QzcxUUlDRlBYdEJ1TzhxbUZha3dueFpxNF9YZjl2b0NOMlVYSTlIemNKTWh4Y3J1TnJXTm5uRTRCdkR6cnVBZURxTlJWQzROVnZpblVIQWV0VF80OFdHWFNhb0JTRFFCN3NaaThfZFhibi1UQmcxdTA5S0JxbTktZTFHNS130gGmAUFVX3lxTFBob296QkdZTDFZdjlPaHBtdDY3MlJ3aG9BY0xwaEZUZ3VDNzFRSUNGUFh0QnVPOHFtRmFrd254WnE0X1hmOXZvQ04yVVhJOUh6Y0pNaHhjcnVOcldObm5FNEJ2RHpydUFlRHFOUlZDNE5WdmluVUhBZXRUXzQ4V0dYU2FvQlNEUUI3c1ppOF9kWGJuLVRCZzF1MDlLQnFtOS1lMUc1LXc?oc=5",
+     "s": "Simply Wall Street",
+     "d": "10-15"
     }
    ]
   },
@@ -2435,34 +2435,34 @@
    "error": null,
    "news": [
     {
-     "t": "백악관, SpaceX에 우크라이나 군용 위성 서비스 제한 지시…로이터 - Investing.com 한국어",
-     "u": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1QVWpxcFBkX2ZZTm96ZkdaMzVhVzBNeHFFcWF3dE9BVVNQdllzM0hydU9mbk5Idmd2NW82WXNxdGUtdHZCOVZFenNhQ3B6N1VfT1ZQX0thYkNwSjktbHhDclpyVGVycDhIRTFENEFUTW9HQkw3UzM0?oc=5",
-     "s": "Investing.com 한국어",
-     "d": "10-16"
-    },
-    {
-     "t": "하늘 나는 테슬라 로드스터…스페이스X의 테슬라 인수 큰그림? - 한국경제",
-     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBWdkNqSTJPb3dIZGpuWWZpQk81SHJtM2RIMjJsbG5QUkVZMG56Qkc5Q0dHMFJDbERydDRkNFRGOGpRWXNJcEc3Zml6M2pGVXBRdGY5RmpKekU3UQ?oc=5",
+     "t": "\"공중 떠올라 한 바퀴 회전\"…'하늘 나는 車' 나왔다 [영상] - 한국경제",
+     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBVdUhONFZBZzdkUnpiZHhyXzREX2x3UVpCZzJRSUxiVmpNQmRhTnNRMWc5dmp3b3JYYTFYaG4xaEFKeVd6dmwtQ3dFOVh4ajduOTlodURhQXdPZw?oc=5",
      "s": "한국경제",
      "d": "10-16"
     },
     {
-     "t": "테슬라·스페이스X 합병 임박하나…바클레이즈 \"12월 주총 전 발표 가능\" By EBN - Investing.com 한국어",
-     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE83c3JSNFpoMjhaSmZNTjBHNlY4WVVSc3FteXg0eUlUX1hoZk1mdWkwT0hVMVlEdXRScXdqRDZPZkFNSXdKNVFPX0FiN3pmejhTRTNTS05RN29pY2pTLXlOZnZ6dEQzdFh6RENSdDlxWEQ?oc=5",
-     "s": "Investing.com 한국어",
+     "t": "하버드, 스페이스X 투자로 27% 수익 - 서울경제",
+     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yR0R5cHhuZXZpanpMc25meHNzX2I4N05hakswYy1vUXptM2FvWU1tcDN5R1Z1SExuMTFPS29IcVo2cVRGT0VCME5LQUMwdl9lSlHSAVNBVV95cUxQNXEzWjgyRU9XSGVreFowa3pINjhEVDlDbmhHa2RXYVFXckhBTEx0Nk03d3V1YjhRbmZTU0dYT212aFRWR3dVdHZHenFpMUZER2tLZw?oc=5",
+     "s": "서울경제",
+     "d": "10-16"
+    },
+    {
+     "t": "\"테슬라-스페이스X 연내 합병 '발표' 가능성…이르면 이달 말?\" - 뉴시스",
+     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBXeFE4VTZ0eXRfM25US2x0ZklBU2JYT0FfVHB5aG1wN0dhSWtBb1hjSUpLN0RzNEJMSlNsZDVUM2o2MzZkeW8tN3ZNLTNCcExzUXFVeF81MzRrVDBPVkJ6TNIBeEFVX3lxTE8zdjZULVFVcC00RXZvVjZoclpwMDYyUHRLYUM3OUg2TmFka3FiVUJDazhSWlNIM241SEpxNW5qdE41R2hlRXZoNjZ1dUNhaDA5RzZuOERCOXRCVXhId2VGNUFWT0dTdndjVkJ5bjA4OFdaaVpDN3hCVA?oc=5",
+     "s": "뉴시스",
      "d": "10-15"
     },
     {
-     "t": "머스크의 'AI제국' 탄생?...테슬라·스페이스X, 연내 합병 발표 가능성 - 머니투데이 - 머니투데이",
-     "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1hNWp3c1o5U3FkZzNPdmV3UGN3OThRQTZOaWFJMmNLTG1mN2E4elktMmd4anhLQ0xITEJlNy1xNnNwaUhTM3dwNXNwQUswZXRUOXpjN3NObG5UQkFVUFljcTQ5bDhoREw50gFuQVVfeXFMUEh0dENSZ3RWQ1JYN1ZySVB5MnhyczJIYmQ0SXVFSE9LbnZ0bERXbmJFeUc4N0RIcjU2NVMwWGFOT0V4bFpUUmk4MVB0S3NTaDFOSl9rTGQya05MRUROWTJVZVZHTUJ1WU1sYzZuUWc?oc=5",
-     "s": "머니투데이",
-     "d": "10-15"
-    },
-    {
-     "t": "‘협력자’에서 ‘경쟁자’로…통신시장 판 흔드는 스페이스X [지정학에서 찾는 투자기회] - 매일경제 마켓",
-     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBmV28tMHFneng0NUlvOE81Z0FicHRHU2dwU2VpSS1WNnBOTEE2WGFra0pEdTdLZWM0djZWdzZqUUR5cWwwRE5sZEJORXE5ZFNaWnc?oc=5",
+     "t": "특징주, 미래에셋증권-스페이스X(SpaceX) 테마 상승세에 5.49% ↑ - 매일경제 마켓",
+     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA1bXZyQ0hHbl9xbFYzbFRzYWViWk9wTnJEdXBTbDRXNXdBX1FNUE1qRHBPellIMlFDN0pVQWxvdFFBVnhHby14dnJhVHVSNXlxbHc?oc=5",
      "s": "매일경제 마켓",
-     "d": "10-14"
+     "d": "10-16"
+    },
+    {
+     "t": "‘기술 무기화’ 시대… 스페이스X 통신 속도 제한에 우크라 작전 차질 - 조선일보",
+     "u": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPOXJLQTVmU1Q0NkpSc2JyMGVYX0NqVHJPbFFGSDQ4YjZmOVpwMVRRWm80UUFtUkVuaEp5SkdtbVRENlJmZFppX3lNNmpNSWdmMndFYWwydk1pRU5XaTdKb291Z2NWaVZLTm9BQlJwRGRUZnBlYW9yN0NFTDhNMGFvUTdsdw?oc=5",
+     "s": "조선일보",
+     "d": "10-15"
     }
    ]
   },
@@ -2587,7 +2587,7 @@
     234000,
     234500,
     207500,
-    216500
+    217000
    ],
    "hist_ma200": [
     118700,
@@ -2709,7 +2709,7 @@
     230448,
     231096,
     231620,
-    232163
+    232166
    ],
    "hist_from": "2026-04-20",
    "hist_dates": [
@@ -2840,8 +2840,8 @@
    "currency": "KRW",
    "last_date": "2026-10-16",
    "bars": 3000,
-   "close": 216500.0,
-   "change_pct": 4.34,
+   "close": 217000.0,
+   "change_pct": 4.58,
    "score": -9,
    "verdict": "관망",
    "demoted_reason": null,
@@ -2850,46 +2850,46 @@
     "12−1 모멘텀 +208% — 1년 흐름 상승 (+25)",
     "두 지표가 서로 엇갈립니다 — 어느 쪽도 확신할 수 없어 관망"
    ],
-   "entry": 216500.0,
-   "stop": 189340.87,
+   "entry": 217000.0,
+   "stop": 189840.87,
    "resistance": 288000.0,
    "risk_pct": 12.5,
-   "ma20": 258625.0,
-   "ma200": 232163.0,
-   "rsi14": 32.9,
+   "ma20": 258650.0,
+   "ma200": 232165.5,
+   "rsi14": 33.2,
    "atr14": 13579.57,
    "stale": false,
    "error": null,
    "news": [
     {
-     "t": "\"10만원까지 가라\"…주가 폭락에 웃는 삼성전자 직원들, 왜? - 한국경제",
-     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5uZWdERGxiLXZXa0NRRlFRSXlyU0Rjakh4ellsb1dRLVVkYlRuWWY2aVBwaHBiRHp6cXRnV21hQXdCU1VYblpVNE82MTlCNFoxWDBtOURYeGE1Zw?oc=5",
-     "s": "한국경제",
-     "d": "10-15"
-    },
-    {
-     "t": "\"주가 더 떨어져라\"… 삼성전자 일부 직원 글에 주주들 분통 - 서울경제TV",
-     "u": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5Rc0JuUks2ZGowR1lNS2xJTzQ0VXRjcUo4VWtISl8tbTRrVGZzOGcyaC10U0c5aDNCN0tFOTdhNTFRcjh2NzZaTnJvb0Izdl93VUFuOUlISnNqU1dpNXZ1Tnl3UXc?oc=5",
-     "s": "서울경제TV",
+     "t": "이재용 막아선 삼성전자 동행노조 \"돌아온 것은 침묵과 부상\" - 연합인포맥스",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA4ZWFWVGNRNm5PU051dTgwaGVLd2FVZWpnd3lOU1Q1bFA1RTg4NkNNbnJvODU0T0Z5RGFZVlhJd3QxeEdVNmR4WXEzXzk5LWNYcnVoRmZKN2ZYMkdhNXNhLTd6UXRPa0FhTDltbDhZV3Q?oc=5",
+     "s": "연합인포맥스",
      "d": "10-16"
     },
     {
-     "t": "분기 영업익 세계 1위 삼성전자, 주가는 왜 또 폭락한 건데? - 인베스트조선",
-     "u": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUVd4UlcyOERaZC1leldsOGJPU1hRTmR5UU5RS2YtRXlfVkRYOGhMYTBCckVEU0tmZlZVRzZWdXNHSUlhZnQ1cnlTN2p5U1NWQzIwNXVqSFlBLVA0VnVNek9tV3RYYWNiQm1wUGtnRnJzOERQTnppUDJweXd0Z3hkdWtCNA?oc=5",
-     "s": "인베스트조선",
-     "d": "10-15"
+     "t": "이재용, 모친 홍라희에게 삼성전자 주식 2조6000억 증여받는다 - 세계일보",
+     "u": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB2ZWFRTWNKVUF2QzlNREM0S29lSmxaaUJYdkI0QVp2Q2RVRmZZR1l6QTU1U2dRNVlyNEpXbWtUWWJiMGpqbEQwUTRxNjJ0SWJneG11TjVYNknSAVRBVV95cUxNYlRvWE1wZktWTEpSdnB6eGR0dnppM3luSml2enE2V1lCcUhBQ1g0alctUXd1ajFSMUFQeXpaZ1VMTzZza256Z0U2Tlp0NTRoR2RYem4?oc=5",
+     "s": "세계일보",
+     "d": "10-13"
     },
     {
-     "t": "삼성전자, 이탈리아 아티스트와 협업한 제품 공개…‘서울 디자인 위크 2026’ 참가 - 경기일보",
-     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0tajlsdE96cHlXVml4UlhNbjA2YjB6Q1BrTEs4eUtIdjFuQ19rVlYzTHAxN3YzZWJleHdvSUtKdkpfMzFSTUJHM2E4RHo2ZXdNQVRfSWxnZENiMlk?oc=5",
-     "s": "경기일보",
-     "d": "10-15"
+     "t": "삼성전자 회장 이재용 , 중동 체류 임직원에게 선물·편지 전달 - 비즈니스포스트",
+     "u": "https://news.google.com/rss/articles/CBMic0FVX3lxTE52d2U5eUd1SFY0U2wxU3hwYzZNeTJuX2RZWHdmYzZFcW9yRTlsM0h4OGRycWQtNjJPbTM5WHhZSjJvcjA1M3lmWWt1SU8xSnN2bG4xclJ5Q21QYXFTV1VUY1dfWmtlSzh2TXV2VTJMZHVqX0E?oc=5",
+     "s": "비즈니스포스트",
+     "d": "10-16"
     },
     {
-     "t": "삼성전자, 서울디자인위크서 이탈리아 작가들과 협업 전시 - 조선비즈 - Chosunbiz",
-     "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRXVTc3VLdGE1clpueTVEMUlpNDdHNUcyM2lKRGxRbXpvWTd1aHJwUVdEellVZ3F2RkFVVG1FcXhPeWhYLVU4TGJBTm5VNTZKX2ZYTC1NNHFLV3R0Y3JUVkdjdGtNV1otNlJPLVkyZmt0QVJMRmx1ZEtaS19iaEVLRG530gGWAUFVX3lxTE1ZRFJaN0dZVi1SbUdtUTl5TnYwYng1M2dOTXA5ZTE1aUQ1djljNHlzS1FldVZSS2wtUTJKVXJkY2d3MDJhVGZxNDhLVG5haS04MGh5czNBZEZmcHNubXFxZmgwRVRETC05TGZKUUxWVmRJdE5aUHF5Yzc0bFlVRDUyUEp4RjlBYTBUVExxOWY5V1VZYUprUQ?oc=5",
+     "t": "삼성전자 또 일냈다…\"올해 최고의 발명품\" 극찬 쏟아진 정체 - 한국경제",
+     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE85SnRHb3gzMGc5M1RyT3V5enMyZWtkTUNBZzA1LTJlMlNuTXJqaHM3c3NldVlwOFlQbnJSR0JVS0lxZ2ZrdFN0OHVNUUVsb0U1S2N4aks5VmZrdw?oc=5",
+     "s": "한국경제",
+     "d": "10-16"
+    },
+    {
+     "t": "삼성전자 갤럭시 S26 울트라 등 3개 제품, 美 타임 ‘최고의 발명품’ 선정 - 조선비즈 - Chosunbiz",
+     "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNSlRxaXJMUnVfTGlZR2tSQVhON2VsLTdQcG02V01ucmJyMFlqMW12cmZ1UXdnUDJUOWRreW00bTlFek1YNERwNF80YUFfS2dfUEwxZ1NSdllCenMzYUNYTVF5bEFQMXo3Ym9hQ1kxRUI4OFA2bGViSFBjaVZzZ2lBaG9n0gGWAUFVX3lxTE5BUGZHc2JxRmoyTXdDVjdGaUJ2cTlXVno2ZzVZZ3h5TW1Icy1ESXlERG04WE9jSk9ldGxxSFZxSnBaMFl6TWtCbVJpaFpTUVRsc2dGMDhPcHRjWlBhV1BuS3I5djFBZHBGdzhBNE56WEpKVHRfb0czbFRBc1VLU2MzVFJrbVh5R3RXNUxMUjJqUUJRX3d6QQ?oc=5",
      "s": "Chosunbiz",
-     "d": "10-15"
+     "d": "10-16"
     }
    ]
   },
@@ -3014,7 +3014,7 @@
     1456000,
     1425000,
     1238000,
-    1272000
+    1265000
    ],
    "hist_ma200": [
     584958,
@@ -3136,7 +3136,7 @@
     1445320,
     1449675,
     1453215,
-    1456820
+    1456785
    ],
    "hist_from": "2026-04-20",
    "hist_dates": [
@@ -3267,8 +3267,8 @@
    "currency": "KRW",
    "last_date": "2026-10-16",
    "bars": 3000,
-   "close": 1272000.0,
-   "change_pct": 2.75,
+   "close": 1265000.0,
+   "change_pct": 2.18,
    "score": -9,
    "verdict": "관망",
    "demoted_reason": null,
@@ -3277,13 +3277,13 @@
     "12−1 모멘텀 +419% — 1년 흐름 상승 (+25)",
     "두 지표가 서로 엇갈립니다 — 어느 쪽도 확신할 수 없어 관망"
    ],
-   "entry": 1272000.0,
-   "stop": 1073336.07,
+   "entry": 1265000.0,
+   "stop": 1066336.07,
    "resistance": 2006000.0,
-   "risk_pct": 15.6,
-   "ma20": 1692600.0,
-   "ma200": 1456820.0,
-   "rsi14": 27.5,
+   "risk_pct": 15.7,
+   "ma20": 1692250.0,
+   "ma200": 1456785.0,
+   "rsi14": 27.0,
    "atr14": 99331.96,
    "stale": false,
    "error": null,
@@ -3295,28 +3295,28 @@
      "d": "10-15"
     },
     {
-     "t": "삼성전자·SK하이닉스 저격한 머스크…\"마이크론 메모리 가격만 적당\" - 연합인포맥스",
-     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8yZGJLcmVJVHJyRnpWVlAycWc2RkF3dklKV0diUXhJN1N0TFh6Wi16Qm5hSG1tUXlnZ0VZeE40c2dUalE4dWliendrMEo4WV9BN0wxTmVCbk9CQWpKSmZTWkxFcXNPdjZNWGhJNDIxNnU?oc=5",
-     "s": "연합인포맥스",
-     "d": "10-14"
+     "t": "SK하이닉스 주가, 오늘 왜 급락했나? - Investing.com 한국어",
+     "u": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5PV05VSFN3YUgwMmpxeVA0Z2pFbGY5T0x1SnVxVk1GYjhKMjVSYkVGbjBPdjNIY21nUFduTG41OF9xb0s0M2d6cTN3S3hFdU9NUmszZ0tVLXVpbFdaMDlIT0VUdGpmSWZxaEp4SXdUckZudVZ4cG5R?oc=5",
+     "s": "Investing.com 한국어",
+     "d": "10-15"
     },
     {
-     "t": "구직자가 뽑은 관심기업 1위 SK하이닉스…현대차 2위 - 매일경제 마켓",
-     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hTEc1TmNqNDlLMW9xTkIyMGtNa2l2TkhoSTlBQnZibzNoWlFvNjNaZlhBRjMtMWlOSDFFZVFjNWFySjI1RnllYVBDd3FMODNOVGc?oc=5",
-     "s": "매일경제 마켓",
+     "t": "SK하이닉스, 한국 시장 폭락 이어 美서도 하락 - 마켓인",
+     "u": "https://news.google.com/rss/articles/CBMic0FVX3lxTE12RmVvUWRzRDE0SU1FOEd6WjRVdEJfcXp1d2FHdm1qQTBCT2gxbVF3d0loenpuSFg3aTF4QldRaXd0TGhaY2U1b2I0c2hkdHpTcDZ6Wmx0aU90LXc5XzVQQkdVMXJQSGdCNklyc2JSTUx4THM?oc=5",
+     "s": "마켓인",
      "d": "10-16"
     },
     {
-     "t": "SK하이닉스, 1년간 구직자 관심기업 등록 1위… 삼성전자는 5위 - 녹색경제신문",
-     "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1OQm85WTFrTU1wMDI3U0J3ZzZwcHd0c3ZqZGNiTFhnSGdWNURUVEwzZGN2eGtNekV5ckg2M2JyTV92YUprOWpfZk5ENmRoTkc5ZXdJakdDdU9Lb1Z3azQxbXd2N1BXRFdX?oc=5",
-     "s": "녹색경제신문",
-     "d": "10-16"
+     "t": "\"SK하이닉스 '美 투자할테니 中 공장에 반도체장비 허용' 요구\" - 머니투데이 - 머니투데이",
+     "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8zTXRja2s5N0JJVkd1eGdVVVpOTjd5RXdYVWluWXFNYVd0NjJnQ1BscFVBUW1JVUE5QnBiU1o4NnBQNW9PazdjbVlheUR4bmxuWEdOSVh1UVMyTDRDdXc1ZE9Jb2FrRFpW0gFuQVVfeXFMTVZwNFEzV1JWcmpULUJuYko2bmxDRzd4SGE2dmVtRTgtVWRmZXlKRjZtbUkxbHpJbEZkU0dWbW9PMGlwNUpLY3FRaDhmWlZ3TzJpYzZvN0tpM1JhVjRIVDlmZTQwSC1Kd1dTTjRjRmc?oc=5",
+     "s": "머니투데이",
+     "d": "10-15"
     },
     {
-     "t": "구직자 관심기업 1위 SK하이닉스, 현대차 2위 - 연합뉴스TV",
-     "u": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE50dnEyWXZzNlBQNDZ0Z2lLY0J2dG1HbUtMeWo3TFhqTkNUY2tBSEJ0OHZ0X1ZnbU9sbFh4Vnh3allIajhpaHV5eTZhZnZvMmtNVlJGRGJPTUNoTC1iU2FDWFZ2WmRUdnM?oc=5",
-     "s": "연합뉴스TV",
-     "d": "10-16"
+     "t": "로이터 \"SK하이닉스, 美 공장 짓는 조건으로 中 다롄 공장 생산 장비 반입 추진\" By 알파경제 alphabiz - Investing.com 한국어",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1MeHRrUTRnV2NDaGhQMkxUOFVWX1MyTGRuVDRJY0tUZ2dzUm1kM1RqY0hZVDQ5QWIyckt5akg4dy12bHlEbC1BSXJqeEhZNktUdXVOMUNJTEpCU05TdEh0VW9kYV82YWREZWdwX21hOEg?oc=5",
+     "s": "Investing.com 한국어",
+     "d": "10-15"
     }
    ]
   },
@@ -3441,7 +3441,7 @@
     69800,
     68900,
     61400,
-    64500
+    64400
    ],
    "hist_ma200": [
     79860,
@@ -3563,7 +3563,7 @@
     91772,
     91732,
     91652,
-    91597
+    91596
    ],
    "hist_from": "2026-04-20",
    "hist_dates": [
@@ -3694,8 +3694,8 @@
    "currency": "KRW",
    "last_date": "2026-10-16",
    "bars": 3000,
-   "close": 64500.0,
-   "change_pct": 5.05,
+   "close": 64400.0,
+   "change_pct": 4.89,
    "score": -9,
    "verdict": "관망",
    "demoted_reason": null,
@@ -3704,17 +3704,29 @@
     "12−1 모멘텀 +44% — 1년 흐름 상승 (+25)",
     "두 지표가 서로 엇갈립니다 — 어느 쪽도 확신할 수 없어 관망"
    ],
-   "entry": 64500.0,
-   "stop": 56462.47,
+   "entry": 64400.0,
+   "stop": 56362.47,
    "resistance": 94400.0,
    "risk_pct": 12.5,
-   "ma20": 78995.0,
-   "ma200": 91597.0,
-   "rsi14": 29.8,
+   "ma20": 78990.0,
+   "ma200": 91596.5,
+   "rsi14": 29.6,
    "atr14": 4018.77,
    "stale": false,
    "error": null,
    "news": [
+    {
+     "t": "두산, 재무·사업 지휘라인 강화…김민철·박상현 부회장 승진 - 신아일보",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAzaFZQdUFXSVZ5ZmV0bS1JcmlCOTVpNjFyV0VTRWp1S2F4Rk1ycVgwbEk0Z1RnWTFGQndIVl9LeXpUa2M2clp4Mm1zMU9OM1VaZzA0SWFwS1RESk9mWG9YbHBIWkl2aDRjWjJNYk1pWGE?oc=5",
+     "s": "신아일보",
+     "d": "10-16"
+    },
+    {
+     "t": "[인사] 두산에너빌리티 - 신아일보",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1zZFY3cmFBRU9kNzNSdFdLNU1WcVJDZnlaVnBLMldhZGVVU1NvYUV1R28wakVUam05bFdDLUlncVdlbjNfSHFBYTMyV2Y1NDlzMGpUeFBaQnZoa3F6YmFFc2JVVDNBd3hPbzc1ZndFbXM?oc=5",
+     "s": "신아일보",
+     "d": "10-16"
+    },
     {
      "t": "“두산에너빌리티, 올해 3분기 실적 시장 기대치 하회 전망” 목표가↓ - 매일경제 마켓",
      "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBMMzVlQnNjSDIyWG5KS0FxTTRWQjlMX3lTeW1GenN3YXJEam1oS05HRDBCYnhVOWl4Z0R2bFQyMzNrMG1uX0ZFanlodS1tTkZVaUE?oc=5",
@@ -3722,28 +3734,16 @@
      "d": "10-16"
     },
     {
+     "t": "두산에너빌리티, 박상현 부회장 승진·송용진 COO 선임 - 전기신문",
+     "u": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04QzZzZ0pENkdIT3FGZFVSa1N4bDYzWEctZnJVOE5fajctZGdHMWZiMGRXeHZDdjNwMXRCUHpxaDJrQmhFRjJYeUJtVHljd3pNNEVueXBHSHhQVWVYYUxKbW9zaDlsc0duYnJmcA?oc=5",
+     "s": "전기신문",
+     "d": "10-16"
+    },
+    {
      "t": "\"美 원전 8기 잡는다\"…두산에너빌리티, 핵심 공급사로 참여 전망 - 뉴시스",
      "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1sVXlndjhiYXhETFloZHgzOE5jcmU4Rk9KYTRVOEljYnVuVmRKejI1dU5fNlFJbE40dGJhSElNWXpjOUQyOXZub1k3RU9MMEVsMTl5cDZudERtZFE4dnhiVtIBeEFVX3lxTFBLX2x1QzVmRVlfNHI1d2lWaERnYjVGVDdOUzc2eGVLWG1zTWNRWFV3b0JYTzRpVDJ6b0tOa1U3WTEtdEdTZTdTLTVBN1hHWUptRUkzYXFTck9HbXp3YVdGWjJsRFlPUDRnSkpiQWRVTjdWU2YtQXNqbQ?oc=5",
      "s": "뉴시스",
      "d": "10-15"
-    },
-    {
-     "t": "SK·삼성물산·두산에너빌리티 '4조 합동 베팅'..美 웨스팅하우스 지분 10% 사들인다 - 한국정경신문",
-     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9Cd2M2WXFXMG5xX3R5Y19idHY0WnN3RTVFT0pISVQ5U3NoZmlReFdocWQxc2NGRFN0clJEWU0ydXkxQ1ROOVFKX3RQT3poSk4wSVE?oc=5",
-     "s": "한국정경신문",
-     "d": "10-15"
-    },
-    {
-     "t": "두산에너빌리티 주가, 전일 급락 딛고 반등…하나증권 \"연내 SMR 추가 수주 기대\" - CBC뉴스",
-     "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAxRzc4MUdKTlBPbjV4ZDFkRTUzSTExVDZ4OFB4TFVrOVlhcG1wLUMxQ0pmTF93aUE2NUtoVXdPQmNDLW1TWGhveFdJdDVwdEthYWY0d0I3WFhpRnhoNkJLeVVleGo0M1ZX?oc=5",
-     "s": "CBC뉴스",
-     "d": "10-16"
-    },
-    {
-     "t": "[경영의학] 두산에너빌리티, 3조6000억 긴급수혈 위기에서 신용등급 A- 회복… 탈원전 그늘 벗고 SMR 집중이 처방 - CEO경제신문",
-     "u": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA2aWpYNTVxdmVWenkwaGk3WU9uUHMzQXJ3NHpvbTh5TnNFNXJvUktENmJqRDVKb1pHWlJYRWRzdUh3b044V2syMmtscmlvS1JMX3hOS1dESUo3S2JuamRkMzdNNDdfZm00UmZaZA?oc=5",
-     "s": "CEO경제신문",
-     "d": "10-13"
     }
    ]
   },
@@ -4142,15 +4142,21 @@
    "error": null,
    "news": [
     {
-     "t": "전기차 민원 최다 업체 테슬라… 현대차·기아 합친 것보다 많다 - 조선일보",
-     "u": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16VkhUWmpuSWN2QmZzT1UxMlNIcDdDcnNhRl8xYWlrVENhVUZwX1BPVHF5OVpYd2pOVFJqbmdrLVYxU296Z3hrY2tBaExLcmRQWWNaSU44VXFJYlJoUzJNQzNkN29aUENZNEh0Tm1rWUtOcjlKemF5N1FtOGVqM1k?oc=5",
-     "s": "조선일보",
+     "t": "차량 5대 뛰어넘어 착지…테슬라, 하늘 나는 스포츠카 시연 성공(종합) - 연합뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QNXVvWUpLajhub3d5WDZzLUxuUFNjMUV0aGs0aThTVXJtenY4Ri13Q25JVWtZMjVKMUlBb2tidkpzdnd0NnFmNVpBMGV4QlkzMWlKYlZOcW93ejjSAWBBVV95cUxQWUhqRFNScmM3QzcxQTlia04zMGxvd05kM2g5ZjJVcmtMZ1M5WUVZaXF0U1IzcXdJVlBrZEpZNzlxZnZqUkhYUEdnajZTaVBUWHJ0LWtDV2xFNTZWcGo2dTM?oc=5",
+     "s": "연합뉴스",
      "d": "10-16"
     },
     {
-     "t": "[미국 특징주] \"테슬라 ESS 수장 스나이더 사임… 후임에 AJ 부스\" - 뉴스핌",
-     "u": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE82RV9mUnlGY2ZGZkVoQllpakxsNzhNdXk5a3FZVS1JeVRPdjJKSHBOQWMzaUwyOVdxTUZiNzRnNzV1SFc0cFhoc2lnV1o0OXZzQWFKQUFaVE9mRGpm?oc=5",
-     "s": "뉴스핌",
+     "t": "프리마켓 동향: 테슬라 급등, Strategy는 MSCI 지수 제외 우려로 하락 - Investing.com 한국어",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBkSGtmSEYtWG1mZFZ0MFVmYnItTXNFYlVZQU1jV1FkUHdHbzhYcjdPU3F2VmNpT25SalBtQ1hCVUZaN1NrX0dUMGNfOVVRcHhmTXZKTmRZSXZvZU9DRVU4bmhpRWxEVHRBY21RLW53MlQ?oc=5",
+     "s": "Investing.com 한국어",
+     "d": "10-16"
+    },
+    {
+     "t": "\"이게 AI가 아니라고?\"…전 세계 놀라게 한 테슬라 - SBS 뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE50eWVqT2RZOTJCUlJRaUFyNmdTLXFORDB3VXFGMU8ybmV2d1BKSl8wbnVBZlNhdDF6aWg1ZHpFYUkxa19ZaDgtYkFuNllVQnNHeUVGVVEwUjJFT1BGQnY1YlpMbzI0b2RpcUHSAWZBVV95cUxObS1lOTBLMUZJVXYxNExJSUNBSk04QmdmeFhyY3cxbEVsQUpqUHlWb2V4TG1JLXR0cWR4OWZjQUNkd20zRjU4dllWVUFjUHNRcDA1ajFlb2l2Sno4b2NPdUU0T3JXdVE?oc=5",
+     "s": "SBS 뉴스",
      "d": "10-16"
     },
     {
@@ -4160,15 +4166,9 @@
      "d": "10-15"
     },
     {
-     "t": "[단독] 테슬라, 독일 기가팩토리 대규모 증설 재개…年 100만대 생산 목표 - 더구루",
-     "u": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1iT0szWGFkWG9LN2FTakhEZDFJYmY1RVpLQ3Q1Y3BhOWFCdGJ1a3VxeTc4S1ZqOVRtR1pydFBPdTBBM1JHbVpjWVRSV3lzLUFIRHNLTmpMdElOSWpCNXc?oc=5",
-     "s": "더구루",
-     "d": "10-15"
-    },
-    {
-     "t": "라스베이거스 테슬라 방화 한인 남성 징역 5년 선고 - 미주중앙일보",
-     "u": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBGcnFKT3VyZDRTd21TMTAwRHNrSXhabkVfbVVDNzVQcTNTTGVKa2xRUkZPcDBma0pFY1NTR1RhWnFiVXkxMVV1RTNua1JaYTFkbHpLQldUbzNKOXNIMlphdEN3?oc=5",
-     "s": "미주중앙일보",
+     "t": "\"테슬라·스페이스X 연내 합병 발표 가능성\"...월가 전망 '주목' - YTN 사이언스",
+     "u": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdUlLRlpTSmkxVWFnLUEzUTViZTNVVlhESEdaZ2Zvd1pDN0o5aEVUYVc3ZDVmcGx5SXpkNnJBc1pmVEJyVzY2SkttZ2JWR0dsYjcwNUN5NWR5eUZmVnRTVmxoRy14UTR5d1pueUIzLUlGQXF4V2NrYXl0Q2s4aGt6QkRnckpqVG9scGJTRg?oc=5",
+     "s": "YTN 사이언스",
      "d": "10-15"
     }
    ]
