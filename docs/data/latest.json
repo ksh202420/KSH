@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-31T08:43:43+09:00",
- "generated_at_display": "2026-10-31 08:43 KST",
+ "generated_at": "2026-10-31T11:17:15+09:00",
+ "generated_at_display": "2026-10-31 11:17 KST",
  "total": 10,
  "ok": 10,
  "failed": 0,
@@ -390,13 +390,13 @@
     "12−1 모멘텀 +23% — 1년 흐름 상승 (+25)"
    ],
    "entry": 342.08,
-   "stop": 329.47,
+   "stop": 328.32,
    "resistance": 351.73,
-   "risk_pct": 3.7,
+   "risk_pct": 4.0,
    "ma20": 342.08,
    "ma200": 296.27,
    "rsi14": 55.4,
-   "atr14": 6.31,
+   "atr14": 6.88,
    "stale": false,
    "error": null,
    "news": [
@@ -407,27 +407,27 @@
      "d": "10-30"
     },
     {
-     "t": "Apple, 터치를 지원하는 PROLED XDR 디스플레이 탑재 MacBook Pro 공개 - GeekNews",
-     "u": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBYNy1zcnE3ak8tRmdXdWZ4b1E5MXhtTXJWQ2RGZ0hTVEhseVlGV0lkUTdGSWdHa2pFT1hnTVhrbkxLb3lnOXZjZGUzSQ?oc=5",
-     "s": "GeekNews",
-     "d": "10-29"
-    },
-    {
-     "t": "애플, 20년 고집 꺾었다…첫 터치스크린 맥북 프로 공개 - 매일경제",
+     "t": "스티브 잡스는 “끔찍하다” 했는데…애플, 결국 20년 제품 철학 뒤집었다 - 매일경제",
      "u": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1FZjM4RktXZkpXNHNRcUhwZTVBVVZNQnJ0ZDFFNzNoUFk0dU9JRll5THNvVXZmRmxxbjhPdGJEYWlHVDR3b2QtVC1VenprUQ?oc=5",
      "s": "매일경제",
      "d": "10-29"
     },
     {
+     "t": "애플, 터치스크린 OLED 디스플레이 탑재 맥북 프로 공개 - Investing.com 한국어",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE41YnBEdndHQW1WSXpDU3poaDdJbTJHeEFhREdmRlJISjJHTkh1enlQS0F1NFlKNFRsdlR1eFFYSERRWk45Tm15X2JhMXhlcmVBSTVhWGZQSGtNWHotUGV0ZjAwRUJtYjJadWlrWUItMlY?oc=5",
+     "s": "Investing.com 한국어",
+     "d": "10-29"
+    },
+    {
+     "t": "애플, 엔비디아 제치고 시총 1위 탈환 - Chosunbiz",
+     "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPelhBei1LWWlTaU1rLURDQXliTFNNYTBJYzJiMVdRSkc0b3AtMjl2N1liZ3MzeUNoMnpQcHBOMlV2QkxpUUVGX2tDaGE0cjJqX2pVY09jVVZXVldWM1kxOHE0aUFHR25Gbm16U0pZRnB2TlVra3BVTDRNZ3h6N19URTBn0gGWAUFVX3lxTFBCRHY1WGgzZGdXMm9vU2EzMXZqXzZRTkpNTWNlUldSUGxaY2Z2a2VRcjJkQk5GQjdoUHBFU3N1dnItdHBBRzhTUWpPc3FZaW1BeVB6VVlvbWwzVGdkN21iQ2Q5Mmx2dmRXMXI2d2NFSVdXUVE5OHM3WHZLS3FpaS12Ykg2a3Uzb19QY2Rsa3lwZzRqVEs0UQ?oc=5",
+     "s": "Chosunbiz",
+     "d": "10-31"
+    },
+    {
      "t": "유라클, 애플 맥 스튜디오 기반 AI 코딩 도구 공급 확대 - 지디넷코리아",
      "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE84UnVJVDdoOVMyR28wOHJxR0tkYTlPc3BtQW5RdmZpM2xJSUgtcFhVRDZFRl9TVy14TGFEN05DT2JaTWlXWElQWXloNGt4ZmxCWjFiUktR?oc=5",
      "s": "지디넷코리아",
-     "d": "10-30"
-    },
-    {
-     "t": "[공지사항] 미지의 여정 공식 출시 및 Apple Mac 출시 안내 | 붉은사막 - 펄어비스 공식 홈페이지",
-     "u": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5YT0hOcFhkamdxaFQ4clJXaTRxeWo3OW13eHc3Nm9lSDVIX2JzRzZCUFFvUDhwekhWQUpQNzlTQ0diZW5teUpOZnFNc3Y5NUxSbllPSndjb2s0Z0tJOWVyZ19rbUlRZk95QUZTU0RQUkZwZW1CTkV4VEhNMzMteG8?oc=5",
-     "s": "펄어비스 공식 홈페이지",
      "d": "10-30"
     }
    ]
@@ -827,34 +827,34 @@
    "error": null,
    "news": [
     {
-     "t": "\"젠슨황과 술자리 중국 女기업인, 엔비디아 정보수집 中스파이\" - MBC 뉴스",
-     "u": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1tRzl6bzN1TkxNdUVKeGlhSDlELXo2YVZDbFdnaFZQNEZ5SmxSemNsVW9OZHBHSGRwX1NNNjhXQ2NNQ3lMaFNwOGs5NFc5a2l3NXNyZi01Z29kQXZnbE5sblk3X0tKRUttNlFCSURPSUcwU2Y10gF0QVVfeXFMUG5UeFFiY0lWX2w3ZVdWLTN4NWZqTEJ5Z216WmJCM1hnMVpreGhwZmRXSWZQQ1A3NnJfd0pXSlE4LWVOTlh0aWpkZVJmcWE1Qll5dU0xblhLaFdQLXNGQzBZU2ptU2daZGhmNEl6WmM1RFMwaWk?oc=5",
-     "s": "MBC 뉴스",
-     "d": "10-30"
-    },
-    {
      "t": "네이버, 엔비디아 3대 주주로 맞는다…AI 팩토리 사업 ‘탄력’ - 지디넷코리아",
      "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE94LXotUW90V2tiWkpoV0J4ZF9JRklRejZqSm9FYkt2cEc0RFJqQkZ1UnNtMXB0S1hvcnk2SnlEa2JObkRuTFNTSEpMd2FNUGlKdkVRbkFB?oc=5",
      "s": "지디넷코리아",
      "d": "10-30"
     },
     {
-     "t": "엔비디아, 네이버에 10억 달러 투자…3대 주주 올라선다 - 경기일보",
-     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1GTlQwOVJjZmxJc3RMaHZYUm5rTE1uTDkxeGM5VTJqZUJ1bk9nWlhlMEdBX2ZxSURfNlJacWtlczI3UDc5VjVZNG9vZkNuQjMyT29BUlJpZ1dORWc?oc=5",
-     "s": "경기일보",
+     "t": "\"젠슨황과 술자리 중국 女기업인, 엔비디아 정보수집 中스파이\" - 연합뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4enk2d2JqOUZoVzdVdDVwRVYzc1phNS15d3VHeG9oX1hwS0NUZXpBdS1aRjNQSEpJRVo4NjJkOEItN1RETGRHZGs5cFV2ZFlmZVI5b2RHLUFGdWfSAWBBVV95cUxNdVpPaFgzQmtTMG9Da1JWWWFJZmRJcmpOUV9yaFQwOFdkbDAwTU05dWxvUnkzazVpQUFCem1qVE0yVklJTERrMWpMQ1M0SnVxeVJ2SzVKQktGVnRhdWU2cEk?oc=5",
+     "s": "연합뉴스",
      "d": "10-30"
     },
     {
-     "t": "엔비디아, 네이버 지분 4.54% 확보…AI 팩토리 동맹 본격화 - 전자신문",
-     "u": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE13UWNNZTVUZjN5VGNORVZsQmdxLXRCakczTThuU1FSaU5vSUpLTmw1X202OXJ1VzFacEQtX3c2MnNJeGttYUVya29IUXV0UQ?oc=5",
-     "s": "전자신문",
+     "t": "\"젠슨황과 술자리 중국 女기업인, 엔비디아 정보수집 中스파이\" - MBC 뉴스",
+     "u": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1tRzl6bzN1TkxNdUVKeGlhSDlELXo2YVZDbFdnaFZQNEZ5SmxSemNsVW9OZHBHSGRwX1NNNjhXQ2NNQ3lMaFNwOGs5NFc5a2l3NXNyZi01Z29kQXZnbE5sblk3X0tKRUttNlFCSURPSUcwU2Y10gF0QVVfeXFMUG5UeFFiY0lWX2w3ZVdWLTN4NWZqTEJ5Z216WmJCM1hnMVpreGhwZmRXSWZQQ1A3NnJfd0pXSlE4LWVOTlh0aWpkZVJmcWE1Qll5dU0xblhLaFdQLXNGQzBZU2ptU2daZGhmNEl6WmM1RFMwaWk?oc=5",
+     "s": "MBC 뉴스",
      "d": "10-30"
     },
     {
-     "t": "엔비디아, 40개 언어 받아쓰는 오픈 음성인식 모델 공개 - 지디넷코리아",
-     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1lR29neElFZVFBWXJkTVVfQzdWNHp3ZFdNQTJZYlRmdWpnS19XeUtqaEtzS20tZ2o1R0VUUWJMcUd1alBGaGVweHgtdlA0SXV2RjIwN0R3?oc=5",
-     "s": "지디넷코리아",
+     "t": "“젠슨 황 옆 분홍 원피스 여인, 중국 스파이였다”…전 세계 ‘발칵’ [잇슈#태그] - KBS 뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAyNklRR1lnNlRuOEdLUzJyb3ZqYWs3RHdfcFhQUlNEQlNySXVmTjNlb2gwRjY2NmhKNnFtdkFDaU4yV1RnVXNpa0RKaEZzRzNKMHVLTEZZMmFyOHc?oc=5",
+     "s": "KBS 뉴스",
      "d": "10-30"
+    },
+    {
+     "t": "애플, 엔비디아 제치고 시총 1위 탈환 - Chosunbiz",
+     "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPelhBei1LWWlTaU1rLURDQXliTFNNYTBJYzJiMVdRSkc0b3AtMjl2N1liZ3MzeUNoMnpQcHBOMlV2QkxpUUVGX2tDaGE0cjJqX2pVY09jVVZXVldWM1kxOHE0aUFHR25Gbm16U0pZRnB2TlVra3BVTDRNZ3h6N19URTBn0gGWAUFVX3lxTFBCRHY1WGgzZGdXMm9vU2EzMXZqXzZRTkpNTWNlUldSUGxaY2Z2a2VRcjJkQk5GQjdoUHBFU3N1dnItdHBBRzhTUWpPc3FZaW1BeVB6VVlvbWwzVGdkN21iQ2Q5Mmx2dmRXMXI2d2NFSVdXUVE5OHM3WHZLS3FpaS12Ykg2a3Uzb19QY2Rsa3lwZzRqVEs0UQ?oc=5",
+     "s": "Chosunbiz",
+     "d": "10-31"
     }
    ]
   },
@@ -1253,9 +1253,9 @@
    "error": null,
    "news": [
     {
-     "t": "인바디, 창립 30주년 사사 발간…체성분분석 시장 개척사 집대성 - 뉴스1",
-     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE00U0FlNnZCcDM5dXBlWjc1S0dlLVhjLUZhQkNDZ3Utb0FldTdsSW1WZk1YRFRKOE5NbDFWeXVWT254QUNvbDJkNDFqOVdvMGFvYWNnNzdn?oc=5",
-     "s": "뉴스1",
+     "t": "인바디 30주년 사사 발간 속 글로벌 도약의 30년 발자취 조명 - 로이슈",
+     "u": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBhMHVfcWxDT21Lc2djbXI4VHo1SmVpNDRXVC1YN3Y5SXRHaU1peFVBQjZXQWVkMmR2QUxGWHhKUi1iVHRRWjVtcGJ1UGIwUWNSa3RsOVRGekY0UnZINFVTZjhISTBrcnFpT1NsRk1TZTFOd3UtbnpPTHdn?oc=5",
+     "s": "로이슈",
      "d": "10-30"
     },
     {
@@ -1680,33 +1680,33 @@
    "error": null,
    "news": [
     {
-     "t": "\"AI 실탄 확보' 마이크로소프트, 9년 만에 회사채…최소 250억달러 조달\" - 연합인포맥스",
-     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE53NEVoSEFUOXk4cHRIZFFwSGRxMzRQS1dJRnNFbGstRmFET2g4QUFTTTRvaGlKY2pCUTZ6NE5IVl9WMVJjQmw3SXNOZ0J0ZEw1aXY0TkJ1SXBjMFUtUEZaanl4MERQdGpEaWUybTI5QVI?oc=5",
+     "t": "스타트업 GTM & Enterprise 영업 전략 | Microsoft for Startups - Microsoft",
+     "u": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1GOXA3REEyR255X1E3UDRiY0tVZkVobXdNalFIeGNUODRfcGJSc2liOW9nbU80blhYT0NNTkpucmJ3YkxKNWE0ZDRVRU9Na3htYXltTGxTR29rM1pJV1BlSFNYbEpPOTBTQkpxNk13?oc=5",
+     "s": "Microsoft",
+     "d": "10-28"
+    },
+    {
+     "t": "Microsoft, 전체 직원 약 4분의 1인 6만 명에게 희망퇴직 제안 - GeekNews",
+     "u": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFA1Yk1XbHRxcy14Q1RVUXJJYWhHZExsdlkwZTlXQ25UQS1Ic3BzZEZKM2FWcHU1VGNZSGhVcnloeW1UQnJsOTNQcldUaw?oc=5",
+     "s": "GeekNews",
+     "d": "10-27"
+    },
+    {
+     "t": "마이크로소프트, AI 투자 확대 속 또 희망퇴직…대상자 6만명 - 연합인포맥스",
+     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1hbjk3U09rbVo3bkI4Rk9DS0dJbUkwc3RXcHBtVjNDYm5LMjFhYzgycDltbjZtajJOelMydTd0d211cE1mTm8zZTNXV3lUdHBCREgzSG1zNmRCVDhRTU9DNS0ycFB4SGFJRnpXTUh5c3Q?oc=5",
      "s": "연합인포맥스",
-     "d": "10-29"
+     "d": "10-27"
     },
     {
-     "t": "마이크로소프트 이번 분기 매출 19%·순이익 32%↑… 숫자 뒤에 남은 질문 세 가지 - 네이버 프리미엄콘텐츠",
-     "u": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVHhORnNNaUZSX2hHZl9RODJzTWZoTVJwcVhCT1ZYU0FUYnQ4a1dVR3MtMFdCa1pSZTV5bmpYVlQwbDJqTGRMY2lKa3RlOGs2eGIwM05PX21BRGNaYXZXN1VndFZlRVlzc3BvYzhKZUh1RDBPangwUEh3YzA1VkltZ0NYMjlCWk5D?oc=5",
-     "s": "네이버 프리미엄콘텐츠",
-     "d": "10-30"
+     "t": "MSFT|Microsoft Corp|가격:521.910|Chg%:-8.230 - TradingKey",
+     "u": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBLOTV6bU1tU3RlYlJpUVZFcGJZTGNwc3ZUVmZDS3VMbk5sZ1hVTEtlYTEwZjFIY1h5M0EwOE9lTzN5enVmd0s1VjE3SU1QZWg1Z1c5cWJ6Yy1nQjFkcHc?oc=5",
+     "s": "TradingKey",
+     "d": "10-28"
     },
     {
-     "t": "마이크로소프트 클라우드 매출 48% 급증… 빅테크 AI 투자 불안 잠재우나 - 글로벌이코노믹",
-     "u": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZkhtR2VQekhXVmg5NWt3ZWg4dUlIczdjWmpQRER4NkhmMjg2NXpRUGNkcEgxVjFyTWoyaVdZSlc1MWE3bHAzdXhjVFR4Rlk4N3BEaXl6U0pLdER0OW5BMDVFOHAzUW1TNF9SOGkwYWdvTm9FdlFhOE9veU8xaW1PeGFzaFI5TU0?oc=5",
-     "s": "글로벌이코노믹",
-     "d": "10-30"
-    },
-    {
-     "t": "[미국 특징주] 마이크로소프트, 9년 만에 회사채 시장 복귀…최소 250억 달러 조달 나선다 - 뉴스핌",
-     "u": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5ZOXlxSlpjLUpMUWp3R2xoUnBWWTByd0Z2Slp3NmNYZmcwMDlwaWYzT0pOck83UTBsLXA1LWt4aFdMODl0TUVjOTlFb3ZlcVhoWUhJZUs0b0E0dXBs?oc=5",
-     "s": "뉴스핌",
-     "d": "10-30"
-    },
-    {
-     "t": "구글 메타 아마존 적자 경쟁할 때…홀로 현금 남긴 마이크로소프트 - 한국경제",
-     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5FQTN2U3B6ZDF4SmxkbTFXOWowOEJmRU1OdVU0MDZiTHA3MWhPYXVURTBNXzI0bFRpak4zUW1TUFBjckdobkdqUkpfcTZWRmIwV3o4SXJ4bW1sZw?oc=5",
-     "s": "한국경제",
+     "t": "Microsoft, 매출 19% 성장…Azure 매출 48% 급증 - Unite.AI",
+     "u": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQenE5d0tQVlJYY2M2MTBlUWZZUGV1STh2cVpLRzBSVkppQXg0UUdQRi14SlhKeXJQdGJnaWxwcHFrSmdpTzBJRmYyUTNOV0hSb3pqYXFwcFl2VlIyRXJxVTN0eFgtSDlQZGVQR183LTlEbzMtbGk5dEQ4eGthUTZuYUJKcGdpbGN2blVBSA?oc=5",
+     "s": "Unite.AI",
      "d": "10-29"
     }
    ]
@@ -2107,10 +2107,10 @@
    "error": null,
    "news": [
     {
-     "t": "’테슬라 완전자율주행 환불 요구’ 차주들 패소 - 연합뉴스TV",
-     "u": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBMTjBmcTZTdmVtakF2NURBZ2lzRmhjV0Rid2NxdjNHQWpRdDRkNDA3Slk0bmMwVkE5eGFIeXltN0xTTHdrdDF0cjRiWGhGbWRQWTBONFZScWJpLURpdnZMT0lGb0FpQmc?oc=5",
-     "s": "연합뉴스TV",
-     "d": "10-30"
+     "t": "\"완전자율주행? 돈 돌려 달라\"…테슬라 차주들 '결국 완패' - 한국경제",
+     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1nTmpibVRFaVhKV0FyMGFlcUxzbzllUjVjYWhKWHRZWVRNLS0wOEk4Wlh1Smwwd2NTT0t0UFQ5VG5EWnFyMl9zNzV2bnZxOWNlME04OXI2WkczQQ?oc=5",
+     "s": "한국경제",
+     "d": "10-29"
     },
     {
      "t": "'고래' 스페이스X-테슬라 합병 추진에 부담 커진 '새우' 미래에셋 - 인베스트조선",
@@ -2119,10 +2119,10 @@
      "d": "10-28"
     },
     {
-     "t": "머스크에 노후자금 올인…스페이스X·테슬라 반반 담았다 - 한국경제",
-     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9JTGwzcmRldWMzeU5veHphaXdMNjU2Qjlvd2NOVS0wTHBhOExEWmZCWGl3NTNpampXTE5UUDNveWFQNDBGV3V6bGY3VEJXb2t4Q3lJSzNXMF9BZw?oc=5",
-     "s": "한국경제",
-     "d": "10-28"
+     "t": "테슬라·스페이스X 합병 추진…머스크의 진짜 노림수와 최대 걸림돌 - 뉴시스",
+     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5wQTZDd0NCVmk1TDd5eThNVV9LT0RIT2d5OGtzYnI5aTNpc2ZGQXZoTXMwSGlFamNnNTcwel94MXFicWhNSzJ3WEYxSGFyWk9DQl9XWlJkLUJEN3hkMkJ2S9IBeEFVX3lxTE54ZVFvcE9vZ1JYYUk5XzBxQ0ZBYS1tV3ZKLUhvaE5PeDNld1p3LXhSbEQ0SjIyR0R3VEloVDBjbk82R29CUHBsQmhleFl1NldibGo4QTBWME1ia3M0WldyYUU4M2lzOXcxZjlJclJMRWVsYzdSdnc3Ng?oc=5",
+     "s": "뉴시스",
+     "d": "10-31"
     },
     {
      "t": "베이징이 SpaceX-테슬라 합병을 막을 수 있는 이유 - Investing.com 한국어",
@@ -2523,21 +2523,21 @@
     "두 지표가 서로 엇갈립니다 — 어느 쪽도 확신할 수 없어 관망"
    ],
    "entry": 184.11,
-   "stop": 167.96,
+   "stop": 167.55,
    "resistance": 212.94,
-   "risk_pct": 8.8,
+   "risk_pct": 9.0,
    "ma20": 197.25,
    "ma200": 153.57,
    "rsi14": 41.9,
-   "atr14": 8.08,
+   "atr14": 8.28,
    "stale": false,
    "error": null,
    "news": [
     {
-     "t": "팔란티어, 현금 창출력에 목표주가 상향…\"다음주 실적 기대\"-JP모간 - 마켓인",
-     "u": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB6UnRucFQ1VHZPZmljejAxZWVDQWFvdmVmaGlYbmxVRERqWjVra21xbU1ZVEZDY0Z2NnBQeUc1dnRQNVYza01EVG9zRmp5Q3c0T2ZsYllKejM1eWR1YXhDU0dRdWtEamhyc2JLY0YzTjctSDA?oc=5",
-     "s": "마켓인",
-     "d": "10-29"
+     "t": "팔란티어 ① JP모간 \"AI 도입의 해에서 수익의 해로\" - 네이버 프리미엄콘텐츠",
+     "u": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5kazA0WVpHSml4M05PanhScnY2eDNRRTBlX21UV3Mxa1RMSDBtcnVLMjdBempFcGJJTFRqS1NjTVZILWNkaXRjX0drRU9zUkJQdDlHYllibFVPOExna0laSjZqZnpqUkJZMWNfVmpMdUZHbFh5LWdVOFFjZw?oc=5",
+     "s": "네이버 프리미엄콘텐츠",
+     "d": "10-30"
     },
     {
      "t": "[컨콜] 오픈AI·앤트로픽·팔란티어 협력…LG CNS \"고부가가치 사업 비중↑\" - 디지털데일리",
@@ -2552,16 +2552,16 @@
      "d": "10-30"
     },
     {
+     "t": "[GAM] 팔란티어 ② 11월 2일 실적 앞두고 월가 '서프라이즈' 합창 - 뉴스핌",
+     "u": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5QOGREMGxmSE8wSHdKbF85MmRyWVllSGtlWUhsaWEyTEY5RWhVMzF5QW9jcDUzRURTRkhnVl9iclE0T2VCLXNpSjh4ZXlBSmp0ZkVuNnd4VkpXM3JY?oc=5",
+     "s": "뉴스핌",
+     "d": "10-31"
+    },
+    {
      "t": "JP모건, 팔란티어 테크에 비중확대 개시…\"파괴적 AI 리더\" - Investing.com 한국어",
      "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE84elA4eHJjdlZ5RktuWHpxZXNTOXBvbEhJYnBoNERZRHZjSXB4enZCc1NWb1FYc3JRdmNZaWV6UmNZaVVkc0tNc01rcWFvaURjS0NJRllibFhfXzdYTW82WTRmSFBIOGZRRDdaVnpLRE8?oc=5",
      "s": "Investing.com 한국어",
      "d": "10-29"
-    },
-    {
-     "t": "JP모건, 팔란티어 비중확대 '최선호주'…AI주권 주목 - SBS Biz",
-     "u": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tY2MwUTFad01oZDFpWmlVTldXS3NuZ2pvS0tUb3Q4MVRRalZKOVVaRUg2TFc4REtOOF93elBucU03U2lGWlcxdUN1OVpPV3Z3VWFF0gFYQVVfeXFMTjBFVEJwMWtSNEk2RXdKcWRWejJieUctem96dlN6bmRsNk5fVEtuMmdJbTRQMnNxTld6Rm8zNkR5VnFjV19EZmdzREp2TmJlNDR5RTZhaE1BUQ?oc=5",
-     "s": "SBS Biz",
-     "d": "10-30"
     }
    ]
   },
@@ -2913,16 +2913,16 @@
      "d": "10-29"
     },
     {
-     "t": "푸틴, 일론 머스크 스페이스X CEO와 대화 후…'그는 진정한 천재' - BBC",
-     "u": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBXamotVzBjTUZueWpWcG5lblptcFhzYm51MmxTMFNQMWZZeUtWb0RlREQwQnQ4QUVoUXU0N1RkV05FbzJJTHZUbERzSkZFTzRkY1VsaUxPeGFvU1gzTkHSAWNBVV95cUxPY054TjlRRF9jVDVVaWZHTHdMTXdvWlFsWHFWMV96NzNHeEtzVGNmZzh2UUo1dDFPNXVIUmduSnhxQ2E4eC1NOU5WeWEzWlRSSUNGN0pHSm1IV0ZySU90NENpVDg?oc=5",
-     "s": "BBC",
-     "d": "10-29"
+     "t": "우주 넘어 클라우드까지...스페이스X, 단숨에 매출 10위권 - 지디넷코리아",
+     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hYW5abDhyWWY2LS1TTDVoZEpILU5RMzJKYmhpT0lUMGFaZjFNaTdXODV5RHZ6MXpLTzVFSzBicnFOMDhlVzRWXzJ2UmtUV2pvX0xva2x3?oc=5",
+     "s": "지디넷코리아",
+     "d": "10-31"
     },
     {
-     "t": "스페이스X, '보호예수 해제+앤트로픽 IPO' 부담으로 하방 압력 - 연합인포맥스",
-     "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHU3hHLWVueVlRZmZ0MEc1UjJybVBrUm9hTzNQaTBqU2FWTzBPbWowb2lPZDNsdGtpRFVOV3lTbmF3MzFOSE85S0NxZ2cyNWZmV3B6bExGRVFoUGJYREVNQ1NZcVBQOTdqclNvVXJNLXI?oc=5",
-     "s": "연합인포맥스",
-     "d": "10-29"
+     "t": "'고래' 스페이스X-테슬라 합병 추진에 부담 커진 '새우' 미래에셋 - 인베스트조선",
+     "u": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUI5VEVQVS03MExpcjA4WVpCZHlNZlU3N284NlRWcDdfOG9xRFRKZXR0OGZtSVp4aU9WbjVielpmRmVhYVhzRm9BYXVqSVFlRU01MnhiSnZtOWZXMjA5ajRaS3JVRjdVcG5SM2FwVWZiT3RCS3dwYmVWcnhVd0gtWjZzbw?oc=5",
+     "s": "인베스트조선",
+     "d": "10-28"
     }
    ]
   },
@@ -3328,28 +3328,28 @@
      "d": "10-30"
     },
     {
-     "t": "사람인, ‘2026 하반기 삼성전자 협력사 온라인 채용박람회’ 개최 - 머스트 뉴스",
-     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1LYmotRVVOc3hvdXhEbG9ON0J6UThGU0VHbGJCX3lsN2lBWFNmY0RjOXhJVzZ6YWpGQnJmdG9lMVpFN1k5ODg1XzVyYkhTYi1kV2dTRVN3?oc=5",
-     "s": "머스트 뉴스",
+     "t": "삼성전자 창립 57주년… 전영현 “경쟁력 냉정하게 점검” - 문화일보",
+     "u": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1yMTJLUFR2U2ZmMHFwWmh6QUs0NEJlbmI1eWs4YTBxRENUN24yZkE1cE5xM2o5NmZyRmF3clZ1T2U3dmFhSGd0a3NSOXBFamJl?oc=5",
+     "s": "문화일보",
      "d": "10-30"
     },
     {
-     "t": "가스안전공사·삼성전자, 반도체 사업장 가스안전 강화 맞손 - 전기신문",
-     "u": "https://news.google.com/rss/articles/CBMibEFVX3lxTE80aTdSbnBfYTd6QmpsSnU2RkZzSGRKUVZOODEzRFlHM09PTXFuR3M2MHItOXhqeWMtZmY4cDdxS1Vrd3lVX184NjBJV3hxZVFpeGJrUUR6ajdlRUdRcXA1TE1rTEltcWgxTTlZM9IBcEFVX3lxTE12WE1LUnB0WXpvQVAzQVVQSzdrTUF1bkJCUl9fNjFrX2JXUms0UHZSWU5mM2FPTm1fblRNWk45WnJlVzRYSDNhR3RGQ1Z2bVZ1V0pqOG5ldl82NVZlRTd3LVJ4cFRXR0x0NDF6N01JLVQ?oc=5",
-     "s": "전기신문",
+     "t": "삼성전자, 창립 57주년에 “지금은 자축하기보다 경쟁력 확보할 때” - 경향신문",
+     "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBSNlYzYURLakRqMHVhMGQyWXBXMmF3VmR5Z3hoWFFndEFQTVBZUU9Dc0pfYzZGZFN6MWlWTXRZMGx2aWsxcmhBemtQcFIwWmp1dU8tclFsUkhXQdIBX0FVX3lxTE85eUlyU0tXajBuQi10MWNTa1NGWTN3YkVfa1UwWkY2RGRYd0NSc3BwbnBRMFlCakVhSGgzbm1oMW5mSTNQRTdlVjQ4Wi1hYVZiYnJjYlBhcDdiTkJKdzZr?oc=5",
+     "s": "경향신문",
      "d": "10-30"
     },
     {
-     "t": "[게시판] 가스안전공사·삼성전자, 반도체 사업장 가스시설 안전협약 - 매일경제 마켓",
-     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBzSjE5d3JQY21YeldkSG5UUnBZcmhDZjZVai1fWEtET3JoSklSUHZIeTh6YnByWGg1NDAtRVFuSTNvNm5BNE1sS2RiSnk2WV9VY1E?oc=5",
-     "s": "매일경제 마켓",
-     "d": "10-30"
+     "t": "삼성전자 “내년 HBM 물량 완판…HBM4 비중 60%” [컨콜] - 서울경제",
+     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9FbHBHZk1NNEtuZi1YSXpObTZoc3hiYTVYOGRLMDJtUFU4UkZsNG83QnBPa0VwTk9EbTAzaG1rYlliVlF0cHhyemZ6T2o2U2FQVUHSAVNBVV95cUxONFM4cUZPc3g3REFwcG12bFdXS2NHdkp5YzZ3ZTcyeWpWc1BNUHlSTFBjZXVpWktGZnU2aDF0MmtlaWp4LWVvT240SnVYTkJYR3pkOA?oc=5",
+     "s": "서울경제",
+     "d": "10-29"
     },
     {
-     "t": "가스안전공사, 삼성전자와 국가 핵심 반도체 사업장 가스안전 강화 협력 - 데일리안",
-     "u": "https://news.google.com/rss/articles/CBMiowJBVV95cUxQQ080bWVXenRiT05uS0hZd1lRQi1lWWhlRHhYVEdRNmZFVDB5MjdyY3BaVFlONE5pd1kyeHZTU2NBNlVGaUFWVFlhVGZPMjJCMi1GamhNRGJseGdsREZwRmVRbGlTRWtSN09ZRkJpRTNCZUozanNUNmZIRERyaFlyZ0RLME84YkVwM0UyN21kTnd3LUZ0eEZlNXVyWUVQRzhnNXFRSXRObUtpeE1FNnhyNVAzQU9GMnVMU2JyZXQ1ZndMd0YzeDR2ODFIYzROOEQtR001TVZ1Zml4Y09yVFZqaDB4Q0RlLWp3Sy1XS1Y4aTVLempHanJlUmVLdFpXV1NPaENzeWVJWXhjNnoyR3V5TzlMNGY1UlJyNDR4V1cwMXZPOU0?oc=5",
-     "s": "데일리안",
-     "d": "10-30"
+     "t": "삼성전자 \"메모리, 2028년까지 수급 빠듯...내년 HBM 완판\" - 지디넷코리아",
+     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBpRFJMVXEyRmNLa3phYngxVU1Gakw1SGpsY1BheFNGWWp1V2doQTVJYm9HN3B1VENiRS1hN0RkeTdJLUVQSHJrUFJnWGhmSlpMNWtZUVNR?oc=5",
+     "s": "지디넷코리아",
+     "d": "10-29"
     }
    ]
   },
@@ -3749,33 +3749,33 @@
    "error": null,
    "news": [
     {
-     "t": "SK하이닉스, 일본서 첫 ‘파트너스데이’ 개최… 현지 핵심 협력사 초청해 사업 방향성 공유 - SK hynix",
-     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5kdFllNlhsMF94WkxiakxodUttbDFpYWE4UG93Wm9NSWNsNUt6UXh4eTlSeTg4Rk9hZ19ibTBYMHhYQ1p3LTdETEFlMlU5U2xBdTRhS2tjVndyVEN5TS1NQg?oc=5",
-     "s": "SK hynix",
-     "d": "10-30"
-    },
-    {
-     "t": "SK하이닉스, 日 첫 ‘파트너스데이’ 개최…현지 소부장 20여 개사 한 자리 - 서울경제",
-     "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1BcjZOUGVFb0w5a3Q0MUtMcjNzTUJVYzMxRVBmMVI1cWZ6YWZNUFI4SVduNzBzdVcybjc4OTBuaDhjMzkxUXdQVGVyc3R1MFRiSEHSAVNBVV95cUxOanF0SmlDT3MtakUzanl3R19RcFFZNVR4ejJNYm1wYmRrZzlkc2F3U0NaaHNPZl9FNW1FOUpabGlLQTM1VFdQVmgxWC02djJzY0lraw?oc=5",
-     "s": "서울경제",
-     "d": "10-30"
-    },
-    {
-     "t": "SK하이닉스, 日 소부장 20여곳과 기술 로드맵 공유…공급망 협력 강화 - 동아일보",
-     "u": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4wTzNzLWQ4UlZFdVk4NkgtUXdta3F2UFZoaGYwcC1ha3dJcGJIaHZpcDJ6S1hMMlBDeTVTOGswNDhEWkxfWURlUmV5SGJLNG1INE1Wb2FSVUpIQWVZZDM1WG5iM2JvdW82MGhLWUVnMEZEUmhQMlHSAWZBVV95cUxNblU4NEt0LUJvaW5PRGVzZ3VKTkFqbElNNjN2WkZtT0hpaUNhZFpkd095WTNsaFRycmRablNQanoxeFhCTkwzeU1tZnNLTXItc1JOcW5QTS0tZ1JyWFV0N3pKYUJtdHc?oc=5",
+     "t": "SK하이닉스, 美 사장급 조직 신설…안현 미주총괄 사장 선임 - 동아일보",
+     "u": "https://news.google.com/rss/articles/CBMidkFVX3lxTE10bGk0YUFiOE5laHdXWEJ2VlN0b1NVZVdpSVNYRW41SXRZdVNrVUs2X3M2LW9VcHdCa2g0MDFpRVdkYWdNbm1najMyNWl2TUZseXQ2MXVOMzBtMG5XX09sZmRTd0FCaXlTcTZoLTh5OWY2Mk1wN2fSAWZBVV95cUxQTXFBdDBkb095WEpKLUJJd1N5Q1Nlci14SmliMEd4eEZhYi1nS2FqM0ZMV1AyQjkwbm1DT1doa3liZ2xRNXBqZENSVWNWcHBGVkxuUmZ0MnFlOGpjc2JqQ2M3N2VVckE?oc=5",
      "s": "동아일보",
      "d": "10-30"
     },
     {
-     "t": "SK하이닉스, 美 미주총괄 신설…'HBM 주역' 안현 사장 전진배치 - 머니투데이 - 머니투데이",
-     "u": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95Ml9CUnVOZGJSMTZubDdrdTZ0RW1QS29nbWFTZmp3WGV6ZFFCZWppMF9kTnFTWXFDQ0FzQ3YwLVJXSTlJMzBZYXB6RHhJWWJRSng5NzlKdkxEOHpCb2xzcGtQcXBlUVp4TzBjTdIBckFVX3lxTE12b1ZrNkxzQ1Fjc3IxUVlQdnBkV0g3NlZMbGU4YndMNTQwbENtSVA5bmk1Y3BsVFpsUTlrYkk3NDdlNXoyd0NiNnZrdTdITEJlTDU5UWJtTzBUVExPZmgyaTE3eGhyVU9DWWM2U3dQZkc5dw?oc=5",
-     "s": "머니투데이",
+     "t": "SK하이닉스, 미주총괄 신설 '안현 사장' 배치…\"美빅테크와 스킨십 강화\" - 뉴시스",
+     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VY1ZTSjlJR1BJZ2ZPQVQzc2dRRGhXV2VsemZhYk8zZWZ0UVlxTUppUGc4MjRMNU1rTXBVSXZEc1oxZzIwZ0d2aUxSLThLSGpFOWhPQ2UxZXRFNFFveWtpQtIBeEFVX3lxTE42OVk4ZTRhXzI1cjZfZDNLM0E1MTN4T0ozTlB2Vmg2N0xuT1ZxSnhGdG1VLVB0Y2pVbmhLRjd5cjc5ZVNOYTBkZ1oyV0NnVGRpX1RGUV84Z0tINXVBSUhRNXRKQ3Nrc3NMN01ib1cxbUFZVFR4SnZXQg?oc=5",
+     "s": "뉴시스",
      "d": "10-30"
     },
     {
-     "t": "SK하이닉스, 美 사장급 조직 신설…안현 사장 선임 - 지디넷코리아",
-     "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE51UERVWjVCX29PRkVyNGJGR0RFOVZwaGdYNUttemdFcEVNUjBPWXpTbDF5WUp6a0NQVjJIbjBGdmEzTXNUZ3lncWlhSDBRMFZ6a1Y5RC1B?oc=5",
-     "s": "지디넷코리아",
+     "t": "SK하이닉스, 11월 1일부로 사장단 인사 단행…안현 개발총괄 사장 '미주총괄'로 - 전자신문",
+     "u": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9hSjdtcTNiaE03RmRVYlhpQjRJREhDUUEwRFJmRnYtT1E4S00wVElWUk83UndIaEo3N1pQRnBjRC1qUGZxU1NfLTk0WGpkdw?oc=5",
+     "s": "전자신문",
+     "d": "10-30"
+    },
+    {
+     "t": "SK하이닉스 실적 신기록‥주주환원 100조 푼다 - MBC 뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1JNWFUQ3VzOGJIUTJOUGoxMVVIRkY5SXJ3OG5hLTFrRkFSSGNUT19ZajRNU3Vnc2hSVVdwMnEzSnBOdnlIaURzMEVDMFU3dnNIT25JMUY2Ym1HcjVKT2tzY3ZhbGZEd0ExeTJ5X1ZabDBrVmdxUmJBMjNn0gF6QVVfeXFMT1BfWWs4S2lXMzY2SjZJWXBsMTZUeGdwYndaV05TTHpFWDRTR2VhRFNQdVRxUXoyZ2ZRYjROMmlUZWJDSnFybUlNdHM3SkJzWVZ2TnlmRUVQX2xsM3ZKd0xwd01feEtqbllTUzFpOC1YYkw4YTZQTDJmelE?oc=5",
+     "s": "MBC 뉴스",
+     "d": "10-29"
+    },
+    {
+     "t": "'역대급 실적' SK하이닉스, 곽노정 단독대표 사장단 체제 지속…'新사업·美공략' 새 방점 - 뉴시스",
+     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9RLS01WEFRa3RIcFh6aC1IRnBzSXBVVEM0d2p3cy1mbWNqYWJybnFSX0hBc1kwVzBET190NTlOVXVTcGE5eTg4SmxPQlY3NjZkQzJvTEZyN05CbWdNLXY2NNIBeEFVX3lxTE1TZG1pT2RmZEdlMnJfd3FfSmNPYld1U2ZCbHA3RnBQdXlSU2tmYzJxZEtSd3NGUk9kZWhyX0V0YUhGenRabnRnSW1vZFBtUDctWTJWZGFLcWJ1UVJaaVRyWTF4T1dLSHB4ZEMtXzdMRDVGNGdsc3NaYw?oc=5",
+     "s": "뉴시스",
      "d": "10-30"
     }
    ]
@@ -4176,32 +4176,32 @@
    "error": null,
    "news": [
     {
-     "t": "대우건설·두산에너빌리티, 체코 원전 협상 결렬에 반발 - 세계일보",
-     "u": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBzdUhrQ0tQTHdFYzdkZ3VGbUdJRDdsaUkyT2lfMDMwUG5KNWZCUGFMVEhFeEpCc0NCXzN5VlFNSVVRQ0U1MVJKd1RIVzlLYXRHNFlOcndkNFTSAVRBVV95cUxQaWtqT3hRQ3NVbkRFbXBQLWx5N0pvcWhjV2NjR1dkSjVqci1EOUlNMWIzTmFXenhQTDVVdWdXMkJ1RnNBZDJhbGFWNC1WVFUzSTBFX3c?oc=5",
+     "t": "[경제 단신] 두산에너빌리티, SMR 모듈 제작 계약 외 - 세계일보",
+     "u": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9iVndkdFc1LVBxYlJqdUN1amg0bE80OHdzbHl0RHJiQWc0bndKMkhTNHZlT1FOMEZTTlN1VVFZU0RDMlk1SWlER0VhYTd3N0FuWERCQ2RDNHDSAVRBVV95cUxQZG9qY2t3SmZUenFQMkRTWF9GYXhKU2dtM3J4eFRNUXo1WWd4V0JrNWFhOUxJU1FpSzNMcTdtTnVBWmlWcmthUFZMWG9MRjlQU0FKT0s?oc=5",
      "s": "세계일보",
-     "d": "10-29"
-    },
-    {
-     "t": "두산에너빌리티, 3분기 영업이익 2612억…전년比 90.5%↑ - 글로벌이코노믹",
-     "u": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPZlpsZ2VreUwxa29Pb1ZBY0dCRDdOVTdZYUZVb1d3QmlJOGlaRThyT3Q0UjI2MHFZV09rNUZ3c2VfVFFLN0J5bTBNQWQxdXczSDgwMWJldzFFOE1wUjAxaUt1Y3o4N01BbXBPbFNvcnVxNi1DclB3d0l3SnlzeWh5VVpGcXNXQQ?oc=5",
-     "s": "글로벌이코노믹",
-     "d": "10-29"
-    },
-    {
-     "t": "한투증권, 두산에너빌리티 목표가↓…\"원전수출 계약구조 불확실성\" - 연합뉴스",
-     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ia0JiT0t1YkIxRzZ0X21zMEcteDhJUUxtOUpEMk5FU2piTTZKVllibl9sNHVzTUVrU2RvWUNsWFZZdGhFcGhPNnNIaWlwcVowSGVkTHA1UGNmbHfSAWBBVV95cUxPWXY0RkM1Y0JfZUR1T01RbE15eFMzMFQyT0RuUVdzYWxXM25zX0pEMmtpMzVjQ1U0TFppNU4wTmFkdW5zZnkwUzAwSjFEaFZwUy1wSjhZNzN0UWNYOGtjRmg?oc=5",
-     "s": "연합뉴스",
-     "d": "10-30"
-    },
-    {
-     "t": "두산에너빌리티 일본 IHI와 미국 원전 주기기 수주 경쟁, 닛케이 \"오랜 협력관계 덕에 일본 유리\" - 비즈니스포스트",
-     "u": "https://news.google.com/rss/articles/CBMic0FVX3lxTE14MXRacEpsbHFHQUVIVURyYVFLM3RZRkx1cVFoMzdmT3psME41VWNOY21RdEpDeHU2TmwtUGZNbmhMS05Qa09heEtuTU9rX1ZfM1A4MGpFa2R2cy1aOG1GTTNqRlptOVhLWVFJMXFwZTl0LTA?oc=5",
-     "s": "비즈니스포스트",
      "d": "10-30"
     },
     {
      "t": "두산에너빌리티, 美 뉴스케일파워 SMR 첫 원자로 제작 계약 체결 - 머니투데이 - 머니투데이",
      "u": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1Bd3RmTHZ2cjBlY1F4QmZPWUYwM1N1OUdWVFNva1RzY2Z6WFNBSjZxQnRLaXdHektuclJEWGRFME5EYlltNXV3WTRiU2FkZHpIOS1UMldfX0JFQVc4dlhmQnVseVV2d0twX2NXdtIBckFVX3lxTE1nR0doU0FZMnM1Q09xWFNUamtDVFF3cmxxNzJCeC0yTnZVRDZrRktaVUhVODNQb2wtV05vY3RPTUtTYW9vOG10akNVQVMzbkwxMlgzTGVhY3F0YmhRM0V0MkNJNGdXb0t4QmJlbFMyMGhqdw?oc=5",
+     "s": "머니투데이",
+     "d": "10-29"
+    },
+    {
+     "t": "두산에너빌리티, 미국 뉴스케일파워 SMR 원자로 제작 수주 - 연합뉴스",
+     "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5YLWRwa2tHUTN2VnVRYWZCaFNYd0hVNElyMlB2bkk0WFVZSEp6REdvdW5kV083dXJmWm9GTjg0OG1QbHZyNWVlalFhdG9WNlZwN1BiNnJ2VlJVUlXSAWBBVV95cUxOdXVZd2RWZEZDYjNLNHlwNFFKSUs3bXV3YVBsS1hWc20zNTQyTS1CT3hnVDgxdGFPRV80dUlBWDY5c2pXSGNWaU9vdldfZjNMVmZ4RzZDMW10SkN5Z1lsNmI?oc=5",
+     "s": "연합뉴스",
+     "d": "10-29"
+    },
+    {
+     "t": "대우건설, 체코 원전 이탈 수순에도…\"두산에너빌리티, 주기기 공급 영향 미미할 듯\" - 뉴시스",
+     "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1oVmNEV1RXdUM3MVlJYms4Ni05RmFDUFl0NElCSUxhQjhTY1ZKUjBZcEJQSkZER3NJRDc2c0ZmNWhNUFlZeC01RzdYb1QyWl9heTYwd2dybHVVbmZBSnJpUtIBeEFVX3lxTFBwVzBjREc2NWNxa0RNVUdpTmZWS1lLeEFkelBYd1ZQTWlXS0pPZ3hqdTJ5SWRsY3VMeHdxaEI2N0o4LXJtVVM5VVZMOW52aGlFVmtZZ0UxUk5OeE5ldGVieDZqdGNzWUloUFFYN001YnNxWmlFeDdSRw?oc=5",
+     "s": "뉴시스",
+     "d": "10-29"
+    },
+    {
+     "t": "대우건설·두산에너빌리티 급락…체코원전 팀코리아 균열 - 머니투데이 - 머니투데이",
+     "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ucGRpcFlTbFBBdDVWQUV3QWRUYlQ3Y2htc0llYTc0eXdWd1dvRmdlMENmeVQ5LTZHZWxWNy1KZGYyOUlCZnhtV0JtRTZibXlHb0RfNHI0Uks4VEEyakZzVTdzVVBlZkM50gFuQVVfeXFMUGlBOVRQRG95eXZIaTFicmdvYWtNSzY1S2tWS0xfU0JBcGdCdUVSOEs1Sml0bTdqaTFjeEUwdHU5MXVTVnUxdUNjczYyVzN1c1FVY09RcTZGQnhpa2JzYlFQenFVUTdGSWc3N0Nqc1E?oc=5",
      "s": "머니투데이",
      "d": "10-29"
     }
